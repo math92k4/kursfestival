@@ -5,13 +5,30 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./wp-content/themes/kursfestival/dist/css/app.css">
+    <link rel="icon" href="./wp-content/themes/kursfestival/imgs/ellipse_55.png" type="image/x-icon"/>
     <title>Kurs Festival</title>
 </head>
 <body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="front-page.php">LOGO</a></li>
+                <li>
+                    20-23 AUGUST 2022 
+                    <span>UNGDOMSØEN</span>
+                </li>
+                 <li>
+                   MENU
+                </li>
+            </ul>
+        </nav>
+    </header>
 <section id="splash">
     <img src="./wp-content/themes/kursfestival/imgs/temp_splash_logo.png" alt="">
     <h1>KURS <span>FESTIVAL</span></h1>
+    <button class="ticket_btn">KØB BILLET</button>
 </section>
+
 
 <script type="module" src="./wp-content/themes/kursfestival/dist/js/front.js"></script>
 </body>

@@ -13,6 +13,7 @@
     line-height: 8rem;
     position: relative;
     color: $black;
+    pointer-events: none;
     &::after {
       content: "KURS";
       position: absolute;
@@ -45,5 +46,6 @@
     position: absolute;
     z-index: 1;
     transform: translateY(var(--new-y)) translateX(var(--new-x));
+    pointer-events: none;
   }
 }
