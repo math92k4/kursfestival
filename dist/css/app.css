@@ -46,6 +46,7 @@
 #splash img {
   position: absolute;
   z-index: 1;
+  transform: translateY(var(--new-y)) translateX(var(--new-x));
 }
 
 body {

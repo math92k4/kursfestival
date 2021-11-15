@@ -12,5 +12,7 @@
     <img src="./wp-content/themes/kursfestival/imgs/temp_splash_logo.png" alt="">
     <h1>KURS <span>FESTIVAL</span></h1>
 </section>
+
+<script type="module" src="./wp-content/themes/kursfestival/dist/js/front.js"></script>
 </body>
 </html>

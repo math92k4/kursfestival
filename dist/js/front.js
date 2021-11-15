@@ -1,13 +1,59 @@
 /******/ (() => { // webpackBootstrap
+/******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "./src/app.js":
-/*!********************!*\
-  !*** ./src/app.js ***!
-  \********************/
-/***/ (() => {
+/***/ "./src/front.js":
+/*!**********************!*\
+  !*** ./src/front.js ***!
+  \**********************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _js_modules_moveonmouse_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./js_modules/moveonmouse.js */ "./src/js_modules/moveonmouse.js");
 
+window.addEventListener("DOMContentLoaded", init);
+
+function init() {
+  (0,_js_modules_moveonmouse_js__WEBPACK_IMPORTED_MODULE_0__.moveElm)();
+}
+
+/***/ }),
+
+/***/ "./src/js_modules/moveonmouse.js":
+/*!***************************************!*\
+  !*** ./src/js_modules/moveonmouse.js ***!
+  \***************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "moveElm": () => (/* binding */ moveElm)
+/* harmony export */ });
+function moveElm() {
+  var brush = document.querySelector("#splash img");
+  var brushWidth = 0;
+  var originalX = brush.getBoundingClientRect().x + brushWidth;
+  var originalY = brush.getBoundingClientRect().y + brushWidth;
+  var mouseY = 0;
+  var mouseX = 0;
+  window.addEventListener("mousemove", function (e) {
+    mouseX = (e.clientX - originalX) / 25;
+    mouseY = (e.clientY - originalY) / 25;
+  });
+  var delay = 100;
+  var revisedX = 0;
+  var revisedY = 0;
+
+  function animateBrush() {
+    requestAnimationFrame(animateBrush);
+    revisedX += (mouseX - revisedX) / delay;
+    revisedY += (mouseY - revisedY) / delay;
+    brush.style.setProperty("--new-x", revisedX + "px");
+    brush.style.setProperty("--new-y", revisedY + "px");
+  }
+
+  animateBrush();
+}
 
 /***/ }),
 
@@ -17,7 +63,6 @@
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 // extracted by mini-css-extract-plugin
 
@@ -86,6 +131,18 @@ __webpack_require__.r(__webpack_exports__);
 /******/ 		};
 /******/ 	})();
 /******/ 	
+/******/ 	/* webpack/runtime/define property getters */
+/******/ 	(() => {
+/******/ 		// define getter functions for harmony exports
+/******/ 		__webpack_require__.d = (exports, definition) => {
+/******/ 			for(var key in definition) {
+/******/ 				if(__webpack_require__.o(definition, key) && !__webpack_require__.o(exports, key)) {
+/******/ 					Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });
+/******/ 				}
+/******/ 			}
+/******/ 		};
+/******/ 	})();
+/******/ 	
 /******/ 	/* webpack/runtime/hasOwnProperty shorthand */
 /******/ 	(() => {
 /******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
@@ -110,7 +167,7 @@ __webpack_require__.r(__webpack_exports__);
 /******/ 		// undefined = chunk not loaded, null = chunk preloaded/prefetched
 /******/ 		// [resolve, reject, Promise] = chunk loading, 0 = chunk loaded
 /******/ 		var installedChunks = {
-/******/ 			"/js/app": 0,
+/******/ 			"/js/front": 0,
 /******/ 			"css/app": 0
 /******/ 		};
 /******/ 		
@@ -161,7 +218,7 @@ __webpack_require__.r(__webpack_exports__);
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module depends on other loaded chunks and execution need to be delayed
-/******/ 	__webpack_require__.O(undefined, ["css/app"], () => (__webpack_require__("./src/app.js")))
+/******/ 	__webpack_require__.O(undefined, ["css/app"], () => (__webpack_require__("./src/front.js")))
 /******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["css/app"], () => (__webpack_require__("./src/app.scss")))
 /******/ 	__webpack_exports__ = __webpack_require__.O(__webpack_exports__);
 /******/ 	
