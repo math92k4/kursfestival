@@ -8,7 +8,9 @@
     <title>Kurs Festival</title>
 </head>
 <body>
-    <h1>Dette er en test</h1>
-    <p>Tjek om html minifies!</p>
+<section id="splash">
+    <img src="./wp-content/themes/kursfestival/imgs/temp_splash_logo.png" alt="">
+    <h1>KURS <span>FESTIVAL</span></h1>
+</section>
 </body>
 </html>

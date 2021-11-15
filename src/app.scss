@@ -1,3 +1,6 @@
+@import "./sass/abstracts";
+@import "./sass/layout/";
+
 body {
-  background-color: blue;
+  background-color: $bg_color;
 }

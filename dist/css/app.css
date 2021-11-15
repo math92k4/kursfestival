@@ -1,1 +1,53 @@
-body{background-color:blue}
+#splash {
+  width: 100vw;
+  height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+#splash h1 {
+  font-size: 13rem;
+  line-height: 8rem;
+  position: relative;
+  color: #252525;
+}
+
+#splash h1::after {
+  content: "KURS";
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: 3px;
+  -webkit-text-stroke-color: #252525;
+}
+
+#splash span {
+  font-size: 7.7rem;
+  display: block;
+  position: relative;
+}
+
+#splash span::after {
+  content: "FESTIVAL";
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: 3px;
+  -webkit-text-stroke-color: #252525;
+}
+
+#splash img {
+  position: absolute;
+  z-index: 1;
+}
+
+body {
+  background-color: #f3ece9;
+}

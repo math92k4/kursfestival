@@ -1,0 +1,48 @@
+@import "../abstracts";
+#splash {
+  width: 100vw;
+  height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+
+  & h1 {
+    font-size: 13rem;
+    line-height: 8rem;
+    position: relative;
+    color: $black;
+    &::after {
+      content: "KURS";
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 2;
+      -webkit-text-fill-color: transparent;
+      -webkit-text-stroke-width: 3px;
+      -webkit-text-stroke-color: $black;
+    }
+  }
+  & span {
+    font-size: 7.7rem;
+    display: block;
+    position: relative;
+
+    &::after {
+      content: "FESTIVAL";
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 2;
+      -webkit-text-fill-color: transparent;
+      -webkit-text-stroke-width: 3px;
+      -webkit-text-stroke-color: $black;
+    }
+  }
+
+  & img {
+    position: absolute;
+    z-index: 1;
+  }
+}
