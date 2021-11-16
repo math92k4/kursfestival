@@ -1,0 +1,9 @@
+.content ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+}
+
+.content li {
+  border: 2px solid black;
+  aspect-ratio: 1/1;
+}

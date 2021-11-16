@@ -77,7 +77,17 @@
       </div>
 </section>
 
-<div id="content"></div>
+<section class="content">
+<ul>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+</ul>
+</section>
+
 </main>
 
 <script type="module" src="./wp-content/themes/kursfestival/dist/js/front.js"></script>

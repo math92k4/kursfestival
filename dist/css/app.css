@@ -313,6 +313,16 @@ header li span {
   font-weight: bold;
 }
 
+.content ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+}
+
+.content li {
+  border: 2px solid black;
+  aspect-ratio: 1/1;
+}
+
 button {
   -webkit-appearance: none;
      -moz-appearance: none;
