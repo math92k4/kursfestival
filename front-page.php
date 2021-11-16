@@ -13,19 +13,30 @@
         <nav>
             <ul>
                 <li><a href="front-page.php">LOGO</a></li>
-                <li>
-                    20-23 AUGUST 2022 
-                    <span>UNGDOMSØEN</span>
-                </li>
-                 <li>
-                   MENU
-                </li>
+                <li>20-23 AUGUST 2022 <span>UNGDOMSØEN</span></li>
+                <li>MENU</li>
             </ul>
         </nav>
     </header>
 <section id="splash">
-    <img src="./wp-content/themes/kursfestival/imgs/temp_splash_logo.png" alt="">
-    <h1>KURS <span>FESTIVAL</span></h1>
+    <div id="splash_logo">
+        <img src="./wp-content/themes/kursfestival/imgs/temp_splash_logo.png" alt="">
+        <h1>KURS <span>FESTIVAL</span></h1>
+    </div>
+    <ul id="word_anim">
+      <li>
+        <span>PERFOMATIVITET</span>
+        <span>DEMOKRATI</span>
+      </li>
+      <li>
+        <span>NATUR</span>
+        <span>KULTUR</span>
+      </li>
+      <li>
+        <span>ORD</span>
+        <span>KØN</span>
+      </li>
+    </ul>
     <button class="ticket_btn">KØB BILLET</button>
 </section>
 

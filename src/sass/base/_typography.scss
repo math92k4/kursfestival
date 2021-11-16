@@ -1,19 +1,11 @@
 @import "../abstracts/";
 
-ul {
-  display: flex;
-  justify-content: space-between;
-}
-li {
-  font-size: 1.8rem;
-  font-family: Arial, Helvetica, sans-serif;
-  text-align: center;
-  cursor: pointer;
-  font-weight: bold;
-  & span {
-    display: block;
-    text-align: center;
-    font-size: 2.3rem;
-    font-weight: bold;
-  }
+h1,
+h2,
+h3,
+h4,
+p,
+span {
+  font-family: sans-serif;
+  color: $black;
 }
