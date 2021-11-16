@@ -20,6 +20,11 @@ header {
     font-weight: bold;
     &.date {
       font-size: 1.36rem;
+      transition: opacity 0.7s;
+      transform: translateY(var(--y));
+      &.disappear {
+        opacity: 0;
+      }
     }
     & span {
       display: block;
