@@ -14,10 +14,31 @@
             <ul>
                 <li><a href="front-page.php"><img id="logo" src="./wp-content/themes/kursfestival/imgs/temp_splash_logo.png" alt=""></a></li>
                 <li>20-23 AUGUST 2022 <span>UNGDOMSØEN</span></li>
-                <li id="menu_btn">M≡NU</li>
+                <li id="menu_btn" >M≡NU</li>
             </ul>
+            <!-- <ul id="menu">
+                <li>
+                    <a href="">PAGE1</a>
+                </li>
+                <li>
+                    <a href="">PAGE2</a>
+                </li>
+                <li>
+                    <a href="">PAGE3</a>
+                </li>
+                <li>
+                    <a href="">PAGE4</a>
+                </li>
+                <li>
+                    <a href="">PAGE5</a>
+                </li>
+                <li>
+                    <a href="">PAGE6</a>
+                </li>
+            </ul> -->
         </nav>
     </header>
+    <main>
 <section id="splash">
     <div id="splash_logo">
         <img src="./wp-content/themes/kursfestival/imgs/temp_splash_logo.png" alt="">
@@ -43,7 +64,7 @@
     </ul>
     <button class="ticket_btn">KØB BILLET</button>
 </section>
-
+</main>
 
 <script type="module" src="./wp-content/themes/kursfestival/dist/js/front.js"></script>
 </body>

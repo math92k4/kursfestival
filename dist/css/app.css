@@ -253,6 +253,48 @@ li {
   color: #252525;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*::-moz-selection {
+  background-color: var(--selection);
+  color: white;
+}
+
+*::selection {
+  background-color: var(--selection);
+  color: white;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #252525;
+  cursor: pointer;
+}
+
+body {
+  background-color: #f3ece9;
+}
+
+h1,
+h2,
+h3,
+h4,
+p,
+span,
+button,
+li {
+  font-family: sans-serif;
+  color: #252525;
+}
+
 header {
   position: fixed;
   width: 100%;
