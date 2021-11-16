@@ -13,7 +13,7 @@
         <nav>
             <ul>
                 <li><a href="front-page.php"><img id="logo" src="./wp-content/themes/kursfestival/imgs/temp_splash_logo.png" alt=""></a></li>
-                <li>20-23 AUGUST 2022 <span>UNGDOMSØEN</span></li>
+                <li class="date">20-23 AUGUST 2022 <span>UNGDOMSØEN</span></li>
                 <li id="menu_btn" >M≡NU</li>
             </ul>
             <!-- <ul id="menu">
@@ -64,7 +64,7 @@
     </ul>
 
     <div id="ticket_cont">
-        <button>BILLETTER</button>
+        <button>KØB BILLET</button>
         <div class="circles">
           <span data-delay="70"></span>
           <span data-delay="60"></span>
