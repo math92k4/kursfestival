@@ -14,7 +14,7 @@
             <ul>
                 <li><a href="front-page.php"><img id="logo" src="./wp-content/themes/kursfestival/imgs/temp_splash_logo.png" alt=""></a></li>
                 <li>20-23 AUGUST 2022 <span>UNGDOMSØEN</span></li>
-                <li>MENU</li>
+                <li id="menu_btn">M≡NU</li>
             </ul>
         </nav>
     </header>
@@ -29,15 +29,15 @@
         <span>DEMOKRATI</span>
       </li>
       <li>
-        <span>NATUR</span>
+        <span>SCIENCE</span>
         <span>KULTUR</span>
       </li>
       <li>
-        <span>ORD</span>
-        <span>SCIENCE</span>
+        <span>NATUR</span>
+        <span>TECH</span>
       </li>
       <li>
-        <span>TECH</span>
+        <span>ORD</span>
         <span>KØN</span>
       </li>
     </ul>

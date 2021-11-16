@@ -217,6 +217,16 @@
   box-sizing: border-box;
 }
 
+*::-moz-selection {
+  background-color: var(--selection);
+  color: white;
+}
+
+*::selection {
+  background-color: var(--selection);
+  color: white;
+}
+
 li {
   list-style: none;
 }
@@ -247,6 +257,7 @@ header {
   position: fixed;
   width: 100%;
   padding: 20px 20px 0px 20px;
+  z-index: 10;
 }
 
 header #logo {
@@ -263,7 +274,6 @@ header li {
   font-size: 1.8rem;
   font-family: Arial, Helvetica, sans-serif;
   text-align: center;
-  cursor: pointer;
   font-weight: bold;
 }
 
@@ -289,6 +299,16 @@ button {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+*::-moz-selection {
+  background-color: var(--selection);
+  color: white;
+}
+
+*::selection {
+  background-color: var(--selection);
+  color: white;
 }
 
 li {

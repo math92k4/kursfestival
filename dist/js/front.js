@@ -10,11 +10,14 @@
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _js_modules_moveonmouse_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./js_modules/moveonmouse.js */ "./src/js_modules/moveonmouse.js");
+/* harmony import */ var _js_modules_selection_randomizer_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./js_modules/selection_randomizer.js */ "./src/js_modules/selection_randomizer.js");
+
 
 window.addEventListener("DOMContentLoaded", init);
 
 function init() {
   (0,_js_modules_moveonmouse_js__WEBPACK_IMPORTED_MODULE_0__.moveElm)();
+  (0,_js_modules_selection_randomizer_js__WEBPACK_IMPORTED_MODULE_1__.randomizeSelection)();
 }
 
 /***/ }),
@@ -53,6 +56,37 @@ function moveElm() {
   }
 
   animateBrush();
+}
+
+/***/ }),
+
+/***/ "./src/js_modules/selection_randomizer.js":
+/*!************************************************!*\
+  !*** ./src/js_modules/selection_randomizer.js ***!
+  \************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "randomizeSelection": () => (/* binding */ randomizeSelection)
+/* harmony export */ });
+function randomizeSelection() {
+  var body = document.querySelector("body");
+  body.style.setProperty("--selection", "#C1CE9F");
+  document.querySelectorAll("li").forEach(function (elm) {
+    console.log("hej");
+    elm.addEventListener("click", function () {
+      var rnd = Math.floor(Math.random() * 3) + 1;
+
+      if (rnd === 1) {
+        body.style.setProperty("--selection", "#C1CE9F");
+      } else if (rnd === 2) {
+        body.style.setProperty("--selection", "#F1CDBD");
+      } else {
+        body.style.setProperty("--selection", "#B9A9D5");
+      }
+    });
+  });
 }
 
 /***/ }),

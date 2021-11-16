@@ -6,6 +6,11 @@
   box-sizing: border-box;
 }
 
+*::selection {
+  background-color: var(--selection);
+  color: white;
+}
+
 li {
   list-style: none;
 }
