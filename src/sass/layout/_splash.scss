@@ -3,6 +3,12 @@
   width: 100vw;
   height: 100vh;
   position: relative;
+
+  & .ticket_btn {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+  }
 }
 
 #splash_logo {

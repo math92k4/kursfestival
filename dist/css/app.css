@@ -4,6 +4,12 @@
   position: relative;
 }
 
+#splash .ticket_btn {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+}
+
 #splash_logo {
   position: absolute;
   top: 0;
@@ -224,7 +230,9 @@ h2,
 h3,
 h4,
 p,
-span {
+span,
+button,
+li {
   font-family: sans-serif;
   color: #252525;
 }
@@ -232,6 +240,7 @@ span {
 header {
   position: fixed;
   width: 100%;
+  padding: 20px 20px 0px 20px;
 }
 
 header ul {
@@ -261,6 +270,8 @@ button {
   border: none;
   background-color: transparent;
   cursor: pointer;
+  font-size: 1.8rem;
+  font-weight: bold;
 }
 
 * {
@@ -288,7 +299,9 @@ h2,
 h3,
 h4,
 p,
-span {
+span,
+button,
+li {
   font-family: sans-serif;
   color: #252525;
 }
