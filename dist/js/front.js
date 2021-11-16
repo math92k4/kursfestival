@@ -12,6 +12,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _js_modules_moveonmouse_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./js_modules/moveonmouse.js */ "./src/js_modules/moveonmouse.js");
 /* harmony import */ var _js_modules_selection_randomizer_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./js_modules/selection_randomizer.js */ "./src/js_modules/selection_randomizer.js");
 /* harmony import */ var _js_modules_rotateOnScroll_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./js_modules/rotateOnScroll.js */ "./src/js_modules/rotateOnScroll.js");
+/* harmony import */ var _js_modules_datedisappear_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./js_modules/datedisappear.js */ "./src/js_modules/datedisappear.js");
+
 
 
  // import { toggleMenu } from "./js_modules/burgermenu.js";
@@ -20,11 +22,39 @@ window.addEventListener("DOMContentLoaded", init);
 
 function init() {
   (0,_js_modules_moveonmouse_js__WEBPACK_IMPORTED_MODULE_0__.moveElm)();
-  (0,_js_modules_selection_randomizer_js__WEBPACK_IMPORTED_MODULE_1__.randomizeSelection)(); // toggleMenu();
+  (0,_js_modules_selection_randomizer_js__WEBPACK_IMPORTED_MODULE_1__.randomizeSelection)();
+  (0,_js_modules_datedisappear_js__WEBPACK_IMPORTED_MODULE_3__.dateDisappear)(); // toggleMenu();
 
   var fpCircles = document.querySelectorAll("#splash .circles span");
   fpCircles.forEach(function (circle) {
     (0,_js_modules_rotateOnScroll_js__WEBPACK_IMPORTED_MODULE_2__.rotateOnScroll)(circle);
+  });
+}
+
+/***/ }),
+
+/***/ "./src/js_modules/datedisappear.js":
+/*!*****************************************!*\
+  !*** ./src/js_modules/datedisappear.js ***!
+  \*****************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "dateDisappear": () => (/* binding */ dateDisappear)
+/* harmony export */ });
+function dateDisappear() {
+  var date = document.querySelector(".date");
+  window.addEventListener("scroll", function () {
+    var y = window.scrollY;
+    date.style.setProperty("--y", -0.2 * y + "px");
+
+    if (y >= 50) {
+      date.classList.add("disappear");
+      return;
+    } else {
+      date.classList.remove("disappear");
+    }
   });
 }
 
