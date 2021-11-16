@@ -1,3 +1,45 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*::-moz-selection {
+  background-color: var(--selection);
+  color: white;
+}
+
+*::selection {
+  background-color: var(--selection);
+  color: white;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #252525;
+  cursor: pointer;
+}
+
+body {
+  background-color: #f3ece9;
+}
+
+h1,
+h2,
+h3,
+h4,
+p,
+span,
+button,
+li {
+  font-family: sans-serif;
+  color: #252525;
+}
+
 #splash {
   width: 100vw;
   height: 100vh;
@@ -5,10 +47,33 @@
   overflow: hidden;
 }
 
-#splash .ticket_btn {
+#splash #ticket_cont {
   position: absolute;
   bottom: 20px;
   right: 20px;
+  display: flex;
+}
+
+#splash #ticket_cont button {
+  align-self: flex-end;
+}
+
+#splash #ticket_cont .circles {
+  margin-left: 20px;
+  position: relative;
+  width: 75px;
+  height: 75px;
+}
+
+#splash #ticket_cont span {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+  background-image: url("/wp-content/themes/kursfestival/imgs/circle.png");
+  background-size: cover;
+  transform: rotateX(var(--x-value)) rotateY(var(--y-value));
+  opacity: 0.5;
 }
 
 #splash_logo {
@@ -211,90 +276,6 @@
     /* opacity: 0; */
   }
 }
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-*::-moz-selection {
-  background-color: var(--selection);
-  color: white;
-}
-
-*::selection {
-  background-color: var(--selection);
-  color: white;
-}
-
-li {
-  list-style: none;
-}
-
-a {
-  text-decoration: none;
-  color: #252525;
-  cursor: pointer;
-}
-
-body {
-  background-color: #f3ece9;
-}
-
-h1,
-h2,
-h3,
-h4,
-p,
-span,
-button,
-li {
-  font-family: sans-serif;
-  color: #252525;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-*::-moz-selection {
-  background-color: var(--selection);
-  color: white;
-}
-
-*::selection {
-  background-color: var(--selection);
-  color: white;
-}
-
-li {
-  list-style: none;
-}
-
-a {
-  text-decoration: none;
-  color: #252525;
-  cursor: pointer;
-}
-
-body {
-  background-color: #f3ece9;
-}
-
-h1,
-h2,
-h3,
-h4,
-p,
-span,
-button,
-li {
-  font-family: sans-serif;
-  color: #252525;
-}
-
 header {
   position: fixed;
   width: 100%;
@@ -337,44 +318,6 @@ button {
   font-weight: bold;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-*::-moz-selection {
-  background-color: var(--selection);
-  color: white;
-}
-
-*::selection {
-  background-color: var(--selection);
-  color: white;
-}
-
-li {
-  list-style: none;
-}
-
-a {
-  text-decoration: none;
-  color: #252525;
-  cursor: pointer;
-}
-
-body {
-  background-color: #f3ece9;
-}
-
-h1,
-h2,
-h3,
-h4,
-p,
-span,
-button,
-li {
-  font-family: sans-serif;
-  color: #252525;
+#content {
+  height: 100vh;
 }

@@ -11,6 +11,8 @@
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _js_modules_moveonmouse_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./js_modules/moveonmouse.js */ "./src/js_modules/moveonmouse.js");
 /* harmony import */ var _js_modules_selection_randomizer_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./js_modules/selection_randomizer.js */ "./src/js_modules/selection_randomizer.js");
+/* harmony import */ var _js_modules_rotateOnScroll_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./js_modules/rotateOnScroll.js */ "./src/js_modules/rotateOnScroll.js");
+
 
  // import { toggleMenu } from "./js_modules/burgermenu.js";
 
@@ -19,6 +21,11 @@ window.addEventListener("DOMContentLoaded", init);
 function init() {
   (0,_js_modules_moveonmouse_js__WEBPACK_IMPORTED_MODULE_0__.moveElm)();
   (0,_js_modules_selection_randomizer_js__WEBPACK_IMPORTED_MODULE_1__.randomizeSelection)(); // toggleMenu();
+
+  var fpCircles = document.querySelectorAll("#splash .circles span");
+  fpCircles.forEach(function (circle) {
+    (0,_js_modules_rotateOnScroll_js__WEBPACK_IMPORTED_MODULE_2__.rotateOnScroll)(circle);
+  });
 }
 
 /***/ }),
@@ -57,6 +64,50 @@ function moveElm() {
   }
 
   animateBrush();
+}
+
+/***/ }),
+
+/***/ "./src/js_modules/rotateOnScroll.js":
+/*!******************************************!*\
+  !*** ./src/js_modules/rotateOnScroll.js ***!
+  \******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "rotateOnScroll": () => (/* binding */ rotateOnScroll)
+/* harmony export */ });
+function rotateOnScroll(elm) {
+  var x = 0;
+  var y = 0;
+  window.addEventListener("scroll", function () {
+    x = window.pageYOffset / 5;
+    y = window.pageYOffset / 3;
+  });
+  var revicedX = 0;
+  var revicedY = 0;
+  var delay = elm.dataset.delay;
+  console.log(delay);
+
+  function calculateRotation() {
+    requestAnimationFrame(calculateRotation);
+    revicedX += (x - revicedX) / delay;
+    revicedY += (y - revicedY) / delay;
+
+    if (revicedX < 0.0001) {
+      revicedX = 0;
+    }
+
+    if (revicedY < 0.0001) {
+      revicedY = 0;
+    }
+
+    elm.style.setProperty("--x-value", revicedX + "deg");
+    elm.style.setProperty("--y-value", revicedY + "deg");
+  }
+
+  calculateRotation();
 }
 
 /***/ }),

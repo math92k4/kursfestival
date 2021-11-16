@@ -62,8 +62,22 @@
         <span>KØN</span>
       </li>
     </ul>
-    <button class="ticket_btn">KØB BILLET</button>
+
+    <div id="ticket_cont">
+        <button>BILLETTER</button>
+        <div class="circles">
+          <span data-delay="70"></span>
+          <span data-delay="60"></span>
+          <span data-delay="50"></span>
+          <span data-delay="40"></span>
+          <span data-delay="30"></span>
+          <span data-delay="20"></span>
+          <span data-delay="10"></span>
+        </div>
+      </div>
 </section>
+
+<div id="content"></div>
 </main>
 
 <script type="module" src="./wp-content/themes/kursfestival/dist/js/front.js"></script>
