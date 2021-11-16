@@ -12,7 +12,7 @@
     <header>
         <nav>
             <ul>
-                <li><a href="front-page.php">LOGO</a></li>
+                <li><a href="front-page.php"><img id="logo" src="./wp-content/themes/kursfestival/imgs/temp_splash_logo.png" alt=""></a></li>
                 <li>20-23 AUGUST 2022 <span>UNGDOMSØEN</span></li>
                 <li>MENU</li>
             </ul>
@@ -34,6 +34,10 @@
       </li>
       <li>
         <span>ORD</span>
+        <span>SCIENCE</span>
+      </li>
+      <li>
+        <span>TECH</span>
         <span>KØN</span>
       </li>
     </ul>

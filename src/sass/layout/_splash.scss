@@ -3,6 +3,7 @@
   width: 100vw;
   height: 100vh;
   position: relative;
+  overflow: hidden;
 
   & .ticket_btn {
     position: absolute;
@@ -99,6 +100,9 @@
   }
   & li:nth-child(3) span {
     animation-delay: 0.2s;
+  }
+  & li:nth-child(4) span {
+    animation-delay: 0.35s;
   }
 }
 

@@ -2,6 +2,7 @@
   width: 100vw;
   height: 100vh;
   position: relative;
+  overflow: hidden;
 }
 
 #splash .ticket_btn {
@@ -114,6 +115,11 @@
 #word_anim li:nth-child(3) span {
   -webkit-animation-delay: 0.2s;
           animation-delay: 0.2s;
+}
+
+#word_anim li:nth-child(4) span {
+  -webkit-animation-delay: 0.35s;
+          animation-delay: 0.35s;
 }
 
 @-webkit-keyframes kf_txt_rot {
@@ -241,6 +247,11 @@ header {
   position: fixed;
   width: 100%;
   padding: 20px 20px 0px 20px;
+}
+
+header #logo {
+  width: 70px;
+  transform: rotate(-30deg);
 }
 
 header ul {
