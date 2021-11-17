@@ -39,57 +39,48 @@
         </nav>
     </header>
     <main>
-<section id="splash">
-    <div id="splash_logo">
-        <img src="./wp-content/themes/kursfestival/imgs/temp_splash_logo.png" alt="">
-        <h1>KURS <span>FESTIVAL</span></h1>
-    </div>
-    <ul id="word_anim">
-      <li>
-        <span>PERFOMATIVITET</span>
-        <span>DEMOKRATI</span>
-      </li>
-      <li>
-        <span>SCIENCE</span>
-        <span>KULTUR</span>
-      </li>
-      <li>
-        <span>NATUR</span>
-        <span>TECH</span>
-      </li>
-      <li>
-        <span>ORD</span>
-        <span>KØN</span>
-      </li>
-    </ul>
+        <section id="splash">
+            <div id="splash_logo">
+                <img src="./wp-content/themes/kursfestival/imgs/temp_splash_logo.png" alt="">
+                <h1>KURS <span>FESTIVAL</span></h1>
+            </div>
+            
+            <ul id="word_anim">
+                <li>
+                    <span>PERFOMATIVITET</span>
+                    <span>DEMOKRATI</span>
+                </li>
+                <li>
+                    <span>SCIENCE</span>
+                    <span>KULTUR</span>
+                </li>
+                <li>
+                    <span>NATUR</span>
+                    <span>TECH</span>
+                </li>
+                <li>
+                    <span>ORD</span>
+                    <span>KØN</span>
+                </li>
+            </ul>
 
-    <div id="ticket_cont">
-        <button>KØB BILLET</button>
-        <div class="circles">
-          <span data-delay="70" style="background-image: url('./wp-content/themes/kursfestival/imgs/circle.png');"></span>
-          <span data-delay="60" style="background-image: url('./wp-content/themes/kursfestival/imgs/circle.png');"></span>
-          <span data-delay="50" style="background-image: url('./wp-content/themes/kursfestival/imgs/circle.png');"></span>
-          <span data-delay="40" style="background-image: url('./wp-content/themes/kursfestival/imgs/circle.png');"></span>
-          <span data-delay="30" style="background-image: url('./wp-content/themes/kursfestival/imgs/circle.png');"></span>
-          <span data-delay="20" style="background-image: url('./wp-content/themes/kursfestival/imgs/circle.png');"></span>
-          <span data-delay="10" style="background-image: url('./wp-content/themes/kursfestival/imgs/circle.png');"></span>
-        </div>
-      </div>
-</section>
+            <div id="ticket_cont">
+                <button>KØB BILLET</button>
+                <div class="circles">
+                    <span data-delay="70" style="background-image: url('./wp-content/themes/kursfestival/imgs/circle.png');"></span>
+                    <span data-delay="60" style="background-image: url('./wp-content/themes/kursfestival/imgs/circle.png');"></span>
+                    <span data-delay="50" style="background-image: url('./wp-content/themes/kursfestival/imgs/circle.png');"></span>
+                    <span data-delay="40" style="background-image: url('./wp-content/themes/kursfestival/imgs/circle.png');"></span>
+                    <span data-delay="30" style="background-image: url('./wp-content/themes/kursfestival/imgs/circle.png');"></span>
+                    <span data-delay="20" style="background-image: url('./wp-content/themes/kursfestival/imgs/circle.png');"></span>
+                    <span data-delay="10" style="background-image: url('./wp-content/themes/kursfestival/imgs/circle.png');"></span>
+                </div>
+            </div>
+        </section>
+        
+        <?php get_template_part("/theme-parts/fp-content") ?>
 
-<section class="content">
-<ul>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-</ul>
-</section>
-
-</main>
-
+    </main>
 <script type="module" src="./wp-content/themes/kursfestival/dist/js/front.js"></script>
 </body>
 </html>

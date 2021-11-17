@@ -47,6 +47,10 @@
   justify-content: center;
   align-items: center;
 
+  & img {
+    width: auto;
+  }
+
   & h1 {
     font-size: 13rem;
     line-height: 8rem;

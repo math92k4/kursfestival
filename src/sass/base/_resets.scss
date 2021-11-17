@@ -11,6 +11,10 @@
   color: white;
 }
 
+img {
+  width: 100%;
+}
+
 li {
   list-style: none;
 }
@@ -20,6 +24,7 @@ a {
   color: $black;
   cursor: pointer;
 }
+
 body {
   background-color: $bg_color;
 }
