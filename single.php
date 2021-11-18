@@ -14,8 +14,9 @@
 
 
 <body class=" <?php echo $pods_name ?> ">
-
 <?php
+
+// if, for alle pods
 if ($pods_name == 'om-kurs') {
    get_template_part('/theme-parts/om-kurs');
 } else if ($pods_name == 'program') {
