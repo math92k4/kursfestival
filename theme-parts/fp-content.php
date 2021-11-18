@@ -3,7 +3,7 @@
         <?php
         $params = array(
             //order by date - asc
-            'orderby' => 'CAST( dato.meta_value AS DATE )',
+            'orderby' => 'post_date',
             //no max-limit (take all)
             'limit' => -1,
         );
@@ -33,7 +33,7 @@
                 ?>
                 
                 <li class="image">
-                    <a href= <?php echo $pods->field('link') ?> >
+                    <a href=" <?php echo $pods->field('link') ?> ">
                         <picture>
                             <source srcset=" <?php echo $imgUrl ?>" type="image/webp">
                             <img src=" <?php echo $fallbackUrl ?> " alt="">
