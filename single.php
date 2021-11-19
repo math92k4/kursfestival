@@ -1,4 +1,9 @@
-<?php $pods_name = pods_v( 0, 'url'); ?>
+<?php $pods_name = pods_v( 0, 'url');
+// "/kursfestival/" sub-directory fallback
+if ($pods_name == "kursfestival") {
+   $pods_name = pods_v( 1, 'url');
+}
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -14,6 +19,7 @@
 
 
 <body class=" <?php echo $pods_name ?> ">
+
 <?php
 
 // if, for alle pods
