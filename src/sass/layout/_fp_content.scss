@@ -1,9 +1,20 @@
 @import "../abstracts";
 
 .content ul {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(430px, 1fr));
   padding: 0 20px;
+  max-width: 1800px;
+  margin: 0 auto;
+
+  & li:nth-child(1) img {
+    border-radius: 20% 20% 0 0%;
+  }
+
+  & li:nth-child(3) img {
+    border-radius: 0% 0 0% 0;
+  }
+  & li:nth-child(5) img {
+    border-radius: 0 0 20% 20%;
+  }
 }
 
 .content li {
@@ -25,15 +36,14 @@
 }
 
 .green {
-  background-color: #bdcf9a;
-
   &::after,
-  &::before {
+  &::before,
+  & .graphic_fill::before,
+  & .graphic_fill::after {
     content: "";
     position: absolute;
     top: 50%;
     left: 50%;
-    border: 2px solid $black;
     border-radius: 100%;
     transform: translate(-50%, -50%);
     width: 80%;
@@ -41,13 +51,28 @@
     transition: transform 0.5s cubic-bezier(0.77, 0, 0.24, 1);
   }
 
+  &::after,
+  &::before {
+    border: 2px solid $purple;
+  }
+  &::before {
+    z-index: 0;
+  }
+  & .graphic_fill::after,
+  & .graphic_fill::before {
+    background-color: $bg_color;
+    z-index: -1;
+  }
+
   & a {
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 1;
   }
 
-  &:hover::after {
+  &:hover::after,
+  &:hover .graphic_fill::after {
     transform: translate(-55%, -55%);
   }
 
@@ -62,19 +87,62 @@
 }
 
 .orange {
-  background-color: #f9a94d;
-
   &::after,
-  &::before {
+  &::before,
+  & .graphic_fill::before,
+  & .graphic_fill::after {
     content: "";
     position: absolute;
     top: 50%;
     left: 50%;
-    border: 2px solid $black;
+
     transform: translate(-50%, -50%);
     width: 80%;
     height: 80%;
     transition: transform 0.5s cubic-bezier(0.77, 0, 0.24, 1);
+  }
+  &::before,
+  &::after {
+    border: 2px solid $purple;
+  }
+  & .graphic_fill::before,
+  & .graphic_fill::after {
+    background-color: $bg_color;
+    z-index: -1;
+  }
+
+  & a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &:hover::after,
+  &:hover .graphic_fill::after {
+    transform: translate(-55%, -55%);
+  }
+}
+
+.purple {
+  &::after,
+  &::before,
+  & .graphic_fill::before,
+  & .graphic_fill::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border: 2px solid $purple;
+    border-radius: 100%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    height: 80%;
+    transition: transform 0.5s cubic-bezier(0.77, 0, 0.24, 1);
+  }
+
+  &::before,
+  &::after {
+    fill: $bg_color;
   }
 
   & a {
@@ -88,30 +156,20 @@
   }
 }
 
-.purple {
-  background-color: #e6b8f8;
+@media only screen and (min-width: 900px) {
+  .content ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
 
-  &::after,
-  &::before {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    border: 2px solid $black;
-    border-radius: 100%;
-    transform: translate(-50%, -50%);
-    width: 80%;
-    height: 80%;
-    transition: transform 0.5s cubic-bezier(0.77, 0, 0.24, 1);
-  }
+    & li:nth-child(1) img {
+      border-radius: 0 20% 0 20%;
+    }
 
-  & a {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  &:hover::after {
-    transform: translate(-55%, -55%);
+    & li:nth-child(3) img {
+      border-radius: 20% 0 20% 0;
+    }
+    & li:nth-child(5) img {
+      border-radius: 0 0 20% 20%;
+    }
   }
 }

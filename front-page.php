@@ -41,7 +41,7 @@
     <main>
         <section id="splash">
             <div id="splash_logo">
-                <img src="./wp-content/themes/kursfestival/imgs/temp_splash_logo.png" alt="">
+                <img src="./wp-content/themes/kursfestival/imgs/logostroke.svg" alt="">
                 <h1>KURS <span>FESTIVAL</span></h1>
             </div>
             

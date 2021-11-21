@@ -48,7 +48,7 @@
   align-items: center;
 
   & img {
-    width: auto;
+    width: 40vw;
   }
 
   & h1 {
@@ -63,7 +63,7 @@
       top: 0;
       left: 0;
       z-index: 2;
-      -webkit-text-fill-color: transparent;
+      // -webkit-text-fill-color: transparent;
       -webkit-text-stroke-width: 3px;
       -webkit-text-stroke-color: $black;
     }
@@ -79,7 +79,7 @@
       top: 0;
       left: 0;
       z-index: 2;
-      -webkit-text-fill-color: transparent;
+      // -webkit-text-fill-color: transparent;
       -webkit-text-stroke-width: 3px;
       -webkit-text-stroke-color: $black;
     }

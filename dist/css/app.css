@@ -109,7 +109,7 @@ h4 {
 }
 
 #splash_logo img {
-  width: auto;
+  width: 40vw;
 }
 
 #splash_logo h1 {
@@ -126,7 +126,6 @@ h4 {
   top: 0;
   left: 0;
   z-index: 2;
-  -webkit-text-fill-color: transparent;
   -webkit-text-stroke-width: 3px;
   -webkit-text-stroke-color: #252525;
 }
@@ -143,7 +142,6 @@ h4 {
   top: 0;
   left: 0;
   z-index: 2;
-  -webkit-text-fill-color: transparent;
   -webkit-text-stroke-width: 3px;
   -webkit-text-stroke-color: #252525;
 }
@@ -348,9 +346,21 @@ header li span {
 }
 
 .content ul {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(430px, 1fr));
   padding: 0 20px;
+  max-width: 1800px;
+  margin: 0 auto;
+}
+
+.content ul li:nth-child(1) img {
+  border-radius: 20% 20% 0 0%;
+}
+
+.content ul li:nth-child(3) img {
+  border-radius: 0% 0 0% 0;
+}
+
+.content ul li:nth-child(5) img {
+  border-radius: 0 0 20% 20%;
 }
 
 .content li {
@@ -371,16 +381,11 @@ header li span {
   font-weight: 300;
 }
 
-.green {
-  background-color: #bdcf9a;
-}
-
-.green::after, .green::before {
+.green::after, .green::before, .green .graphic_fill::before, .green .graphic_fill::after {
   content: "";
   position: absolute;
   top: 50%;
   left: 50%;
-  border: 2px solid #252525;
   border-radius: 100%;
   transform: translate(-50%, -50%);
   width: 80%;
@@ -388,13 +393,27 @@ header li span {
   transition: transform 0.5s cubic-bezier(0.77, 0, 0.24, 1);
 }
 
+.green::after, .green::before {
+  border: 2px solid #e6b8f8;
+}
+
+.green::before {
+  z-index: 0;
+}
+
+.green .graphic_fill::after, .green .graphic_fill::before {
+  background-color: #f3ece9;
+  z-index: -1;
+}
+
 .green a {
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 1;
 }
 
-.green:hover::after {
+.green:hover::after, .green:hover .graphic_fill::after {
   transform: translate(-55%, -55%);
 }
 
@@ -407,20 +426,24 @@ header li span {
   transform: rotateX(10deg) rotateY(-20deg);
 }
 
-.orange {
-  background-color: #f9a94d;
-}
-
-.orange::after, .orange::before {
+.orange::after, .orange::before, .orange .graphic_fill::before, .orange .graphic_fill::after {
   content: "";
   position: absolute;
   top: 50%;
   left: 50%;
-  border: 2px solid #252525;
   transform: translate(-50%, -50%);
   width: 80%;
   height: 80%;
   transition: transform 0.5s cubic-bezier(0.77, 0, 0.24, 1);
+}
+
+.orange::before, .orange::after {
+  border: 2px solid #e6b8f8;
+}
+
+.orange .graphic_fill::before, .orange .graphic_fill::after {
+  background-color: #f3ece9;
+  z-index: -1;
 }
 
 .orange a {
@@ -429,25 +452,25 @@ header li span {
   align-items: center;
 }
 
-.orange:hover::after {
+.orange:hover::after, .orange:hover .graphic_fill::after {
   transform: translate(-55%, -55%);
 }
 
-.purple {
-  background-color: #e6b8f8;
-}
-
-.purple::after, .purple::before {
+.purple::after, .purple::before, .purple .graphic_fill::before, .purple .graphic_fill::after {
   content: "";
   position: absolute;
   top: 50%;
   left: 50%;
-  border: 2px solid #252525;
+  border: 2px solid #e6b8f8;
   border-radius: 100%;
   transform: translate(-50%, -50%);
   width: 80%;
   height: 80%;
   transition: transform 0.5s cubic-bezier(0.77, 0, 0.24, 1);
+}
+
+.purple::before, .purple::after {
+  fill: #f3ece9;
 }
 
 .purple a {
@@ -460,9 +483,29 @@ header li span {
   transform: translate(-55%, -55%);
 }
 
+@media only screen and (min-width: 900px) {
+  .content ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .content ul li:nth-child(1) img {
+    border-radius: 0 20% 0 20%;
+  }
+
+  .content ul li:nth-child(3) img {
+    border-radius: 20% 0 20% 0;
+  }
+
+  .content ul li:nth-child(5) img {
+    border-radius: 0 0 20% 20%;
+  }
+}
 .page section {
   max-width: 1200px;
   margin: 0 auto;
+  padding-left: 60px;
+  padding-right: 60px;
 }
 
 .page h1 {
@@ -472,6 +515,32 @@ header li span {
 .page p {
   margin-top: 1rem;
   font-size: 1.5rem;
+}
+
+.gitter_list li {
+  position: relative;
+}
+
+.gitter {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  z-index: -1;
+}
+
+.gitter .row {
+  display: flex;
+  height: 100%;
+}
+
+.gitter span {
+  width: 100%;
+  height: 100%;
+  border: 1px solid #e6b8f8;
 }
 
 button {
@@ -535,7 +604,7 @@ tr {
 
 td,
 th {
-  width: 100%;
+  flex: 1;
   padding: 25px 10px;
   font-size: 1.2rem;
   border: 2px solid var(--bd-clr);
@@ -559,11 +628,12 @@ tr:last-child td {
 }
 
 .time {
-  width: 50%;
+  flex: 0.5;
 }
 
 .speciel .time {
-  width: 13.3%;
+  flex: 0.5;
+  border-right: 0;
 }
 
 .speciel td:not(.time) {
@@ -572,6 +642,7 @@ tr:last-child td {
 
 .speciel td {
   padding: 10px 10px;
+  flex: 4;
 }
 
 tr:first-child th:last-child {

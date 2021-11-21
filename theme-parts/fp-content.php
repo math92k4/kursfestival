@@ -1,5 +1,5 @@
 <section class="content">
-    <ul>
+    <ul class="gitter_list">
         <?php
         $params = array(
             //order by date - asc
@@ -14,6 +14,48 @@
             if ($pods->field('grafik')) { ?>
 
             <li class="graphic <?php echo $pods->field('farve') ?>">
+                <div class="gitter">
+                    <div class="row top">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    </div>
+
+                    <div class="row">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    </div>
+
+                    <div class="row">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    </div>
+
+                    <div class="row">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    </div>
+
+                    <div class="row bottom">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    </div>
+                </div>
+                <div class="graphic_fill"></div>
                 <a href=" <?php echo $pods->field('link') ?> ">
                     <p><?php echo $pods->field('tekst') ?></p>
                 </a>
@@ -33,6 +75,47 @@
                 ?>
                 
                 <li class="image">
+                <div class="gitter">
+                    <div class="row top">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    </div>
+
+                    <div class="row">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    </div>
+
+                    <div class="row">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    </div>
+
+                    <div class="row">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    </div>
+
+                    <div class="row bottom">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    </div>
+                </div>
                     <a href=" <?php echo $pods->field('link') ?> ">
                         <picture>
                             <source srcset=" <?php echo $imgUrl ?>" type="image/webp">

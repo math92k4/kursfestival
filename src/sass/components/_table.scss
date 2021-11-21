@@ -50,7 +50,7 @@ tr {
 
 td,
 th {
-  width: 100%;
+  flex: 1;
   padding: 25px 10px;
   font-size: 1.2rem;
   border: 2px solid var(--bd-clr);
@@ -72,16 +72,19 @@ tr:last-child td {
 }
 
 .time {
-  width: 50%;
+  flex: 0.5;
 }
 .speciel .time {
-  width: 13.3%;
+  flex: 0.5;
+  border-right: 0;
 }
 .speciel td:not(.time) {
   text-align: center;
 }
 .speciel td {
   padding: 10px 10px;
+  flex: 4;
+  //   background-color: var(--bd-clr);
 }
 
 tr:first-child th:last-child {
