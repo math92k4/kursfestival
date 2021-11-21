@@ -33,15 +33,30 @@ body {
   background-color: #f3ece9;
 }
 
+@font-face {
+  font-family: "gallery_modernregular";
+  src: url("/wp-content/themes/kursfestival/fonts/gallerymodern-webfont.woff2") format("woff2"), url("/wp-content/themes/kursfestival/fonts/gallerymodern-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+p,
+p span,
+button,
+li,
+td {
+  font-family: sans-serif;
+  color: #252525;
+  font-weight: 300;
+}
+
+th,
+caption,
+.caption,
 h1,
 h2,
 h3,
-h4,
-p,
-span,
-button,
-li {
-  font-family: sans-serif;
+h4 {
+  font-family: "gallery_modernregular", sans-serif;
   color: #252525;
 }
 
@@ -327,6 +342,11 @@ header li span {
   font-weight: 300;
 }
 
+.page section:nth-of-type(1),
+.single section:nth-of-type(1) {
+  padding-top: 100px;
+}
+
 .content ul {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(430px, 1fr));
@@ -440,6 +460,20 @@ header li span {
   transform: translate(-55%, -55%);
 }
 
+.page section {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.page h1 {
+  font-size: 4rem;
+}
+
+.page p {
+  margin-top: 1rem;
+  font-size: 1.5rem;
+}
+
 button {
   -webkit-appearance: none;
      -moz-appearance: none;
@@ -449,6 +483,103 @@ button {
   cursor: pointer;
   font-size: 1.8rem;
   font-weight: 300;
+}
+
+.table_cont {
+  display: flex;
+  margin: 0 auto;
+  margin-top: 50px;
+  position: relative;
+}
+
+.caption {
+  text-align: right;
+  font-size: 1.5rem;
+  font-weight: 300;
+  position: absolute;
+  right: 100%;
+  top: 0;
+  margin-right: 20px;
+  transform: rotate(-90deg) translateY(-100%);
+  transform-origin: right top;
+}
+
+table {
+  width: 100%;
+  border-spacing: 0px;
+}
+
+table.installations {
+  --bd-clr: #eeab5e;
+}
+
+table.friday {
+  --bd-clr: #dfbbf4;
+}
+
+table.saturday {
+  --bd-clr: #c1cd9f;
+}
+
+table.sunday {
+  --bd-clr: #eeab5e;
+}
+
+thead tr {
+  text-align: left;
+}
+
+tr {
+  display: flex;
+}
+
+td,
+th {
+  width: 100%;
+  padding: 25px 10px;
+  font-size: 1.2rem;
+  border: 2px solid var(--bd-clr);
+  border-bottom: 0;
+  font-weight: 300;
+}
+
+th {
+  font-weight: 500;
+  font-size: 1.5rem;
+  background-color: var(--bd-clr);
+}
+
+td:not(:first-child),
+th:not(:first-child) {
+  border-left: 0px;
+}
+
+tr:last-child td {
+  border-bottom: 2px solid var(--bd-clr);
+}
+
+.time {
+  width: 50%;
+}
+
+.speciel .time {
+  width: 13.3%;
+}
+
+.speciel td:not(.time) {
+  text-align: center;
+}
+
+.speciel td {
+  padding: 10px 10px;
+}
+
+tr:first-child th:last-child {
+  border-radius: 0 50px 0 0;
+}
+
+tr:last-child td:first-child {
+  border-radius: 0 0 0 50px;
 }
 
 #content {

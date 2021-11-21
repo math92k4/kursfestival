@@ -1,13 +1,30 @@
 @import "../abstracts/";
 
+@font-face {
+  font-family: "gallery_modernregular";
+  src: url("/wp-content/themes/kursfestival/fonts/gallerymodern-webfont.woff2") format("woff2"),
+    url("/wp-content/themes/kursfestival/fonts/gallerymodern-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+p,
+p span,
+button,
+li,
+td {
+  font-family: sans-serif;
+  color: $black;
+  font-weight: 300;
+}
+
+th,
+caption,
+.caption,
 h1,
 h2,
 h3,
-h4,
-p,
-span,
-button,
-li {
-  font-family: sans-serif;
+h4 {
+  font-family: "gallery_modernregular", sans-serif;
   color: $black;
 }
