@@ -1,0 +1,39 @@
+.om-kurs {
+  & main {
+    display: flex;
+    flex-direction: row-reverse;
+    max-width: 1500px;
+    margin: 0 auto;
+  }
+  & section {
+    padding: 20px;
+  }
+  & .om_container {
+    width: 100%;
+  }
+  & img {
+    border-radius: 0 100px 0 100px;
+  }
+
+  & article {
+    display: flex;
+    flex-direction: column;
+  }
+  & article div {
+    margin-top: 20px;
+  }
+  & article div:nth-child(2n) {
+    align-self: flex-end;
+  }
+
+  & h2 {
+    font-size: 3rem;
+  }
+
+  & p {
+    font-size: 1.4rem;
+    max-width: 50ch;
+    text-align: justify;
+    line-height: 1.2;
+  }
+}

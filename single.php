@@ -20,7 +20,6 @@ if ($pods_name == "kursfestival") {
 <?php get_template_part("/theme-parts/header") ?>
 
 <?php
- echo $pods_name;
 // if, for alle pods
 if ($pods_name == 'om-kurs') {
    get_template_part('/theme-parts/om-kurs');

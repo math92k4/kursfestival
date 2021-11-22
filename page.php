@@ -17,6 +17,7 @@ if ($page_name == 'kursfestival') {
 </head>
 <body class="page">
 <?php get_template_part("/theme-parts/header") ?>
+<div class="header_margin"></div>
     <section>
         <h1><?php echo get_the_title(); ?></h1>
         <div>
