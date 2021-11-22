@@ -15,8 +15,8 @@
         <thead>
             <tr>
                 <th>Skaber</th>
-                <th>Sted</th>
                 <th>Type</th>
+                <th>Sted</th>
             </tr>
         </thead>
 

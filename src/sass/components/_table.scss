@@ -1,22 +1,14 @@
 @import "../abstracts";
 
 .table_cont {
-  display: flex;
   margin: 0 auto;
   margin-top: 50px;
   position: relative;
 }
 
 .caption {
-  text-align: right;
-  font-size: 1.5rem;
+  font-size: 2.5rem;
   font-weight: 300;
-  position: absolute;
-  right: 100%;
-  top: 0;
-  margin-right: 20px;
-  transform: rotate(-90deg) translateY(-100%);
-  transform-origin: right top;
 }
 
 table {
@@ -93,4 +85,44 @@ tr:first-child th:last-child {
 
 tr:last-child td:first-child {
   border-radius: 0 0 0 50px;
+}
+
+@media only screen and (min-width: 1100px) {
+  .table_cont {
+    display: flex;
+  }
+
+  .caption {
+    font-size: 1.5rem;
+    text-align: right;
+    font-size: 1.5rem;
+    font-weight: 300;
+    position: absolute;
+    right: 100%;
+    top: 0;
+    margin-right: 20px;
+    transform: rotate(-90deg) translateY(-100%);
+    transform-origin: right top;
+  }
+}
+
+@media only screen and (max-width: 1100px) {
+  table:not(.installations) tr:not(.speciel) {
+    & td:nth-child(5),
+    & th:nth-child(5) {
+      display: none;
+    }
+    & th:nth-child(4) {
+      border-radius: 0 50px 0 0;
+    }
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  table:not(.installations) tr:not(.speciel) {
+    & td:nth-child(3),
+    & th:nth-child(3) {
+      display: none;
+    }
+  }
 }
