@@ -12,17 +12,16 @@
                 </li>
                 <li id="menu_btn" >M≡NU</li>
             </ul>
-
-            <?php 
-            wp_nav_menu(
-            array(
-                'theme_location' => 'top-menu'
+            <div class="header_clr"></div>
+            <div class="menu_list">
+                
+                <?php 
+                wp_nav_menu(
+                array(
+                    'theme_location' => 'top-menu'
+                    )
                 )
-            )
-            ?>
+                ?>
+            </div>
         </nav>
-
-
-
-
     </header>
