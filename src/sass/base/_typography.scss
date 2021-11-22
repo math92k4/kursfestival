@@ -23,7 +23,15 @@ caption,
 h1,
 h2,
 h3,
-h4 {
+h4,
+summary {
   font-family: "gallery_modernregular", sans-serif;
   color: $black;
+}
+
+p {
+  font-size: 1.5rem;
+}
+summary {
+  font-size: 1.8rem;
 }

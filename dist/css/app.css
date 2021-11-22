@@ -33,6 +33,14 @@ body {
   background-color: #f3ece9;
 }
 
+::marker {
+  display: none;
+}
+
+summary {
+  list-style: none;
+}
+
 @font-face {
   font-family: "gallery_modernregular";
   src: url("../../fonts/gallerymodern-webfont.woff2") format("woff2"), url("../..//fonts/gallerymodern-webfont.woff") format("woff");
@@ -55,9 +63,18 @@ caption,
 h1,
 h2,
 h3,
-h4 {
+h4,
+summary {
   font-family: "gallery_modernregular", sans-serif;
   color: #252525;
+}
+
+p {
+  font-size: 1.5rem;
+}
+
+summary {
+  font-size: 1.8rem;
 }
 
 #splash {
@@ -580,6 +597,8 @@ header li span {
 .page p {
   margin-top: 1rem;
   font-size: 1.5rem;
+  max-width: 45ch;
+  line-height: 1.2;
 }
 
 .gitter_list li {
@@ -803,6 +822,78 @@ tr:first-child th:last-child {
 
 tr:last-child td:first-child {
   border-radius: 0 0 0 50px;
+}
+
+form {
+  width: 50vw;
+}
+
+form legend {
+  color: #e6b8f8;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+form label {
+  color: #e6b8f8;
+  margin-top: 20px;
+  margin-left: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+form input {
+  padding: 5px;
+  border: none;
+  margin: 0px 20px 0px 20px;
+}
+
+form input[type=submit] {
+  border: solid 1px #252525;
+}
+
+form fieldset {
+  border: 1px solid #e6b8f8;
+  margin-top: 20px;
+  margin-top: 20px;
+}
+
+form .form_ctrl {
+  display: grid;
+}
+
+.faq_container {
+  margin-top: 40px !important;
+}
+
+details {
+  margin-top: 20px;
+}
+
+details summary {
+  padding: 20px;
+  border: 2px solid #f9a94d;
+  position: relative;
+}
+
+details summary::after {
+  content: "";
+  width: 50px;
+  height: 50px;
+  background-image: url("../../imgs/arrow.png");
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+details p {
+  background-color: #f9a94d;
+  padding: 20px;
+  margin-top: 0 !important;
+  max-width: none !important;
+}
+
+details[open] summary::after {
+  transform: translateY(-50%) rotate(90deg);
 }
 
 #content {
