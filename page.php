@@ -28,6 +28,8 @@ if ($page_name == 'kursfestival') {
     <?php 
     if ($page_name == 'program') {
         get_template_part('/theme-parts/program');
+    } if ($page_name == 'frivillig') {
+        get_template_part('/theme-parts/frivillig');
     }
     ?>
 
