@@ -72,3 +72,11 @@ header {
     text-transform: uppercase;
   }
 }
+
+.menu-logo-container a {
+  display: block;
+  width: 40px;
+  height: 40px;
+  background-image: url("../../imgs/temp_splash_logo.png");
+  background-size: cover;
+}

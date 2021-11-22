@@ -2,8 +2,7 @@
 
 @font-face {
   font-family: "gallery_modernregular";
-  src: url("/wp-content/themes/kursfestival/fonts/gallerymodern-webfont.woff2") format("woff2"),
-    url("/wp-content/themes/kursfestival/fonts/gallerymodern-webfont.woff") format("woff");
+  src: url("../../fonts/gallerymodern-webfont.woff2") format("woff2"), url("../..//fonts/gallerymodern-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }

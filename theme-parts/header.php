@@ -1,7 +1,15 @@
 <header>
         <nav>
             <ul>
-                <li><a href="front-page.php"><img id="logo" src="/wp-content/themes/kursfestival/imgs/temp_splash_logo.png" alt=""></a></li>
+                <li>
+                    <?php 
+                    wp_nav_menu(
+                    array(
+                        'theme_location' => 'logo'
+                        )
+                    )
+                    ?>
+                </li>
                 <li id="menu_btn" >M≡NU</li>
             </ul>
 
