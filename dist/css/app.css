@@ -468,6 +468,7 @@ header li span {
   display: flex;
   justify-content: center;
   align-items: center;
+  transform: translate3d(0, 0, 0);
 }
 
 .green:hover::after, .green:hover .graphic_fill::after {
