@@ -13,6 +13,7 @@ function init() {
   toggleMenu();
   const fpCircles = document.querySelectorAll("#splash .circles span");
   fpCircles.forEach((circle) => {
+    console.log(circle);
     rotateOnScroll(circle);
   });
 }

@@ -28,6 +28,7 @@ function init() {
   (0,_js_modules_burgermenu_js__WEBPACK_IMPORTED_MODULE_4__.toggleMenu)();
   var fpCircles = document.querySelectorAll("#splash .circles span");
   fpCircles.forEach(function (circle) {
+    console.log(circle);
     (0,_js_modules_rotateOnScroll_js__WEBPACK_IMPORTED_MODULE_2__.rotateOnScroll)(circle);
   });
 }
@@ -68,7 +69,7 @@ function dateDisappear() {
   var date = document.querySelector(".date");
   window.addEventListener("scroll", function () {
     var y = window.scrollY;
-    date.style.setProperty("--y", -0.2 * y + "px");
+    date.style.setProperty("--y", 0.6 * y + "px");
 
     if (y >= 50) {
       date.classList.add("disappear");

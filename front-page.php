@@ -9,37 +9,10 @@
     <title>Kurs Festival</title>
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="front-page.php"><img id="logo" src="./wp-content/themes/kursfestival/imgs/temp_splash_logo.png" alt=""></a></li>
-                <li class="date">20-23 AUGUST 2022 <span>UNGDOMSØEN</span></li>
-                <li id="menu_btn" >M≡NU</li>
-            </ul>
-            <!-- <ul id="menu">
-                <li>
-                    <a href="">PAGE1</a>
-                </li>
-                <li>
-                    <a href="">PAGE2</a>
-                </li>
-                <li>
-                    <a href="">PAGE3</a>
-                </li>
-                <li>
-                    <a href="">PAGE4</a>
-                </li>
-                <li>
-                    <a href="">PAGE5</a>
-                </li>
-                <li>
-                    <a href="">PAGE6</a>
-                </li>
-            </ul> -->
-        </nav>
-    </header>
+<?php get_template_part("/theme-parts/header") ?>
     <main>
         <section id="splash">
+            <p class="date">20-23 AUGUST 2022 <span>UNGDOMSØEN</span></p>
             <div id="splash_logo">
                 <img src="./wp-content/themes/kursfestival/imgs/logostroke.svg" alt="">
                 <h1>KURS <span>FESTIVAL</span></h1>

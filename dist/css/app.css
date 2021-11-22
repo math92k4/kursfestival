@@ -67,6 +67,25 @@ h4 {
   overflow: hidden;
 }
 
+#splash .date {
+  margin-top: 20px;
+  position: absolute;
+  width: 100%;
+  font-size: 1.36rem;
+  text-align: center;
+  transition: opacity 0.7s;
+  transform: translateY(var(--y));
+}
+
+#splash .date.disappear {
+  opacity: 0;
+}
+
+#splash .date span {
+  display: block;
+  font-size: 1.8rem;
+}
+
 #splash #ticket_cont {
   position: absolute;
   bottom: 20px;
