@@ -113,11 +113,12 @@ h4 {
 }
 
 #splash_logo h1 {
-  font-size: 13rem;
-  line-height: 8rem;
+  font-size: 17rem;
+  line-height: 10rem;
   position: relative;
   color: #252525;
   pointer-events: none;
+  font-weight: 300;
 }
 
 #splash_logo h1::after {
@@ -126,12 +127,13 @@ h4 {
   top: 0;
   left: 0;
   z-index: 2;
-  -webkit-text-stroke-width: 3px;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: 2px;
   -webkit-text-stroke-color: #252525;
 }
 
 #splash_logo span {
-  font-size: 7.7rem;
+  font-size: 9.5rem;
   display: block;
   position: relative;
 }
@@ -142,7 +144,8 @@ h4 {
   top: 0;
   left: 0;
   z-index: 2;
-  -webkit-text-stroke-width: 3px;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: 2px;
   -webkit-text-stroke-color: #252525;
 }
 
@@ -345,10 +348,45 @@ header li span {
   padding-top: 100px;
 }
 
+.menu-top-menu-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #f3ece9;
+  transform: translateX(100%);
+  transition: transform 0.5s;
+  z-index: -1;
+}
+
+.menu-top-menu-container.open {
+  transform: translateX(0);
+}
+
+.menu-top-menu-container ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  height: 100%;
+  flex-direction: column;
+  padding: 10vw;
+}
+
+.menu-top-menu-container li {
+  font-weight: 300;
+  font-size: 3rem;
+  text-transform: uppercase;
+}
+
 .content ul {
   padding: 0 20px;
   max-width: 1800px;
   margin: 0 auto;
+}
+
+.content ul a {
+  cursor: pointer;
 }
 
 .content ul li:nth-child(1) img {
@@ -391,6 +429,7 @@ header li span {
   width: 80%;
   height: 80%;
   transition: transform 0.5s cubic-bezier(0.77, 0, 0.24, 1);
+  pointer-events: none;
 }
 
 .green::after, .green::before {
@@ -410,7 +449,6 @@ header li span {
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 1;
 }
 
 .green:hover::after, .green:hover .graphic_fill::after {
@@ -435,6 +473,7 @@ header li span {
   width: 80%;
   height: 80%;
   transition: transform 0.5s cubic-bezier(0.77, 0, 0.24, 1);
+  pointer-events: none;
 }
 
 .orange::before, .orange::after {
@@ -467,6 +506,7 @@ header li span {
   width: 80%;
   height: 80%;
   transition: transform 0.5s cubic-bezier(0.77, 0, 0.24, 1);
+  pointer-events: none;
 }
 
 .purple::before, .purple::after {

@@ -13,21 +13,42 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _js_modules_selection_randomizer_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./js_modules/selection_randomizer.js */ "./src/js_modules/selection_randomizer.js");
 /* harmony import */ var _js_modules_rotateOnScroll_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./js_modules/rotateOnScroll.js */ "./src/js_modules/rotateOnScroll.js");
 /* harmony import */ var _js_modules_datedisappear_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./js_modules/datedisappear.js */ "./src/js_modules/datedisappear.js");
+/* harmony import */ var _js_modules_burgermenu_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./js_modules/burgermenu.js */ "./src/js_modules/burgermenu.js");
 
 
 
- // import { toggleMenu } from "./js_modules/burgermenu.js";
+
 
 window.addEventListener("DOMContentLoaded", init);
 
 function init() {
   (0,_js_modules_moveonmouse_js__WEBPACK_IMPORTED_MODULE_0__.moveElm)();
   (0,_js_modules_selection_randomizer_js__WEBPACK_IMPORTED_MODULE_1__.randomizeSelection)();
-  (0,_js_modules_datedisappear_js__WEBPACK_IMPORTED_MODULE_3__.dateDisappear)(); // toggleMenu();
-
+  (0,_js_modules_datedisappear_js__WEBPACK_IMPORTED_MODULE_3__.dateDisappear)();
+  (0,_js_modules_burgermenu_js__WEBPACK_IMPORTED_MODULE_4__.toggleMenu)();
   var fpCircles = document.querySelectorAll("#splash .circles span");
   fpCircles.forEach(function (circle) {
     (0,_js_modules_rotateOnScroll_js__WEBPACK_IMPORTED_MODULE_2__.rotateOnScroll)(circle);
+  });
+}
+
+/***/ }),
+
+/***/ "./src/js_modules/burgermenu.js":
+/*!**************************************!*\
+  !*** ./src/js_modules/burgermenu.js ***!
+  \**************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "toggleMenu": () => (/* binding */ toggleMenu)
+/* harmony export */ });
+function toggleMenu() {
+  var menuBtn = document.querySelector("#menu_btn");
+  menuBtn.addEventListener("click", function (e) {
+    e.target.classList.toggle("open");
+    document.querySelector(".menu-top-menu-container").classList.toggle("open");
   });
 }
 

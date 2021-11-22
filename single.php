@@ -35,5 +35,6 @@ if ($pods_name == 'om-kurs') {
 } 
 ?>
 
+<script type="module" src="/wp-content/themes/kursfestival/dist/js/page.js"></script>
 </body>
 </html>

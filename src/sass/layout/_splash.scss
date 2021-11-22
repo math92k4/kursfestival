@@ -52,24 +52,25 @@
   }
 
   & h1 {
-    font-size: 13rem;
-    line-height: 8rem;
+    font-size: 17rem;
+    line-height: 10rem;
     position: relative;
     color: $black;
     pointer-events: none;
+    font-weight: 300;
     &::after {
       content: "KURS";
       position: absolute;
       top: 0;
       left: 0;
       z-index: 2;
-      // -webkit-text-fill-color: transparent;
-      -webkit-text-stroke-width: 3px;
+      -webkit-text-fill-color: transparent;
+      -webkit-text-stroke-width: 2px;
       -webkit-text-stroke-color: $black;
     }
   }
   & span {
-    font-size: 7.7rem;
+    font-size: 9.5rem;
     display: block;
     position: relative;
 
@@ -79,8 +80,8 @@
       top: 0;
       left: 0;
       z-index: 2;
-      // -webkit-text-fill-color: transparent;
-      -webkit-text-stroke-width: 3px;
+      -webkit-text-fill-color: transparent;
+      -webkit-text-stroke-width: 2px;
       -webkit-text-stroke-color: $black;
     }
   }
