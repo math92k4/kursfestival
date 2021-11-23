@@ -78,18 +78,20 @@ summary {
 }
 
 legend {
+  font-weight: 300;
   font-size: 1.8rem;
   margin-bottom: 20px;
   color: #252525;
-  font-family: "gallery_modernregular", sans-serif;
+  font-family: sans-serif;
 }
 
 label {
   font-size: 1.8rem;
+  font-weight: 300;
   color: #252525;
   margin-top: 20px;
   margin-left: 20px;
-  font-family: "gallery_modernregular", sans-serif;
+  font-family: sans-serif;
 }
 
 .radio_label {
@@ -832,6 +834,95 @@ header li {
 
   .om-kurs .side_menu li {
     text-align: right;
+  }
+}
+.skaber_container {
+  margin-top: 40px !important;
+}
+
+.skaber_container article {
+  margin-top: 40px;
+  position: relative;
+}
+
+.skaber_container h2 {
+  padding: 20px 10px;
+  text-transform: uppercase;
+  font-size: 2.5rem;
+  background-color: #f3ece9;
+  border-radius: 0 100px 0 0;
+}
+
+.skaber_container ul {
+  border-radius: 0 0 0 100px;
+  overflow: hidden;
+}
+
+.skaber_container li {
+  position: relative;
+}
+
+.skaber_container p {
+  position: absolute;
+  right: 5%;
+  bottom: 5%;
+  padding: 10px 25px;
+  border-radius: 0 50px 0 50px;
+  text-transform: uppercase;
+}
+
+.skaber_container .kunst ul {
+  border: 2px solid #e6b8f8;
+  border-top: 0;
+}
+
+.skaber_container .kunst h2 {
+  border: 2px solid #e6b8f8;
+  background-color: #e6b8f8;
+}
+
+.skaber_container .kunst p {
+  background-color: #e6b8f8;
+}
+
+.skaber_container .musik ul {
+  border: 2px solid #bdcf9a;
+  border-top: 0;
+}
+
+.skaber_container .musik h2 {
+  border: 2px solid #bdcf9a;
+  background-color: #bdcf9a;
+}
+
+.skaber_container .musik p {
+  background-color: #bdcf9a;
+}
+
+.skaber_container .talks ul {
+  border: 2px solid #f9a94d;
+  border-top: 0;
+}
+
+.skaber_container .talks h2 {
+  border: 2px solid #f9a94d;
+  background-color: #f9a94d;
+}
+
+.skaber_container .talks p {
+  background-color: #f9a94d;
+}
+
+@media only screen and (min-width: 700px) {
+  .skaber_container ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media only screen and (min-width: 900px) {
+  .skaber_container ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
   }
 }
 button {
