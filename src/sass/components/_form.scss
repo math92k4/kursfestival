@@ -1,15 +1,30 @@
 @import "../abstracts";
 
+#form_wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
 form {
   width: 50vw;
+  display: flex;
+  flex-direction: row;
+  background-color: lightblue;
+  padding: 20px;
+
+  & .form_ctrl {
+    display: grid;
+  }
 
   & legend {
-    color: $purple;
+    margin-bottom: 20px;
+    color: $black;
     font-family: Arial, Helvetica, sans-serif;
   }
 
   & label {
-    color: $purple;
+    color: $black;
     margin-top: 20px;
     margin-left: 20px;
     font-family: Arial, Helvetica, sans-serif;
@@ -21,16 +36,26 @@ form {
     margin: 0px 20px 0px 20px;
   }
 
+  & input[type="text"],
+  input[type="email"] {
+    background-color: transparent;
+    border-bottom: solid $purple 1px;
+  }
+
   & input[type="submit"] {
-    border: solid 1px $black;
+    background-color: $purple;
+    color: $bg_color;
+    margin-top: 20px;
+    width: 150px;
+    border-radius: 0px 20px 0px 20px;
+    font-size: 2rem;
+    cursor: pointer;
   }
 
   & fieldset {
-    border: 1px solid $purple;
+    width: 50vw;
+    border: none;
     margin-top: 20px;
     margin-top: 20px;
-  }
-  & .form_ctrl {
-    display: grid;
   }
 }
