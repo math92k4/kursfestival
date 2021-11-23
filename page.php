@@ -1,3 +1,4 @@
+<!-- Get page name width fallback for subfolder wp-setup -->
 <?php 
 $page_name = pods_v(0, 'url');
 
@@ -15,8 +16,11 @@ if ($page_name == 'kursfestival') {
     <link rel="icon" href="../../wp-content/themes/kursfestival/imgs/ellipse_55.png" type="image/x-icon"/>
     <title><?php echo get_the_title(); ?></title>
 </head>
-<body class="page">
+<body class="page <?php echo $page_name; ?>">
+
+<!-- Load header -->
 <?php get_template_part("/theme-parts/header") ?>
+
 <div class="header_margin"></div>
     <section>
         <h1><?php echo get_the_title(); ?></h1>
@@ -25,6 +29,7 @@ if ($page_name == 'kursfestival') {
         </div>
     </section>
 
+    <!-- Get pods content, sorted by page title -->
     <?php 
     if ($page_name == 'program') {
         get_template_part('/theme-parts/program');
@@ -39,6 +44,6 @@ if ($page_name == 'kursfestival') {
     }
     ?>
 
-    <script type="module" src="/wp-content/themes/kursfestival/dist/js/page.js"></script>
+    <script type="module" src="../../wp-content/themes/kursfestival/dist/js/page.js"></script>
 </body>
 </html>

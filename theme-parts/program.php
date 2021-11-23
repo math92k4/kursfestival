@@ -1,4 +1,4 @@
-<section>
+<section class="program_container">
     <?php 
     $params = array(
         //order by pods field "tidspunnkt" - asc
