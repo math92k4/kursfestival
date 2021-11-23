@@ -6,11 +6,11 @@
 <div id="form_wrapper">
 <fieldset id="frivillig_info">
 <div class="form_ctrl">
-<label for="frivillig_navn">Fulde navn</label>
+<label for="frivillig_navn">Navn</label>
 <input type="text" name="frivillig_navn" minlength="2" placeholder="Frivillig Frivilligsen" id="frivillig_navn">
 </div>
 <div class="form_ctrl">
-<label for="frivillig_email">E-mail</label>
+<label for="frivillig_email">Mail</label>
 <input type="email" name="frivillig_email" minlength="2" placeholder="frivillig@frivillig.dk" id="frivillig_email">
 </div>
 <div class="form_ctrl">
@@ -32,8 +32,7 @@
   <label for="omraade_program" class="radio_label">Program</label><br>
 <input type="radio" id="omraade_sikkerhed" name="omraade" value="sikkerged">
   <label for="omraade_sikkerhed" class="radio_label">Sikkerhed</label><br>
-<label for="file">Motiveret ansøgning</label>
-
+<label for="file" id="fil_label">Motiveret ansøgning</label>
 <input type="file" name="frivillig_fil" id="frivillig_fil"> 
 
 </fieldset>

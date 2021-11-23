@@ -93,9 +93,31 @@ label {
 }
 
 .radio_label {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-weight: 300;
   font-family: sans-serif;
+}
+
+#fil_label {
+  margin-top: 40px;
+}
+
+::-moz-placeholder {
+  opacity: 0.5;
+  font-size: 1.2rem;
+  font-weight: 300;
+}
+
+:-ms-input-placeholder {
+  opacity: 0.5;
+  font-size: 1.2rem;
+  font-weight: 300;
+}
+
+::placeholder {
+  opacity: 0.5;
+  font-size: 1.2rem;
+  font-weight: 300;
 }
 
 #splash {
@@ -973,7 +995,7 @@ form .form_ctrl {
 form input {
   padding: 5px;
   border: none;
-  margin: 0px 20px 0px 20px;
+  margin: 10px 20px 10px 20px;
 }
 
 form input[type=text],
@@ -982,14 +1004,20 @@ form input[type=email] {
   border-bottom: solid #e6b8f8 1px;
 }
 
+form textarea:focus,
+form input:focus {
+  outline: none;
+}
+
 form input[type=submit] {
   background-color: #e6b8f8;
   color: #f3ece9;
-  margin-top: 20px;
-  width: 150px;
-  border-radius: 0px 20px 0px 20px;
+  margin-top: 40px;
+  border-radius: 0px 40px 0px 40px;
   font-size: 2rem;
   cursor: pointer;
+  padding: 20px 150px;
+  position: relative;
 }
 
 form fieldset {

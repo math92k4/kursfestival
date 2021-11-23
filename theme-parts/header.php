@@ -10,7 +10,7 @@
                     )
                     ?>
                 </li>
-                <li id="menu_btn" >M≡NU</li>
+                <li id="menu_btn" >MENU</li>
             </ul>
             <div class="header_clr"></div>
             <div class="menu_list">
@@ -25,3 +25,5 @@
             </div>
         </nav>
     </header>
+
+    
