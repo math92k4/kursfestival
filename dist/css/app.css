@@ -43,7 +43,8 @@ summary {
 
 @font-face {
   font-family: "gallery_modernregular";
-  src: url("../../fonts/gallerymodern-webfont.woff2") format("woff2"), url("../..//fonts/gallerymodern-webfont.woff") format("woff");
+  src: url("../../fonts/gallerymodern-webfont.woff2") format("woff2"),
+    url("../..//fonts/gallerymodern-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
@@ -217,36 +218,36 @@ summary {
 #word_anim span:nth-child(1) {
   transform-origin: bottom center;
   -webkit-animation-name: kf_txt_rot;
-          animation-name: kf_txt_rot;
+  animation-name: kf_txt_rot;
   -webkit-animation-duration: 5s;
-          animation-duration: 5s;
+  animation-duration: 5s;
   -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
 }
 
 #word_anim span:nth-child(2) {
   transform-origin: bottom center;
   -webkit-animation-name: kf_txt_rot2;
-          animation-name: kf_txt_rot2;
+  animation-name: kf_txt_rot2;
   -webkit-animation-duration: 5s;
-          animation-duration: 5s;
+  animation-duration: 5s;
   -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
 }
 
 #word_anim li:nth-child(2) span {
   -webkit-animation-delay: 0.1s;
-          animation-delay: 0.1s;
+  animation-delay: 0.1s;
 }
 
 #word_anim li:nth-child(3) span {
   -webkit-animation-delay: 0.2s;
-          animation-delay: 0.2s;
+  animation-delay: 0.2s;
 }
 
 #word_anim li:nth-child(4) span {
   -webkit-animation-delay: 0.35s;
-          animation-delay: 0.35s;
+  animation-delay: 0.35s;
 }
 
 @-webkit-keyframes kf_txt_rot {
@@ -395,7 +396,8 @@ header li {
   text-transform: uppercase;
   position: relative;
   text-align: right;
-  transition: transform 0s 1s cubic-bezier(0.77, 0, 0.24, 1), opacity 0s 1s cubic-bezier(0.77, 0, 0.24, 1);
+  transition: transform 0s 1s cubic-bezier(0.77, 0, 0.24, 1),
+    opacity 0s 1s cubic-bezier(0.77, 0, 0.24, 1);
   opacity: 0;
   transform: translateX(100%);
   font-family: "gallery_modernregular", sans-serif;
@@ -428,7 +430,8 @@ header li {
 }
 
 .menu_list.open li {
-  transition: transform 0.3s var(--delay) cubic-bezier(0.77, 0, 0.24, 1), opacity 0.3s var(--delay) cubic-bezier(0.77, 0, 0.24, 1);
+  transition: transform 0.3s var(--delay) cubic-bezier(0.77, 0, 0.24, 1),
+    opacity 0.3s var(--delay) cubic-bezier(0.77, 0, 0.24, 1);
   transform: translateX(0);
   opacity: 1;
 }
@@ -445,7 +448,8 @@ header li {
   z-index: -1;
 }
 
-.header_clr::before, .header_clr::after {
+.header_clr::before,
+.header_clr::after {
   content: "";
   position: absolute;
   top: 0;
@@ -470,7 +474,8 @@ header li {
   transform: translateX(0);
 }
 
-.header_clr.open::before, .header_clr.open::after {
+.header_clr.open::before,
+.header_clr.open::after {
   transform: translateX(0);
 }
 
@@ -524,7 +529,10 @@ header li {
   font-weight: 300;
 }
 
-.green::after, .green::before, .green .graphic_fill::before, .green .graphic_fill::after {
+.green::after,
+.green::before,
+.green .graphic_fill::before,
+.green .graphic_fill::after {
   content: "";
   position: absolute;
   top: 50%;
@@ -537,7 +545,8 @@ header li {
   pointer-events: none;
 }
 
-.green::after, .green::before {
+.green::after,
+.green::before {
   border: 2px solid #e6b8f8;
 }
 
@@ -545,7 +554,8 @@ header li {
   z-index: 0;
 }
 
-.green .graphic_fill::after, .green .graphic_fill::before {
+.green .graphic_fill::after,
+.green .graphic_fill::before {
   background-color: #f3ece9;
   z-index: -1;
 }
@@ -557,7 +567,8 @@ header li {
   transform: translate3d(0, 0, 0);
 }
 
-.green:hover::after, .green:hover .graphic_fill::after {
+.green:hover::after,
+.green:hover .graphic_fill::after {
   transform: translate(-55%, -55%);
 }
 
@@ -570,7 +581,10 @@ header li {
   transform: rotateX(10deg) rotateY(-20deg);
 }
 
-.orange::after, .orange::before, .orange .graphic_fill::before, .orange .graphic_fill::after {
+.orange::after,
+.orange::before,
+.orange .graphic_fill::before,
+.orange .graphic_fill::after {
   content: "";
   position: absolute;
   top: 50%;
@@ -582,11 +596,13 @@ header li {
   pointer-events: none;
 }
 
-.orange::before, .orange::after {
+.orange::before,
+.orange::after {
   border: 2px solid #e6b8f8;
 }
 
-.orange .graphic_fill::before, .orange .graphic_fill::after {
+.orange .graphic_fill::before,
+.orange .graphic_fill::after {
   background-color: #f3ece9;
   z-index: -1;
 }
@@ -597,11 +613,15 @@ header li {
   align-items: center;
 }
 
-.orange:hover::after, .orange:hover .graphic_fill::after {
+.orange:hover::after,
+.orange:hover .graphic_fill::after {
   transform: translate(-55%, -55%);
 }
 
-.purple::after, .purple::before, .purple .graphic_fill::before, .purple .graphic_fill::after {
+.purple::after,
+.purple::before,
+.purple .graphic_fill::before,
+.purple .graphic_fill::after {
   content: "";
   position: absolute;
   top: 50%;
@@ -615,7 +635,8 @@ header li {
   pointer-events: none;
 }
 
-.purple::before, .purple::after {
+.purple::before,
+.purple::after {
   fill: #f3ece9;
 }
 
@@ -785,8 +806,8 @@ header li {
 }
 button {
   -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   border: none;
   background-color: transparent;
   cursor: pointer;
@@ -904,7 +925,8 @@ tr:last-child td:first-child {
   }
 }
 @media only screen and (max-width: 1100px) {
-  table:not(.installations) tr:not(.speciel) td:nth-child(5), table:not(.installations) tr:not(.speciel) th:nth-child(5) {
+  table:not(.installations) tr:not(.speciel) td:nth-child(5),
+  table:not(.installations) tr:not(.speciel) th:nth-child(5) {
     display: none;
   }
 
@@ -913,7 +935,8 @@ tr:last-child td:first-child {
   }
 }
 @media only screen and (max-width: 700px) {
-  table:not(.installations) tr:not(.speciel) td:nth-child(3), table:not(.installations) tr:not(.speciel) th:nth-child(3) {
+  table:not(.installations) tr:not(.speciel) td:nth-child(3),
+  table:not(.installations) tr:not(.speciel) th:nth-child(3) {
     display: none;
   }
 }
@@ -939,7 +962,7 @@ form input {
   margin: 0px 20px 0px 20px;
 }
 
-form input[type=submit] {
+form input[type="submit"] {
   border: solid 1px #252525;
 }
 
