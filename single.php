@@ -23,15 +23,7 @@ if ($pods_name == "kursfestival") {
 // if, for alle pods
 if ($pods_name == 'om-kurs') {
    get_template_part('/theme-parts/om-kurs');
-} else if ($pods_name == 'program') {
-   get_template_part('/theme-parts/program-single');
-} else if ($pods_name == 'frivillighed') {
-   get_template_part('/theme-parts/program');
-} else if ($pods_name == 'faq') {
-   get_template_part('/theme-parts/faq');
-} else if ($pods_name == 'events') {
-   get_template_part('/theme-parts/events');
-} 
+}
 ?>
 
 <script type="module" src="/wp-content/themes/kursfestival/dist/js/page.js"></script>
