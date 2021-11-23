@@ -8,7 +8,7 @@
     <link rel="icon" href="./wp-content/themes/kursfestival/imgs/ellipse_55.png" type="image/x-icon"/>
     <title>Kurs Festival</title>
 </head>
-<body>
+<body class="front_page">
 <?php get_template_part("/theme-parts/header") ?>
     <main>
         <section id="splash">

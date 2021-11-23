@@ -1,5 +1,14 @@
 @import "../abstracts";
 
+.gitter_list:not(.front_page .gitter_list) {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  left: 0;
+  width: 100%;
+  aspect-ratio: 3/2;
+  // height: 66.66vw;
+}
+
 .gitter_list li {
   position: relative;
 }

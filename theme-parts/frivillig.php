@@ -1,6 +1,9 @@
-<section>
-<div id="form_wrapper">
+<section class="frivillig_form">
+    <?php get_template_part("/theme-parts/gitter") ?>
+                
+
 <form action="frivillig_signup" id="frivillig_signup">
+<div id="form_wrapper">
 <fieldset id="frivillig_info">
 <div class="form_ctrl">
 <label for="frivillig_navn">Fulde navn</label>
@@ -20,22 +23,27 @@
 
 
 <fieldset id="frivillig_omraade">
-<legend>Hvilket område vil du arbejde med?</legend>
+<legend>Område</legend>
 <input type="radio" id="omraade_kommunikation" name="omraade" value="kommunikation">
-  <label for="omraade_kommunikation">Kommunikation</label><br>
+  <label for="omraade_kommunikation" class="radio_label">Kommunikation</label><br>
 <input type="radio" id="omraade_booking" name="omraade" value="booking">
-  <label for="omraade_program">Booking</label><br>
+  <label for="omraade_program" class="radio_label">Booking</label><br>
 <input type="radio" id="omraade_program" name="omraade" value="program">
-  <label for="omraade_program">Program</label><br>
+  <label for="omraade_program" class="radio_label">Program</label><br>
 <input type="radio" id="omraade_sikkerhed" name="omraade" value="sikkerged">
-  <label for="omraade_sikkerhed">Sikkerhed</label><br>
-<label for="file">Vedhæft din motiverede ansøgning</label>
+  <label for="omraade_sikkerhed" class="radio_label">Sikkerhed</label><br>
+<label for="file">Motiveret ansøgning</label>
+
 <input type="file" name="frivillig_fil" id="frivillig_fil"> 
 
-<input type="submit" value="SEND" id="submit_frivillig_form">
 </fieldset>
-</form>
 </div>
+<div id="submit_wrapper">
+<input type="submit" value="SEND" id="submit_frivillig_form">
+</div>
+</form>
+
+
 </section>
 
 <script>
