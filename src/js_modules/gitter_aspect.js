@@ -4,7 +4,7 @@ export function gitterAspectRatio() {
 }
 
 function setAspectRatio() {
-  const gitters = document.querySelectorAll(".gitter, .front_page .graphic");
+  const gitters = document.querySelectorAll(".gitter, .front_page .graphic, .skaber_list li");
   gitters.forEach((elm) => {
     const width = elm.offsetWidth;
     elm.style.height = width + "px";

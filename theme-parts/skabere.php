@@ -12,7 +12,7 @@ $force = false;
 <section class="skaber_container">
     <article class="kunst">
         <h2>Kunst</h2>
-        <ul>
+        <ul class="skaber_list">
             <?php
             $pods = pods('program', $params);
             while ($pods->fetch()) {
@@ -44,7 +44,7 @@ $force = false;
 
     <article class="musik">
         <h2>Musik</h2>
-        <ul>
+        <ul class="skaber_list">
             <?php
             $pods = pods('program', $params);
             while ($pods->fetch()) {
@@ -76,7 +76,7 @@ $force = false;
 
     <article class="talks">
         <h2>talks</h2>
-        <ul>
+        <ul class="skaber_list">
             <?php
             $pods = pods('program', $params);
             while ($pods->fetch()) {
