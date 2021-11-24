@@ -101,7 +101,6 @@ form {
   .frivillig_form {
     & .gitter_list {
       grid-template-columns: 1fr 1fr;
-      aspect-ratio: 2/3;
     }
 
     & form {
@@ -145,7 +144,6 @@ form {
   .frivillig_form {
     & .gitter_list {
       grid-template-columns: 1fr;
-      aspect-ratio: 1/2;
       & li:nth-child(1),
       & li:nth-child(2),
       & li:nth-child(3),
