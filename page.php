@@ -28,6 +28,7 @@ if ($page_name == 'kursfestival') {
             <?php echo the_content(); ?>
         </div>
     </section>
+   
 
     <!-- Get pods content, sorted by page title -->
     <?php 
