@@ -6,8 +6,6 @@
     grid-template-columns: 1fr 1fr 1fr;
     left: 0;
     width: 100%;
-    aspect-ratio: 3/2;
-    // height: 66.66vw;
   }
 }
 
@@ -15,8 +13,11 @@
   position: relative;
 }
 
-.gitter {
+.front_page .gitter:not(.footer_gitter .gitter) {
   position: absolute;
+}
+
+.gitter {
   top: 0;
   left: 0;
   width: 100%;
@@ -46,10 +47,7 @@
 }
 
 .footer_gitter {
-  aspect-ratio: 3/1;
-  display: flex;
-  & .gitter_list,
-  & .gitter_list li {
-    aspect-ratio: 1/1;
-  }
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
 }

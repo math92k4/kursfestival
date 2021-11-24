@@ -15,6 +15,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _js_modules_datedisappear_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./js_modules/datedisappear.js */ "./src/js_modules/datedisappear.js");
 /* harmony import */ var _js_modules_burgermenu_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./js_modules/burgermenu.js */ "./src/js_modules/burgermenu.js");
 /* harmony import */ var _js_modules_cursor_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./js_modules/cursor.js */ "./src/js_modules/cursor.js");
+/* harmony import */ var _js_modules_gitter_aspect__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./js_modules/gitter_aspect */ "./src/js_modules/gitter_aspect.js");
+
 
 
 
@@ -24,6 +26,7 @@ __webpack_require__.r(__webpack_exports__);
 window.addEventListener("DOMContentLoaded", init);
 
 function init() {
+  (0,_js_modules_gitter_aspect__WEBPACK_IMPORTED_MODULE_6__.gitterAspectRatio)();
   (0,_js_modules_cursor_js__WEBPACK_IMPORTED_MODULE_5__.cursor)();
   (0,_js_modules_moveonmouse_js__WEBPACK_IMPORTED_MODULE_0__.moveElm)();
   (0,_js_modules_selection_randomizer_js__WEBPACK_IMPORTED_MODULE_1__.randomizeSelection)();
@@ -143,6 +146,31 @@ function dateDisappear() {
     } else {
       date.classList.remove("disappear");
     }
+  });
+}
+
+/***/ }),
+
+/***/ "./src/js_modules/gitter_aspect.js":
+/*!*****************************************!*\
+  !*** ./src/js_modules/gitter_aspect.js ***!
+  \*****************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "gitterAspectRatio": () => (/* binding */ gitterAspectRatio)
+/* harmony export */ });
+function gitterAspectRatio() {
+  setAspectRatio();
+  window.addEventListener("resize", setAspectRatio);
+}
+
+function setAspectRatio() {
+  var gitters = document.querySelectorAll(".gitter");
+  gitters.forEach(function (elm) {
+    var width = elm.offsetWidth;
+    elm.style.height = width + "px";
   });
 }
 

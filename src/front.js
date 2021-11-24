@@ -4,10 +4,12 @@ import { rotateOnScroll } from "./js_modules/rotateOnScroll.js";
 import { dateDisappear } from "./js_modules/datedisappear.js";
 import { toggleMenu } from "./js_modules/burgermenu.js";
 import { cursor } from "./js_modules/cursor.js";
+import { gitterAspectRatio } from "./js_modules/gitter_aspect";
 
 window.addEventListener("DOMContentLoaded", init);
 
 function init() {
+  gitterAspectRatio();
   cursor();
   moveElm();
   randomizeSelection();

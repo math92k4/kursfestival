@@ -85,6 +85,31 @@ function cursor() {
 
 /***/ }),
 
+/***/ "./src/js_modules/gitter_aspect.js":
+/*!*****************************************!*\
+  !*** ./src/js_modules/gitter_aspect.js ***!
+  \*****************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "gitterAspectRatio": () => (/* binding */ gitterAspectRatio)
+/* harmony export */ });
+function gitterAspectRatio() {
+  setAspectRatio();
+  window.addEventListener("resize", setAspectRatio);
+}
+
+function setAspectRatio() {
+  var gitters = document.querySelectorAll(".gitter");
+  gitters.forEach(function (elm) {
+    var width = elm.offsetWidth;
+    elm.style.height = width + "px";
+  });
+}
+
+/***/ }),
+
 /***/ "./src/js_modules/selection_randomizer.js":
 /*!************************************************!*\
   !*** ./src/js_modules/selection_randomizer.js ***!
@@ -182,13 +207,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _js_modules_selection_randomizer_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./js_modules/selection_randomizer.js */ "./src/js_modules/selection_randomizer.js");
 /* harmony import */ var _js_modules_burgermenu_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./js_modules/burgermenu.js */ "./src/js_modules/burgermenu.js");
 /* harmony import */ var _js_modules_cursor_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./js_modules/cursor.js */ "./src/js_modules/cursor.js");
+/* harmony import */ var _js_modules_gitter_aspect__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./js_modules/gitter_aspect */ "./src/js_modules/gitter_aspect.js");
  // import { rotateOnScroll } from "./js_modules/rotateOnScroll.js";
+
 
 
 
 window.addEventListener("DOMContentLoaded", init);
 
 function init() {
+  (0,_js_modules_gitter_aspect__WEBPACK_IMPORTED_MODULE_3__.gitterAspectRatio)();
   (0,_js_modules_cursor_js__WEBPACK_IMPORTED_MODULE_2__.cursor)();
   (0,_js_modules_selection_randomizer_js__WEBPACK_IMPORTED_MODULE_0__.randomizeSelection)();
   (0,_js_modules_burgermenu_js__WEBPACK_IMPORTED_MODULE_1__.toggleMenu)(); //   const fpCircles = document.querySelectorAll("#splash .circles span");
