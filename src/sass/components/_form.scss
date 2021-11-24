@@ -39,6 +39,34 @@ form {
     outline: none;
   }
 
+  & input[type="radio"]:after {
+    width: 15px;
+    height: 15px;
+    border-radius: 15px;
+    top: -2px;
+    left: -1px;
+    position: relative;
+    background-color: $bg_color;
+    content: "";
+    display: inline-block;
+    visibility: visible;
+    border: solid 2px $purple;
+  }
+
+  & input[type="radio"]:checked:after {
+    width: 15px;
+    height: 15px;
+    border-radius: 15px;
+    top: -2px;
+    left: -1px;
+    position: relative;
+    background-color: $purple;
+    content: "";
+    display: inline-block;
+    visibility: visible;
+    border: solid 2px $purple;
+  }
+
   & input[type="submit"] {
     background-color: $purple;
     color: $bg_color;
@@ -61,5 +89,69 @@ form {
     display: flex;
     width: 100%;
     justify-content: center;
+  }
+
+  & #fil_label {
+    display: block;
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .frivillig_form {
+    & .gitter_list {
+      grid-template-columns: 1fr 1fr;
+      aspect-ratio: 2/3;
+    }
+
+    & form {
+      padding: 10px;
+
+      & label {
+        margin-left: 0px;
+      }
+
+      & legend {
+        margin-bottom: 0px;
+      }
+
+      & #fil_label {
+        display: block;
+        margin-top: 20px;
+      }
+
+      & input {
+        margin: 10px 20px 10px 0px;
+      }
+
+      & fieldset {
+        width: 80vw;
+        padding: 10px;
+      }
+    }
+
+    & input[type="submit"] {
+      padding: 20px 100px;
+    }
+
+    & #form_wrapper {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}
+
+@media (max-width: 640px) {
+  .frivillig_form {
+    & .gitter_list {
+      grid-template-columns: 1fr;
+      aspect-ratio: 1/2;
+      & li:nth-child(1),
+      & li:nth-child(2),
+      & li:nth-child(3),
+      & li:nth-child(4) {
+        display: none;
+      }
+    }
   }
 }

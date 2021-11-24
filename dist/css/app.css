@@ -714,7 +714,7 @@ header li {
     padding-left: 60px;
   }
 }
-.gitter_list:not(.front_page .gitter_list) {
+.frivillig_form .gitter_list {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   left: 0;
@@ -1090,6 +1090,34 @@ form input:focus {
   outline: none;
 }
 
+form input[type=radio]:after {
+  width: 15px;
+  height: 15px;
+  border-radius: 15px;
+  top: -2px;
+  left: -1px;
+  position: relative;
+  background-color: #f3ece9;
+  content: "";
+  display: inline-block;
+  visibility: visible;
+  border: solid 2px #e6b8f8;
+}
+
+form input[type=radio]:checked:after {
+  width: 15px;
+  height: 15px;
+  border-radius: 15px;
+  top: -2px;
+  left: -1px;
+  position: relative;
+  background-color: #e6b8f8;
+  content: "";
+  display: inline-block;
+  visibility: visible;
+  border: solid 2px #e6b8f8;
+}
+
 form input[type=submit] {
   background-color: #e6b8f8;
   color: #f3ece9;
@@ -1114,6 +1142,57 @@ form #submit_wrapper {
   justify-content: center;
 }
 
+@media (max-width: 1000px) {
+  .frivillig_form .gitter_list {
+    grid-template-columns: 1fr 1fr;
+    aspect-ratio: 2/3;
+  }
+
+  .frivillig_form form {
+    padding: 10px;
+  }
+
+  .frivillig_form form label {
+    margin-left: 0px;
+  }
+
+  .frivillig_form form legend {
+    margin-bottom: 0px;
+  }
+
+  .frivillig_form form #fil_label {
+    display: block;
+    margin-top: 20px;
+  }
+
+  .frivillig_form form input {
+    margin: 10px 20px 10px 0px;
+  }
+
+  .frivillig_form form fieldset {
+    width: 80vw;
+    padding: 10px;
+  }
+
+  .frivillig_form input[type=submit] {
+    padding: 20px 100px;
+  }
+
+  .frivillig_form #form_wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media (max-width: 640px) {
+  .frivillig_form .gitter_list {
+    grid-template-columns: 1fr;
+    aspect-ratio: 1/2;
+  }
+
+  .frivillig_form .gitter_list li:nth-child(1), .frivillig_form .gitter_list li:nth-child(2), .frivillig_form .gitter_list li:nth-child(3), .frivillig_form .gitter_list li:nth-child(4) {
+    display: none;
+  }
+}
 .faq_container {
   margin-top: 40px !important;
 }
