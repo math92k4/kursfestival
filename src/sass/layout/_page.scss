@@ -1,4 +1,5 @@
-.page {
+.page,
+.single {
   & section {
     padding: 0 20px;
     max-width: 1500px;
@@ -14,6 +15,28 @@
     font-size: 1.5rem;
     max-width: 45ch;
     line-height: 1.2;
+  }
+}
+
+.sngl_wrapper {
+  & img {
+    margin-top: 20px;
+    max-width: 500px;
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  .sngl_wrapper {
+    display: flex;
+
+    & img {
+      margin-top: 0;
+      margin-left: 20px;
+    }
+
+    & p {
+      width: 45ch;
+    }
   }
 }
 

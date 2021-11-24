@@ -2,8 +2,7 @@
 
 @font-face {
   font-family: "gallery_modernregular";
-  src: url("../../fonts/gallerymodern-webfont.woff2") format("woff2"),
-    url("../..//fonts/gallerymodern-webfont.woff") format("woff");
+  src: url("../../fonts/gallerymodern-webfont.woff2") format("woff2"), url("../..//fonts/gallerymodern-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
@@ -69,4 +68,14 @@ label {
   opacity: 0.5;
   font-size: 1.2rem;
   font-weight: 300;
+}
+
+footer .footer_wrapper {
+  & p {
+    font-family: "gallery_modernregular", sans-serif;
+    font-size: 2rem;
+  }
+  & li {
+    font-size: 1.1rem;
+  }
 }

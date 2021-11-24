@@ -119,7 +119,7 @@
                     <a href=" <?php echo $pods->field('link') ?> ">
                         <picture>
                             <source srcset=" <?php echo $imgUrl ?>" type="image/webp">
-                            <img src=" <?php echo $fallbackUrl ?> " alt="">
+                            <img src=" <?php echo $fallbackUrl ?> " alt="" loading="lazy">
                         </picture>
                         <p><?php echo $pods->field('tekst') ?></p>
                     </a>

@@ -36,7 +36,7 @@
   }
 }
 
-.skabere ul.gitter_list {
+.skabere ul.gitter_list:not(.footer_gitter .gitter_list) {
   position: absolute;
   grid-template-columns: 1fr !important;
   top: 0;

@@ -44,7 +44,8 @@ if ($page_name == 'kursfestival') {
         get_template_part("/theme-parts/skabere");
     }
     ?>
-
+    
+    <?php get_template_part('/theme-parts/footer'); ?>
     <script type="module" src="../../wp-content/themes/kursfestival/dist/js/page.js"></script>
 </body>
 </html>

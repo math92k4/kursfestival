@@ -23,9 +23,13 @@ if ($pods_name == "kursfestival") {
 // if, for alle pods
 if ($pods_name == 'om-kurs') {
    get_template_part('/theme-parts/om-kurs');
+} 
+if ($pods_name == 'program') {
+   get_template_part('/theme-parts/single-skaber');
 }
 ?>
 
+<?php get_template_part('/theme-parts/footer'); ?>
 <script type="module" src="/wp-content/themes/kursfestival/dist/js/page.js"></script>
 </body>
 </html>
