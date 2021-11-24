@@ -29,6 +29,62 @@ function toggleMenu() {
 
 /***/ }),
 
+/***/ "./src/js_modules/cursor.js":
+/*!**********************************!*\
+  !*** ./src/js_modules/cursor.js ***!
+  \**********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "cursor": () => (/* binding */ cursor)
+/* harmony export */ });
+function cursor() {
+  var circle = document.createElement("div");
+  circle.classList.add("cursor");
+  document.querySelector("body").appendChild(circle);
+  var cursor = document.querySelector(".cursor");
+  var x = 0;
+  var y = 0;
+  var radius = cursor.offsetHeight / 2;
+  console.log(radius);
+  document.addEventListener("mousemove", function (e) {
+    x = e.clientX;
+    y = e.clientY;
+  });
+  var delay = 15;
+  var revisedX = 0;
+  var revisedY = 0;
+
+  function animateCursor() {
+    requestAnimationFrame(animateCursor);
+    radius = cursor.offsetHeight / 2;
+    revisedX += (x - revisedX) / delay;
+    revisedY += (y - revisedY) / delay;
+    cursor.style.setProperty("--new-x", revisedX - radius + "px");
+    cursor.style.setProperty("--new-y", revisedY - radius + "px");
+  }
+
+  animateCursor();
+  var allATags = document.querySelectorAll("a, #menu_btn");
+  allATags.forEach(function (a) {
+    a.addEventListener("mouseover", expandMouse);
+
+    function expandMouse() {
+      cursor.classList.add("expand");
+    }
+  });
+  allATags.forEach(function (a) {
+    a.addEventListener("mouseout", expandMouse);
+
+    function expandMouse() {
+      cursor.classList.remove("expand");
+    }
+  });
+}
+
+/***/ }),
+
 /***/ "./src/js_modules/selection_randomizer.js":
 /*!************************************************!*\
   !*** ./src/js_modules/selection_randomizer.js ***!
@@ -125,12 +181,15 @@ var __webpack_exports__ = {};
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _js_modules_selection_randomizer_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./js_modules/selection_randomizer.js */ "./src/js_modules/selection_randomizer.js");
 /* harmony import */ var _js_modules_burgermenu_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./js_modules/burgermenu.js */ "./src/js_modules/burgermenu.js");
+/* harmony import */ var _js_modules_cursor_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./js_modules/cursor.js */ "./src/js_modules/cursor.js");
  // import { rotateOnScroll } from "./js_modules/rotateOnScroll.js";
+
 
 
 window.addEventListener("DOMContentLoaded", init);
 
 function init() {
+  (0,_js_modules_cursor_js__WEBPACK_IMPORTED_MODULE_2__.cursor)();
   (0,_js_modules_selection_randomizer_js__WEBPACK_IMPORTED_MODULE_0__.randomizeSelection)();
   (0,_js_modules_burgermenu_js__WEBPACK_IMPORTED_MODULE_1__.toggleMenu)(); //   const fpCircles = document.querySelectorAll("#splash .circles span");
   //   fpCircles.forEach((circle) => {

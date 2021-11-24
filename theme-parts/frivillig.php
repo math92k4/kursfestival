@@ -44,7 +44,9 @@
 
 </section>
 
+
 <script>
+
 
 // alle områder er required, men man kan kun vælge ét, så alle kan ikke være required.
 const allRadios = document.querySelectorAll("input[type=radio]"); 
