@@ -52,8 +52,9 @@
         </section>
         
         <?php get_template_part("/theme-parts/fp-content") ?>
-
     </main>
+
+    <?php get_template_part('/theme-parts/footer'); ?>
 <script type="module" src="./wp-content/themes/kursfestival/dist/js/front.js"></script>
 </body>
 </html>

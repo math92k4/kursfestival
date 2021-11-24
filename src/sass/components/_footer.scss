@@ -1,0 +1,30 @@
+@import "../abstracts";
+footer {
+  padding: 0 20px;
+  margin-top: 100px;
+  margin-bottom: 40px;
+  & li:not(.gitter_list li) {
+    margin-top: 10px;
+  }
+}
+
+.footer_gitter {
+  position: relative;
+}
+
+.footer_wrapper {
+  width: 90%;
+  margin: 0 auto;
+  padding: 50px;
+  background-color: $bg_color;
+  border: 2px solid $purple;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+
+  border-radius: 50px 0 50px 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+}

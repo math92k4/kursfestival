@@ -757,6 +757,15 @@ header li {
   height: 100%;
 }
 
+.footer_gitter {
+  aspect-ratio: 3/1;
+  display: flex;
+}
+
+.footer_gitter .gitter_list, .footer_gitter .gitter_list li {
+  aspect-ratio: 1/1;
+}
+
 .om-kurs main {
   max-width: 1400px;
   margin: 0 auto;
@@ -1157,6 +1166,35 @@ details p {
 
 details[open] summary::after {
   transform: translateY(-50%) rotate(90deg);
+}
+
+footer {
+  padding: 0 20px;
+  margin-top: 100px;
+  margin-bottom: 40px;
+}
+
+footer li:not(.gitter_list li) {
+  margin-top: 10px;
+}
+
+.footer_gitter {
+  position: relative;
+}
+
+.footer_wrapper {
+  width: 90%;
+  margin: 0 auto;
+  padding: 50px;
+  background-color: #f3ece9;
+  border: 2px solid #e6b8f8;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  border-radius: 50px 0 50px 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 #content {
