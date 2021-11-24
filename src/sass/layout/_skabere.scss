@@ -4,8 +4,6 @@
   margin-top: 40px !important;
 
   & article {
-    // border-radius: 0 100px 0 100px;
-    // overflow: hidden;
     margin-top: 40px;
     position: relative;
   }
@@ -16,10 +14,10 @@
     background-color: $bg_color;
     border-radius: 0 100px 0 0;
   }
-  & ul {
-    border-radius: 0 0 0 100px;
-    overflow: hidden;
-  }
+  // & ul:not(.gitter_list) {
+  //   border-radius: 0 0 0 100px;
+  //   overflow: hidden;
+  // }
 
   & li {
     position: relative;
@@ -28,17 +26,17 @@
   & p {
     position: absolute;
     right: 0%;
-    bottom: 5%;
+    bottom: 0%;
     padding: 10px 25px;
     border-radius: 0 0 0 50px;
     text-transform: uppercase;
   }
+  & img {
+    border-radius: 100px 0 0 0;
+    padding: 20px;
+  }
 
   & .kunst {
-    // & ul {
-    //   border: 2px solid $purple;
-    //   border-top: 0;
-    // }
     & h2 {
       border: 2px solid $purple;
       background-color: $purple;
@@ -49,10 +47,6 @@
   }
 
   & .musik {
-    // & ul {
-    //   border: 2px solid $green;
-    //   border-top: 0;
-    // }
     & h2 {
       border: 2px solid $green;
       background-color: $green;
@@ -63,10 +57,6 @@
   }
 
   & .talks {
-    // & ul {
-    //   border: 2px solid $orange;
-    //   border-top: 0;
-    // }
     & h2 {
       border: 2px solid $orange;
       background-color: $orange;
