@@ -748,6 +748,15 @@ header li {
   border: 1px solid #e6b8f8;
 }
 
+.skabere ul.gitter_list {
+  position: absolute;
+  grid-template-columns: 1fr !important;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
 .om-kurs main {
   max-width: 1400px;
   margin: 0 auto;
@@ -852,11 +861,6 @@ header li {
   border-radius: 0 100px 0 0;
 }
 
-.skaber_container ul {
-  border-radius: 0 0 0 100px;
-  overflow: hidden;
-}
-
 .skaber_container li {
   position: relative;
 }
@@ -864,10 +868,15 @@ header li {
 .skaber_container p {
   position: absolute;
   right: 0%;
-  bottom: 5%;
+  bottom: 0%;
   padding: 10px 25px;
   border-radius: 0 0 0 50px;
   text-transform: uppercase;
+}
+
+.skaber_container img {
+  border-radius: 100px 0 0 0;
+  padding: 20px;
 }
 
 .skaber_container .kunst h2 {

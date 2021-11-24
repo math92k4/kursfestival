@@ -25,6 +25,7 @@ $force = false;
                 ?>
 
                 <li>
+                    <?php get_template_part('/theme-parts/small-gitter'); ?>
                     <a href="<?php echo $pods->field('permalink') ?>">
                         <picture>
                             <source srcset=" <?php echo $imgUrl ?>" type="image/webp">
@@ -56,6 +57,7 @@ $force = false;
                 ?>
 
                 <li>
+                <?php get_template_part('/theme-parts/small-gitter'); ?>
                     <a href="<?php echo $pods->field('permalink') ?>">
                         <picture>
                             <source srcset=" <?php echo $imgUrl ?>" type="image/webp">
@@ -87,6 +89,7 @@ $force = false;
                 ?>
 
                 <li>
+                <?php get_template_part('/theme-parts/small-gitter'); ?>
                     <a href="<?php echo $pods->field('permalink') ?>">
                         <picture>
                             <source srcset=" <?php echo $imgUrl ?>" type="image/webp">
