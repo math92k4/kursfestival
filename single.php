@@ -15,8 +15,8 @@ if ($pods_name == "kursfestival") {
    <link rel="icon" href="../../wp-content/themes/kursfestival/imgs/ellipse_55.png" type="image/x-icon"/>
    <title><?php echo get_the_title(); ?></title>
 </head>
-
 <body class="single <?php echo $pods_name?> ">
+<?php get_template_part("/theme-parts/mode-popup") ?>
 <?php get_template_part("/theme-parts/header") ?>
 
 <?php

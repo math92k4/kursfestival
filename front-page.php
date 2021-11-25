@@ -9,6 +9,7 @@
     <title>Kurs Festival</title>
 </head>
 <body class="front_page">
+<?php get_template_part("/theme-parts/mode-popup") ?>
 <?php get_template_part("/theme-parts/header") ?>
     <main>
         <section id="splash">

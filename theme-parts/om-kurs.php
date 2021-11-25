@@ -51,9 +51,9 @@ $menu_pods = pods('om_kurs', $params); ?>
                 $fallbackUrl = pods_image_url($fallback, $size, $default, $force);
                 ?>
 
-                <picture>
-                    <source srcset=" <?php echo $imgUrl ?>" type="image/webp">
-                    <img src=" <?php echo $fallbackUrl ?> " alt="">
+                <picture data-image="<?php echo $imgUrl?>"  data-fallback="<?php echo $fallbackUrl ?>">
+                    <source srcset="//:0" type="image/webp">
+                    <img src="//:0" alt="" loading="lazy">
                 </picture>
 
                 <?php } ?>

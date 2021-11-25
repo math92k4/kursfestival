@@ -1,0 +1,15 @@
+@import "../abstracts";
+.mode_pop_up {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 20;
+  background-color: $bg_color;
+  border: 5px solid $purple;
+  display: none;
+  &.show {
+    display: block;
+  }
+}

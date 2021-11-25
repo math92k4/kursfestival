@@ -1432,6 +1432,22 @@ footer li:not(.gitter_list li) {
     display: block;
   }
 }
+.mode_pop_up {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 20;
+  background-color: #f3ece9;
+  border: 5px solid #e6b8f8;
+  display: none;
+}
+
+.mode_pop_up.show {
+  display: block;
+}
+
 #content {
   height: 100vh;
 }

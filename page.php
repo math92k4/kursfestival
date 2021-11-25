@@ -17,6 +17,7 @@ if ($page_name == 'kursfestival') {
     <title><?php echo get_the_title(); ?></title>
 </head>
 <body class="page <?php echo $page_name; ?>">
+<?php get_template_part("/theme-parts/mode-popup") ?>
 
 <!-- Load header -->
 <?php get_template_part("/theme-parts/header") ?>

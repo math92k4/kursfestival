@@ -27,9 +27,9 @@ $force = false;
                 <li>
                     <?php get_template_part('/theme-parts/small-gitter'); ?>
                     <a href="<?php echo $pods->field('permalink') ?>">
-                        <picture>
-                            <source srcset=" <?php echo $imgUrl ?>" type="image/webp">
-                            <img src=" <?php echo $fallbackUrl ?> " alt="">
+                        <picture data-image="<?php echo $imgUrl?>"  data-fallback="<?php echo $fallbackUrl ?>">
+                            <source srcset="//:0" type="image/webp">
+                            <img src="//:0" alt="" loading="lazy">
                         </picture>
                         <p><?php echo $pods->field('program_navn')?></p>
                     </a>
@@ -59,9 +59,9 @@ $force = false;
                 <li>
                 <?php get_template_part('/theme-parts/small-gitter'); ?>
                     <a href="<?php echo $pods->field('permalink') ?>">
-                        <picture>
-                            <source srcset=" <?php echo $imgUrl ?>" type="image/webp">
-                            <img src=" <?php echo $fallbackUrl ?> " alt="">
+                        <picture data-image="<?php echo $imgUrl?>"  data-fallback="<?php echo $fallbackUrl ?>">
+                            <source srcset="//:0" type="image/webp">
+                            <img src="//:0" alt="" loading="lazy">
                         </picture>
                         <p><?php echo $pods->field('program_navn')?></p>
                     </a>
@@ -91,9 +91,9 @@ $force = false;
                 <li>
                 <?php get_template_part('/theme-parts/small-gitter'); ?>
                     <a href="<?php echo $pods->field('permalink') ?>">
-                        <picture>
-                            <source srcset=" <?php echo $imgUrl ?>" type="image/webp">
-                            <img src=" <?php echo $fallbackUrl ?> " alt="">
+                        <picture data-image="<?php echo $imgUrl?>"  data-fallback="<?php echo $fallbackUrl ?>">
+                            <source srcset="//:0" type="image/webp">
+                            <img src="//:0" alt="" loading="lazy">
                         </picture>
                         <p><?php echo $pods->field('program_navn')?></p>
                     </a>

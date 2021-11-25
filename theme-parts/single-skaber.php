@@ -26,10 +26,10 @@
         <p><?php echo $pods->field('beskrivelse')?></p>
     </div>
 
-    <picture>
-        <source srcset=" <?php echo $imgUrl ?>" type="image/webp">
-        <img src=" <?php echo $fallbackUrl ?> " alt="" loading="lazy">
-    </picture>
+    <picture data-image="<?php echo $imgUrl?>"  data-fallback="<?php echo $fallbackUrl ?>">
+        <source srcset="//:0" type="image/webp">
+        <img src="//:0" alt="" loading="lazy">
+     </picture>
 
 
 

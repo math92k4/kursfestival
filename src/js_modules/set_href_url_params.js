@@ -1,4 +1,4 @@
-export function setUrlParams() {
+export function setHrefUrlParams() {
   const allH = document.querySelectorAll("a");
   allH.forEach((elm) => {
     elm.addEventListener("click", addUrlParams);
@@ -15,5 +15,5 @@ function addUrlParams(e) {
 }
 
 function setHref(url, eco) {
-  window.location.href = url + "?eco" + eco;
+  window.location.href = url + "?eco=" + eco;
 }
