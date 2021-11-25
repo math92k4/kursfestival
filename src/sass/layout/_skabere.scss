@@ -39,6 +39,8 @@
     padding: 10px 25px;
     border-radius: 0 0 0 50px;
     text-transform: uppercase;
+    background-color: $bg_color;
+    color: $black;
   }
   & img {
     border-radius: 100px 0 0 0;
@@ -52,27 +54,40 @@
       background-color: $purple;
     }
     & p {
-      background-color: $purple;
+      background-color: $bg_color;
+      border: solid 2px $purple;
     }
   }
 
   & .musik {
+    .gitter {
+      & span {
+        border: 1px solid $green;
+      }
+    }
     & h2 {
       border: 2px solid $green;
       background-color: $green;
     }
     & p {
-      background-color: $green;
+      border: 2px solid $green;
+      background-color: $bg_color;
     }
   }
 
   & .talks {
+    .gitter {
+      & span {
+        border: 1px solid $orange;
+      }
+    }
     & h2 {
       border: 2px solid $orange;
       background-color: $orange;
     }
     & p {
-      background-color: $orange;
+      border: 2px solid $orange;
+      background-color: $bg_color;
     }
   }
 }
