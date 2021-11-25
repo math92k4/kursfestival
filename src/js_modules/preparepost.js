@@ -5,12 +5,6 @@ submitBtn.addEventListener("click", showValues);
 function showValues() {
   const frivilligNavnValue = document.querySelector("#frivillig_navn").value;
   const frivilligEmailValue = document.querySelector("#frivillig_email").value;
-  const frivilligTelefonValue =
-    document.querySelector("#frivillig_telefon").value;
+  const frivilligTelefonValue = document.querySelector("#frivillig_telefon").value;
   const frivilligFilValue = document.querySelector("#frivillig_fil").value;
-
-  console.log(frivilligNavnValue);
-  console.log(frivilligEmailValue);
-  console.log(frivilligTelefonValue);
-  console.log(frivilligFilValue);
 }

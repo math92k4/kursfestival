@@ -10,7 +10,6 @@ export function rotateOnScroll(elm) {
   let revicedX = 0;
   let revicedY = 0;
   const delay = elm.dataset.delay;
-  console.log(delay);
 
   function calculateRotation() {
     requestAnimationFrame(calculateRotation);

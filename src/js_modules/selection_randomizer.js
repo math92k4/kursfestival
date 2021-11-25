@@ -3,7 +3,6 @@ export function randomizeSelection() {
 
   body.style.setProperty("--selection", "#C1CE9F");
   document.querySelectorAll("li").forEach((elm) => {
-    console.log("hej");
     elm.addEventListener("click", () => {
       const rnd = Math.floor(Math.random() * 3) + 1;
       if (rnd === 1) {

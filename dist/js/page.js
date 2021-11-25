@@ -24,6 +24,12 @@ function toggleMenu() {
     e.target.classList.toggle("open");
     document.querySelector(".menu_list").classList.toggle("open");
     document.querySelector(".header_clr").classList.toggle("open");
+
+    if (menuBtn.classList.contains("open")) {
+      document.querySelector("body").style.overflowY = "hidden";
+    } else {
+      document.querySelector("body").style.overflowY = "initial";
+    }
   });
 }
 
@@ -47,7 +53,6 @@ function cursor() {
   var x = 0;
   var y = 0;
   var radius = cursor.offsetHeight / 2;
-  console.log(radius);
   document.addEventListener("mousemove", function (e) {
     x = e.clientX;
     y = e.clientY;
@@ -124,7 +129,6 @@ function randomizeSelection() {
   var body = document.querySelector("body");
   body.style.setProperty("--selection", "#C1CE9F");
   document.querySelectorAll("li").forEach(function (elm) {
-    console.log("hej");
     elm.addEventListener("click", function () {
       var rnd = Math.floor(Math.random() * 3) + 1;
 
