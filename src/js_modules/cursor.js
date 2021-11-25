@@ -25,8 +25,8 @@ export function cursor() {
     revisedX += (x - revisedX) / delay;
     revisedY += (y - revisedY) / delay;
 
-    cursor.style.setProperty("--new-x", revisedX - radius + "px");
-    cursor.style.setProperty("--new-y", revisedY - radius + "px");
+    cursor.style.setProperty("--new-x", revisedX - radius + 50 + "px");
+    cursor.style.setProperty("--new-y", revisedY - radius + 50 + "px");
   }
 
   animateCursor();

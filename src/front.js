@@ -10,7 +10,11 @@ window.addEventListener("DOMContentLoaded", init);
 
 function init() {
   gitterAspectRatio();
-  cursor();
+
+  if (window.innerWidth > 600) {
+    cursor();
+  }
+
   moveElm();
   randomizeSelection();
   dateDisappear();

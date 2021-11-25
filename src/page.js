@@ -8,7 +8,11 @@ window.addEventListener("DOMContentLoaded", init);
 
 function init() {
   gitterAspectRatio();
-  cursor();
+
+  if (window.innerWidth > 600) {
+    cursor();
+  }
+
   randomizeSelection();
   toggleMenu();
   //   const fpCircles = document.querySelectorAll("#splash .circles span");
