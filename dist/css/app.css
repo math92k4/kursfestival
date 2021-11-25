@@ -578,6 +578,19 @@ header li {
   font-weight: 300;
 }
 
+.image p {
+  position: absolute;
+  text-align: center;
+  right: 0%;
+  bottom: 20%;
+  padding: 10px 25px;
+  border: solid 2px #e6b8f8;
+  background-color: #f3ece9;
+  color: #252525;
+  width: 100%;
+  text-transform: uppercase;
+}
+
 .green::after, .green::before, .green .graphic_fill::before, .green .graphic_fill::after {
   content: "";
   position: absolute;
@@ -693,12 +706,24 @@ header li {
     border-radius: 0 20% 0 20%;
   }
 
+  .content ul li:nth-child(1) p {
+    border-radius: 0 50px 0 50px;
+  }
+
   .content ul li:nth-child(3) img {
     border-radius: 20% 0 20% 0;
   }
 
+  .content ul li:nth-child(3) p {
+    border-radius: 50px 0 50px 0;
+  }
+
   .content ul li:nth-child(5) img {
     border-radius: 0 0 20% 20%;
+  }
+
+  .content ul li:nth-child(5) p {
+    border-radius: 0 0 50px 50px;
   }
 }
 .page section,
@@ -750,6 +775,17 @@ header li {
   grid-template-columns: 1fr 1fr 1fr;
   left: 0;
   width: 100%;
+}
+
+.menu_list {
+  display: flex;
+}
+
+.menu_list .gitter_list li {
+  width: 500px;
+  position: absolute;
+  top: 20%;
+  left: 0%;
 }
 
 .gitter_list li {
@@ -919,6 +955,8 @@ header li {
   padding: 10px 25px;
   border-radius: 0 0 0 50px;
   text-transform: uppercase;
+  background-color: #f3ece9;
+  color: #252525;
 }
 
 .skaber_container img {
@@ -933,7 +971,12 @@ header li {
 }
 
 .skaber_container .kunst p {
-  background-color: #e6b8f8;
+  background-color: #f3ece9;
+  border: solid 2px #e6b8f8;
+}
+
+.skaber_container .musik .gitter span {
+  border: 1px solid #bdcf9a;
 }
 
 .skaber_container .musik h2 {
@@ -942,7 +985,12 @@ header li {
 }
 
 .skaber_container .musik p {
-  background-color: #bdcf9a;
+  border: 2px solid #bdcf9a;
+  background-color: #f3ece9;
+}
+
+.skaber_container .talks .gitter span {
+  border: 1px solid #f9a94d;
 }
 
 .skaber_container .talks h2 {
@@ -951,7 +999,8 @@ header li {
 }
 
 .skaber_container .talks p {
-  background-color: #f9a94d;
+  border: 2px solid #f9a94d;
+  background-color: #f3ece9;
 }
 
 @media only screen and (min-width: 700px) {

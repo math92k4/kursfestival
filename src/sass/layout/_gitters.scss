@@ -9,6 +9,16 @@
   }
 }
 
+.menu_list {
+  display: flex;
+  & .gitter_list li {
+    width: 500px;
+    position: absolute;
+    top: 20%;
+    left: 0%;
+  }
+}
+
 .gitter_list li {
   position: relative;
 }

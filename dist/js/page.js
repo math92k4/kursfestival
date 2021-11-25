@@ -24,6 +24,12 @@ function toggleMenu() {
     e.target.classList.toggle("open");
     document.querySelector(".menu_list").classList.toggle("open");
     document.querySelector(".header_clr").classList.toggle("open");
+
+    if (menuBtn.classList.contains("open")) {
+      document.querySelector("body").style.overflowY = "hidden";
+    } else {
+      document.querySelector("body").style.overflowY = "initial";
+    }
   });
 }
 
