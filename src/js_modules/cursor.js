@@ -8,7 +8,6 @@ export function cursor() {
   let x = 0;
   let y = 0;
   let radius = cursor.offsetHeight / 2;
-  console.log(radius);
 
   document.addEventListener("mousemove", function (e) {
     x = e.clientX;
