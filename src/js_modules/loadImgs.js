@@ -1,4 +1,4 @@
-export function lazyload() {
+export function loadImgs() {
   const pictures = document.querySelectorAll("picture");
   pictures.forEach((elm) => {
     const webpUrl = elm.dataset.image;
