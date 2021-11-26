@@ -29,15 +29,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _js_modules_burgermenu_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./js_modules/burgermenu.js */ "./src/js_modules/burgermenu.js");
 /* harmony import */ var _js_modules_cursor_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./js_modules/cursor.js */ "./src/js_modules/cursor.js");
 /* harmony import */ var _js_modules_gitter_aspect_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./js_modules/gitter_aspect.js */ "./src/js_modules/gitter_aspect.js");
-/* harmony import */ var _js_modules_lazyload_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./js_modules/lazyload.js */ "./src/js_modules/lazyload.js");
-/* harmony import */ var _js_modules_set_href_url_params_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./js_modules/set_href_url_params.js */ "./src/js_modules/set_href_url_params.js");
-/* harmony import */ var _js_modules_mode_pop_up_js__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./js_modules/mode_pop_up.js */ "./src/js_modules/mode_pop_up.js");
+/* harmony import */ var _js_modules_loadImgs_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./js_modules/loadImgs.js */ "./src/js_modules/loadImgs.js");
+/* harmony import */ var _js_modules_modeSelection_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./js_modules/modeSelection.js */ "./src/js_modules/modeSelection.js");
 
 
 function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
 
 function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
-
 
 
 
@@ -56,35 +54,40 @@ function init() {
 
 function _init() {
   _init = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee() {
-    var urlParams, eco, fpCircles;
+    var eco, fpCircles;
     return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee$(_context) {
       while (1) {
         switch (_context.prev = _context.next) {
           case 0:
-            (0,_js_modules_mode_pop_up_js__WEBPACK_IMPORTED_MODULE_10__.modePopUp)();
-            (0,_js_modules_set_href_url_params_js__WEBPACK_IMPORTED_MODULE_9__.setHrefUrlParams)();
-            (0,_js_modules_gitter_aspect_js__WEBPACK_IMPORTED_MODULE_7__.gitterAspectRatio)();
-            (0,_js_modules_burgermenu_js__WEBPACK_IMPORTED_MODULE_5__.toggleMenu)();
-            (0,_js_modules_datedisappear_js__WEBPACK_IMPORTED_MODULE_4__.dateDisappear)();
-            urlParams = new URLSearchParams(window.location.search);
-            eco = urlParams.get("eco");
+            eco = (0,_js_modules_modeSelection_js__WEBPACK_IMPORTED_MODULE_9__.getUrlParam)("eco");
 
-            if (eco == 0) {
-              (0,_js_modules_lazyload_js__WEBPACK_IMPORTED_MODULE_8__.lazyload)();
+            if (eco == null) {
+              (0,_js_modules_modeSelection_js__WEBPACK_IMPORTED_MODULE_9__.showModePopUp)();
+            } else {
+              (0,_js_modules_modeSelection_js__WEBPACK_IMPORTED_MODULE_9__.addParamsToHrefClick)();
+              (0,_js_modules_gitter_aspect_js__WEBPACK_IMPORTED_MODULE_7__.gitterAspectRatio)();
+              (0,_js_modules_burgermenu_js__WEBPACK_IMPORTED_MODULE_5__.toggleMenu)();
+              (0,_js_modules_datedisappear_js__WEBPACK_IMPORTED_MODULE_4__.dateDisappear)();
 
-              if (window.innerWidth > 600) {
-                (0,_js_modules_cursor_js__WEBPACK_IMPORTED_MODULE_6__.cursor)();
+              if (eco == 0) {
+                (0,_js_modules_loadImgs_js__WEBPACK_IMPORTED_MODULE_8__.loadImgs)();
+
+                if (window.innerWidth > 600) {
+                  (0,_js_modules_cursor_js__WEBPACK_IMPORTED_MODULE_6__.cursor)();
+                }
+
+                (0,_js_modules_moveonmouse_js__WEBPACK_IMPORTED_MODULE_1__.moveElm)();
+                (0,_js_modules_selection_randomizer_js__WEBPACK_IMPORTED_MODULE_2__.randomizeSelection)();
+                fpCircles = document.querySelectorAll("#splash .circles span");
+                fpCircles.forEach(function (circle) {
+                  (0,_js_modules_rotateOnScroll_js__WEBPACK_IMPORTED_MODULE_3__.rotateOnScroll)(circle);
+                });
+              } else {
+                document.querySelector("body").classList.add("eco");
               }
-
-              (0,_js_modules_moveonmouse_js__WEBPACK_IMPORTED_MODULE_1__.moveElm)();
-              (0,_js_modules_selection_randomizer_js__WEBPACK_IMPORTED_MODULE_2__.randomizeSelection)();
-              fpCircles = document.querySelectorAll("#splash .circles span");
-              fpCircles.forEach(function (circle) {
-                (0,_js_modules_rotateOnScroll_js__WEBPACK_IMPORTED_MODULE_3__.rotateOnScroll)(circle);
-              });
             }
 
-          case 8:
+          case 2:
           case "end":
             return _context.stop();
         }
@@ -240,18 +243,18 @@ function setAspectRatio() {
 
 /***/ }),
 
-/***/ "./src/js_modules/lazyload.js":
+/***/ "./src/js_modules/loadImgs.js":
 /*!************************************!*\
-  !*** ./src/js_modules/lazyload.js ***!
+  !*** ./src/js_modules/loadImgs.js ***!
   \************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "lazyload": () => (/* binding */ lazyload)
+/* harmony export */   "loadImgs": () => (/* binding */ loadImgs)
 /* harmony export */ });
-function lazyload() {
+function loadImgs() {
   var pictures = document.querySelectorAll("picture");
   pictures.forEach(function (elm) {
     var webpUrl = elm.dataset.image;
@@ -263,35 +266,48 @@ function lazyload() {
 
 /***/ }),
 
-/***/ "./src/js_modules/mode_pop_up.js":
-/*!***************************************!*\
-  !*** ./src/js_modules/mode_pop_up.js ***!
-  \***************************************/
+/***/ "./src/js_modules/modeSelection.js":
+/*!*****************************************!*\
+  !*** ./src/js_modules/modeSelection.js ***!
+  \*****************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "modePopUp": () => (/* binding */ modePopUp)
+/* harmony export */   "getUrlParam": () => (/* binding */ getUrlParam),
+/* harmony export */   "showModePopUp": () => (/* binding */ showModePopUp),
+/* harmony export */   "addParamsToHrefClick": () => (/* binding */ addParamsToHrefClick)
 /* harmony export */ });
-function modePopUp() {
+function getUrlParam(param) {
   var urlParams = new URLSearchParams(window.location.search);
-  var eco = urlParams.get("eco");
-
-  if (eco == null) {
-    document.querySelector(".mode_pop_up").classList.add("show");
-    document.querySelector(".eco_btn").addEventListener("click", function () {
-      setHrefParam(1);
-    });
-    document.querySelector(".normal_btn").addEventListener("click", function () {
-      setHrefParam(0);
-    });
-  }
+  return urlParams.get(param);
+}
+function showModePopUp() {
+  var currentUrl = window.location.href;
+  document.querySelector(".mode_pop_up").classList.add("show");
+  document.querySelector(".eco_btn").addEventListener("click", function () {
+    setUrlParam(currentUrl, 1);
+  });
+  document.querySelector(".normal_btn").addEventListener("click", function () {
+    setUrlParam(currentUrl, 0);
+  });
 }
 
-function setHrefParam(param) {
-  var href = window.location.href;
-  window.location.href = href + "?eco=" + param;
+function setUrlParam(url, param) {
+  window.location.href = url + "?eco=" + param;
+}
+
+function addParamsToHrefClick() {
+  var param = getUrlParam("eco");
+  var allH = document.querySelectorAll("a");
+  allH.forEach(function (elm) {
+    elm.addEventListener("click", function (e) {
+      e.preventDefault();
+      var hrefUrl = e.target.getAttribute("href");
+      setUrlParam(hrefUrl, param);
+    });
+  });
 }
 
 /***/ }),
@@ -406,38 +422,6 @@ function randomizeSelection() {
       }
     });
   });
-}
-
-/***/ }),
-
-/***/ "./src/js_modules/set_href_url_params.js":
-/*!***********************************************!*\
-  !*** ./src/js_modules/set_href_url_params.js ***!
-  \***********************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "setHrefUrlParams": () => (/* binding */ setHrefUrlParams)
-/* harmony export */ });
-function setHrefUrlParams() {
-  var allH = document.querySelectorAll("a");
-  allH.forEach(function (elm) {
-    elm.addEventListener("click", addUrlParams);
-  });
-}
-
-function addUrlParams(e) {
-  e.preventDefault();
-  var url = e.target.getAttribute("href");
-  var urlParams = new URLSearchParams(window.location.search);
-  var eco = urlParams.get("eco");
-  setHref(url, eco);
-}
-
-function setHref(url, eco) {
-  window.location.href = url + "?eco=" + eco;
 }
 
 /***/ }),
