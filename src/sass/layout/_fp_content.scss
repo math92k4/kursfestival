@@ -2,8 +2,6 @@
 
 .content ul {
   padding: 0 20px;
-  // max-width: 1800px;
-  // margin: 0 auto;
 
   & a {
     cursor: pointer;
@@ -55,14 +53,25 @@
   & p {
     position: absolute;
     text-align: center;
-    right: 0%;
-    bottom: 20%;
+    left: 0%;
+    top: 80%;
     padding: 10px 25px;
     border: solid 2px $purple;
     background-color: $bg_color;
     color: $black;
     width: 100%;
     text-transform: uppercase;
+  }
+}
+
+.eco.front_page .image {
+  & p {
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: auto;
+    padding: 20px 40px;
+    border-radius: 0 50px 0 50px;
   }
 }
 

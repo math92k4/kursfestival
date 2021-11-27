@@ -593,14 +593,23 @@ header li {
 .front_page .image p {
   position: absolute;
   text-align: center;
-  right: 0%;
-  bottom: 20%;
+  left: 0%;
+  top: 80%;
   padding: 10px 25px;
   border: solid 2px #e6b8f8;
   background-color: #f3ece9;
   color: #252525;
   width: 100%;
   text-transform: uppercase;
+}
+
+.eco.front_page .image p {
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: auto;
+  padding: 20px 40px;
+  border-radius: 0 50px 0 50px;
 }
 
 .green::after, .green::before, .green .graphic_fill::before, .green .graphic_fill::after {
@@ -1458,8 +1467,4 @@ footer li:not(.gitter_list li) {
 
 .mode_pop_up.show {
   display: block;
-}
-
-#content {
-  height: 100vh;
 }
