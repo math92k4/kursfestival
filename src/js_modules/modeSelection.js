@@ -24,8 +24,9 @@ export function addParamsToHrefClick() {
   allH.forEach((elm) => {
     elm.addEventListener("click", function (e) {
       e.preventDefault();
-      const hrefUrl = e.target.getAttribute("href");
+      const hrefUrl = this.getAttribute("href");
       setUrlParam(hrefUrl, param);
+      window.location.href = hrefUrl + "?eco=" + param;
     });
   });
 }

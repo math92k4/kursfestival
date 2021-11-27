@@ -1,6 +1,6 @@
 <div class="header_margin"></div>
 
-<section class="sngl_wrapper">
+<section class="content_wrapper">
 
     <?php 
     $params = array(
@@ -30,12 +30,6 @@
         <source srcset="//:0" type="image/webp">
         <img src="//:0" alt="" loading="lazy">
      </picture>
-
-
-
-    <?php
-
-    ?>
 
 </section>
 

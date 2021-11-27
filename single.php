@@ -3,6 +3,12 @@
 if ($pods_name == "kursfestival") {
    $pods_name = pods_v( 1, 'url');
 }
+
+// Get SEO meta fields from page
+$pageID = get_the_ID();
+$metaDesc = get_post_meta( $pageID, 'meta_tekst', true );
+$metaKeywords = get_post_meta( $pageID, 'meta_keywords', true );
+
 ?>
 
 <!DOCTYPE html>
@@ -11,6 +17,8 @@ if ($pods_name == "kursfestival") {
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta name="description" content="<?php echo $metaDesc ?>">
+   <meta name="keywords" content="<?php echo $metaKeywords ?>">
    <link rel="stylesheet" href="../../wp-content/themes/kursfestival/dist/css/app.css">
    <link rel="icon" href="../../wp-content/themes/kursfestival/imgs/ellipse_55.png" type="image/x-icon"/>
    <title><?php echo get_the_title(); ?></title>
