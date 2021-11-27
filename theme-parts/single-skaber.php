@@ -31,11 +31,5 @@
         <img src="//:0" alt="" loading="lazy">
      </picture>
 
-
-
-    <?php
-
-    ?>
-
 </section>
 
