@@ -11,6 +11,35 @@ $pageID = get_the_ID();
 $metaDesc = get_post_meta( $pageID, 'meta_tekst', true );
 $metaKeywords = get_post_meta( $pageID, 'meta_keywords', true );
 
+// Is media fields set?
+$imagetSet = "false";
+$videoSet = false;
+
+// urls default to null
+$imgUrl = null;
+$fallbackUrl = null;
+$videUrl = null;
+
+if (get_post_meta( $pageID, 'billede', true )) {
+    // Pods media settings
+    $size = ''; 
+    $default = -1; 
+    $force = false; 
+
+    // Get image urls and imageSet = true
+    $image = get_post_meta( $pageID, 'billede', true );
+    $fallback = get_post_meta( $pageID, 'billede_fallback', true );
+    $imgUrl = pods_image_url($image, $size, $default, $force);
+    $fallbackUrl = pods_image_url($fallback, $size, $default, $force);
+    $imagetSet = true;
+
+    // Get video urls and videoSet = true
+    if (get_post_meta( $pageID, 'video', true )) {
+        $video = get_post_meta( $pageID, 'video', true );
+        $videUrl = pods_image_url($video, $size, $default, $force);
+        $videoSet = true;
+    }
+}
 
 ?>
 <!DOCTYPE html>
@@ -33,8 +62,22 @@ $metaKeywords = get_post_meta( $pageID, 'meta_keywords', true );
 <div class="header_margin"></div>
     <section>
         <h1><?php echo get_the_title(); ?></h1>
-        <div>
+        <div class="page_content">
             <?php echo the_content(); ?>
+
+            <?php if ($videoSet) {
+            ?>
+                <video data-image="<?php echo $fallbackUrl ?>" data-vsrc="<?php echo $videUrl ?>" src=""></video>
+                
+            <?php
+            } else if ($imagetSet) { ?>
+
+                <picture data-image="<?php echo $imgUrl?>"  data-fallback="<?php echo $fallbackUrl ?>">
+                    <source srcset="//:0" type="image/webp">
+                    <img src="//:0" alt="" loading="lazy">
+                </picture>
+
+            <?php } ?>
         </div>
     </section>
    
