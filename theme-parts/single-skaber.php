@@ -1,6 +1,6 @@
 <div class="header_margin"></div>
 
-<section class="sngl_wrapper">
+<section class="content_wrapper">
 
     <?php 
     $params = array(

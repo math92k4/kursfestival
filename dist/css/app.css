@@ -763,26 +763,27 @@ header li {
 .single p:not(.caption) {
   margin-top: 1rem;
   font-size: 1.5rem;
+  width: 100%;
   max-width: 45ch;
   line-height: 1.2;
 }
 
-.sngl_wrapper img {
-  margin-top: 20px;
+.content_wrapper img {
   max-width: 500px;
+  margin: 20px 0 20px auto;
 }
 
 @media only screen and (min-width: 900px) {
-  .sngl_wrapper {
+  .content_wrapper {
     display: flex;
   }
 
-  .sngl_wrapper img {
+  .content_wrapper img {
     margin-top: 0;
-    margin-left: 20px;
+    padding-left: 20px;
   }
 
-  .sngl_wrapper p {
+  .content_wrapper p {
     width: 45ch;
   }
 }

@@ -61,14 +61,17 @@ if (get_post_meta( $pageID, 'billede', true )) {
 
 <div class="header_margin"></div>
     <section>
-        <h1><?php echo get_the_title(); ?></h1>
-        <div class="page_content">
+    <div class="content_wrapper">
+        <div>
+        <h1>
+            <?php echo get_the_title(); ?></h1>
             <?php echo the_content(); ?>
+        </div>
 
             <?php if ($videoSet) {
             ?>
                 <video data-image="<?php echo $fallbackUrl ?>" data-vsrc="<?php echo $videUrl ?>" src=""></video>
-                
+
             <?php
             } else if ($imagetSet) { ?>
 
