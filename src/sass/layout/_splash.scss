@@ -9,6 +9,7 @@
   & .date {
     margin-top: 20px;
     position: absolute;
+    z-index: 100;
     width: 100%;
     font-size: 1.36rem;
     text-align: center;
@@ -50,10 +51,11 @@
     width: 100%;
     height: 100%;
     border-radius: 100%;
-    // background-image: url("/wp-content/themes/kursfestival/imgs/circle.png");
     background-size: cover;
     transform: rotateX(var(--x-value)) rotateY(var(--y-value));
     opacity: 0.5;
+    border-radius: 100%;
+    background-color: $orange;
   }
 }
 

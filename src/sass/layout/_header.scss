@@ -5,6 +5,7 @@ header {
   width: 100%;
   padding: 20px 20px 0px 20px;
   z-index: 10;
+  background-color: $bg_color;
 
   & #logo {
     width: 70px;
@@ -22,7 +23,7 @@ header {
 }
 
 .header_margin {
-  padding-top: 100px;
+  padding-top: 60px;
 }
 
 .menu_list {
@@ -172,13 +173,13 @@ header {
     }
 
     & .top {
-      transform: translate(-50%, -9px);
+      transform: translate(-50%, -8px);
     }
     & .center {
       transform: translate(-50%, 0);
     }
     & .bottom {
-      transform: translate(-50%, 9px);
+      transform: translate(-50%, 8px);
     }
   }
 
@@ -202,7 +203,7 @@ header {
 
 @keyframes kf_stroke_top {
   0% {
-    transform: translate(-50%, -9px);
+    transform: translate(-50%, -8px);
     animation-iteration-count: cubic-bezier(0.77, -0.47, 0.24, 1.02);
   }
   50% {
@@ -229,7 +230,7 @@ header {
 
 @keyframes kf_sroke_bottom {
   0% {
-    transform: translate(-50%, 9px);
+    transform: translate(-50%, 8px);
     animation-iteration-count: cubic-bezier(0.77, -0.47, 0.24, 1.02);
   }
   50% {

@@ -142,6 +142,7 @@ footer .footer_wrapper li {
 #splash .date {
   margin-top: 20px;
   position: absolute;
+  z-index: 100;
   width: 100%;
   font-size: 1.36rem;
   text-align: center;
@@ -186,6 +187,8 @@ footer .footer_wrapper li {
   background-size: cover;
   transform: rotateX(var(--x-value)) rotateY(var(--y-value));
   opacity: 0.5;
+  border-radius: 100%;
+  background-color: #f9a94d;
 }
 
 #splash_logo {
@@ -410,6 +413,7 @@ header {
   width: 100%;
   padding: 20px 20px 0px 20px;
   z-index: 10;
+  background-color: #f3ece9;
 }
 
 header #logo {
@@ -427,7 +431,7 @@ header li {
 }
 
 .header_margin {
-  padding-top: 100px;
+  padding-top: 60px;
 }
 
 .menu_list {
@@ -575,7 +579,7 @@ header li {
 }
 
 #menu_btn .strokes .top {
-  transform: translate(-50%, -9px);
+  transform: translate(-50%, -8px);
 }
 
 #menu_btn .strokes .center {
@@ -583,7 +587,7 @@ header li {
 }
 
 #menu_btn .strokes .bottom {
-  transform: translate(-50%, 9px);
+  transform: translate(-50%, 8px);
 }
 
 #menu_btn.open .top, #menu_btn.closed .top {
@@ -607,7 +611,7 @@ header li {
 
 @-webkit-keyframes kf_stroke_top {
   0% {
-    transform: translate(-50%, -9px);
+    transform: translate(-50%, -8px);
     -webkit-animation-iteration-count: cubic-bezier(0.77, -0.47, 0.24, 1.02);
             animation-iteration-count: cubic-bezier(0.77, -0.47, 0.24, 1.02);
   }
@@ -623,7 +627,7 @@ header li {
 
 @keyframes kf_stroke_top {
   0% {
-    transform: translate(-50%, -9px);
+    transform: translate(-50%, -8px);
     -webkit-animation-iteration-count: cubic-bezier(0.77, -0.47, 0.24, 1.02);
             animation-iteration-count: cubic-bezier(0.77, -0.47, 0.24, 1.02);
   }
@@ -664,7 +668,7 @@ header li {
 }
 @-webkit-keyframes kf_sroke_bottom {
   0% {
-    transform: translate(-50%, 9px);
+    transform: translate(-50%, 8px);
     -webkit-animation-iteration-count: cubic-bezier(0.77, -0.47, 0.24, 1.02);
             animation-iteration-count: cubic-bezier(0.77, -0.47, 0.24, 1.02);
   }
@@ -679,7 +683,7 @@ header li {
 }
 @keyframes kf_sroke_bottom {
   0% {
-    transform: translate(-50%, 9px);
+    transform: translate(-50%, 8px);
     -webkit-animation-iteration-count: cubic-bezier(0.77, -0.47, 0.24, 1.02);
             animation-iteration-count: cubic-bezier(0.77, -0.47, 0.24, 1.02);
   }

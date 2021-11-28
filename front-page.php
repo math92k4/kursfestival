@@ -50,13 +50,13 @@ $metaKeywords = get_post_meta( $pageID, 'meta_keywords', true );
             <div id="ticket_cont">
                 <button>KØB BILLET</button>
                 <div class="circles">
-                    <span data-delay="70" style="background-image: url('./wp-content/themes/kursfestival/imgs/circle.png');"></span>
-                    <span data-delay="60" style="background-image: url('./wp-content/themes/kursfestival/imgs/circle.png');"></span>
-                    <span data-delay="50" style="background-image: url('./wp-content/themes/kursfestival/imgs/circle.png');"></span>
-                    <span data-delay="40" style="background-image: url('./wp-content/themes/kursfestival/imgs/circle.png');"></span>
-                    <span data-delay="30" style="background-image: url('./wp-content/themes/kursfestival/imgs/circle.png');"></span>
-                    <span data-delay="20" style="background-image: url('./wp-content/themes/kursfestival/imgs/circle.png');"></span>
-                    <span data-delay="10" style="background-image: url('./wp-content/themes/kursfestival/imgs/circle.png');"></span>
+                    <span data-delay="70" ></span>
+                    <span data-delay="60" ></span>
+                    <span data-delay="50" ></span>
+                    <span data-delay="40" ></span>
+                    <span data-delay="30" ></span>
+                    <span data-delay="20" ></span>
+                    <span data-delay="10" ></span>
                 </div>
             </div>
         </section>
