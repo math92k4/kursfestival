@@ -20,16 +20,22 @@ function toggleMenu() {
     delay += 100;
   });
   var menuBtn = document.querySelector("#menu_btn");
-  menuBtn.addEventListener("click", function (e) {
-    e.target.classList.toggle("open");
-    document.querySelector(".menu_list").classList.toggle("open");
-    document.querySelector(".header_clr").classList.toggle("open");
-
-    if (menuBtn.classList.contains("open")) {
+  menuBtn.addEventListener("click", function () {
+    // Menu btn anim toggle
+    if (menuBtn.classList.contains("closed") || menuBtn.classList == "") {
+      menuBtn.classList.remove("closed");
+      menuBtn.offsetHeight;
+      menuBtn.classList.add("open");
       document.querySelector("body").style.overflowY = "hidden";
-    } else {
+    } else if (menuBtn.classList.contains("open")) {
+      menuBtn.classList.remove("open");
+      menuBtn.offsetHeight;
+      menuBtn.classList.add("closed");
       document.querySelector("body").style.overflowY = "initial";
     }
+
+    document.querySelector(".menu_list").classList.toggle("open");
+    document.querySelector(".header_clr").classList.toggle("open");
   });
 }
 
