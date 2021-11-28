@@ -73,8 +73,8 @@
   }
 
   & h1 {
-    font-size: 17rem;
-    line-height: 10rem;
+    font-size: 45vw;
+    line-height: 30vw;
     position: relative;
     color: $black;
     pointer-events: none;
@@ -91,7 +91,7 @@
     }
   }
   & span {
-    font-size: 9.5rem;
+    font-size: 25vw;
     display: block;
     position: relative;
 
@@ -112,6 +112,8 @@
     z-index: 1;
     transform: translateY(var(--new-y)) translateX(var(--new-x));
     pointer-events: none;
+    width: 90vw;
+    max-width: 500px;
   }
 }
 
@@ -203,5 +205,18 @@
   100% {
     transform: rotateX(90deg);
     /* opacity: 0; */
+  }
+}
+
+@media only screen and (min-width: 615px) {
+  #splash_logo {
+    & h1 {
+      font-size: 17rem;
+      line-height: 10rem;
+
+      & span {
+        font-size: 9.5rem;
+      }
+    }
   }
 }
