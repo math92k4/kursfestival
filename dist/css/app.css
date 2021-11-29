@@ -1712,6 +1712,7 @@ footer li:not(.gitter_list li) {
 .mode_pop_up p {
   max-width: 50ch;
   text-align: left;
+  padding: 0 20px;
 }
 
 .mode_pop_up button {
@@ -1748,4 +1749,15 @@ footer li:not(.gitter_list li) {
 .mode_pop_up button:nth-child(2) {
   margin-left: 10px;
   border-radius: 50px 0 50px 0;
+}
+
+@media (max-width: 770px) {
+  .mode_pop_up button {
+    display: block;
+  }
+
+  .mode_pop_up .welcome {
+    font-size: 4.5rem;
+    text-align: center;
+  }
 }
