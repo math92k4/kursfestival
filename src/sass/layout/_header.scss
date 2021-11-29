@@ -89,7 +89,8 @@ header {
     transition: transform 1s 0.8s $easeio;
 
     & li {
-      transition: transform 0.3s var(--delay) $easeio, opacity 0.3s var(--delay) $easeio;
+      transition: transform 0.3s var(--delay) $easeio,
+        opacity 0.3s var(--delay) $easeio;
       transform: translateX(0);
       opacity: 1;
     }

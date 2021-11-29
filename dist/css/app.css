@@ -1694,10 +1694,58 @@ footer li:not(.gitter_list li) {
   left: 0;
   z-index: 31;
   background-color: #f3ece9;
-  border: 5px solid #e6b8f8;
   display: none;
 }
 
 .mode_pop_up.show {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.mode_pop_up .welcome {
+  font-size: 5rem;
+  font-family: "gallery_modernregular", sans-serif;
+}
+
+.mode_pop_up p {
+  max-width: 50ch;
+  text-align: left;
+}
+
+.mode_pop_up button {
+  position: relative;
+  width: 350px;
+  padding: 20px 40px;
+  border: solid 2px #bdcf9a;
+  margin-top: 20px;
+  overflow: hidden;
+  font-family: "gallery_modernregular", sans-serif;
+}
+
+.mode_pop_up button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0%;
+  background-color: #bdcf9a;
+  z-index: -1;
+  transition: width 0.3s cubic-bezier(0.77, 0, 0.24, 1);
+}
+
+.mode_pop_up button:hover::before {
+  width: 100%;
+}
+
+.mode_pop_up button:nth-child(1) {
+  margin-right: 10px;
+  border-radius: 0 50px 0 50px;
+}
+
+.mode_pop_up button:nth-child(2) {
+  margin-left: 10px;
+  border-radius: 50px 0 50px 0;
 }
