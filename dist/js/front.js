@@ -62,6 +62,8 @@ function _init() {
             eco = (0,_js_modules_modeSelection_js__WEBPACK_IMPORTED_MODULE_9__.getUrlParam)("eco");
 
             if (eco == null) {
+              // prevent scroll on body when the box is shown
+              document.querySelector("body").style.overflow = "hidden";
               (0,_js_modules_modeSelection_js__WEBPACK_IMPORTED_MODULE_9__.showModePopUp)();
             } else {
               (0,_js_modules_modeSelection_js__WEBPACK_IMPORTED_MODULE_9__.addParamsToHrefClick)();
