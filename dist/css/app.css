@@ -1694,6 +1694,7 @@ footer li:not(.gitter_list li) {
   left: 0;
   z-index: 31;
   background-color: #f3ece9;
+  border: solid #bdcf9a 8px;
   display: none;
 }
 
