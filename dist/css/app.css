@@ -919,6 +919,18 @@ header li {
   .content ul li:nth-child(5) p {
     border-radius: 0 0 50px 50px;
   }
+
+  .eco.front_page li:nth-child(1) p {
+    border-radius: 0 50px 0 50px;
+  }
+
+  .eco.front_page li:nth-child(3) p {
+    border-radius: 50px 0 50px 0;
+  }
+
+  .eco.front_page li:nth-child(5) p {
+    border-radius: 0 0 50px 50px;
+  }
 }
 .page section,
 .single section {
