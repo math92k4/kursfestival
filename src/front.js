@@ -6,7 +6,11 @@ import { toggleMenu } from "./js_modules/burgermenu.js";
 import { cursor } from "./js_modules/cursor.js";
 import { gitterAspectRatio } from "./js_modules/gitter_aspect.js";
 import { loadImgs } from "./js_modules/loadImgs.js";
-import { getUrlParam, showModePopUp, addParamsToHrefClick } from "./js_modules/modeSelection.js";
+import {
+  getUrlParam,
+  showModePopUp,
+  addParamsToHrefClick,
+} from "./js_modules/modeSelection.js";
 
 window.addEventListener("DOMContentLoaded", init);
 
@@ -14,6 +18,8 @@ async function init() {
   const eco = getUrlParam("eco");
 
   if (eco == null) {
+    // prevent scroll on body when the box is shown
+    document.querySelector("body").style.overflow = "hidden";
     showModePopUp();
   } else {
     addParamsToHrefClick();
