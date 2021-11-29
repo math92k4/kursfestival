@@ -41,6 +41,11 @@ summary {
   list-style: none;
 }
 
+textarea:focus,
+input:focus {
+  outline: none;
+}
+
 @font-face {
   font-family: "gallery_modernregular";
   src: url("../../fonts/gallerymodern-webfont.woff2") format("woff2"), url("../..//fonts/gallerymodern-webfont.woff") format("woff");
@@ -80,7 +85,6 @@ summary {
 legend {
   font-weight: 300;
   font-size: 1.8rem;
-  margin-bottom: 20px;
   color: #252525;
   font-family: sans-serif;
 }
@@ -89,8 +93,6 @@ label {
   font-size: 1.8rem;
   font-weight: 300;
   color: #252525;
-  margin-top: 20px;
-  margin-left: 20px;
   font-family: sans-serif;
 }
 
@@ -98,11 +100,6 @@ label {
   font-size: 1.2rem;
   font-weight: 300;
   font-family: sans-serif;
-}
-
-#fil_label {
-  margin-top: 20px;
-  display: block;
 }
 
 ::-moz-placeholder {
@@ -868,34 +865,6 @@ header li {
   transform: translate(-55%, -55%);
 }
 
-.purple::after, .purple::before, .purple .graphic_fill::before, .purple .graphic_fill::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  border: 2px solid #e6b8f8;
-  border-radius: 100%;
-  transform: translate(-50%, -50%);
-  width: 80%;
-  height: 80%;
-  transition: transform 0.5s cubic-bezier(0.77, 0, 0.24, 1);
-  pointer-events: none;
-}
-
-.purple::before, .purple::after {
-  fill: #f3ece9;
-}
-
-.purple a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.purple:hover::after {
-  transform: translate(-55%, -55%);
-}
-
 @media only screen and (min-width: 600px) {
   .content ul {
     display: grid;
@@ -917,6 +886,10 @@ header li {
 @media only screen and (min-width: 900px) {
   .content ul {
     grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .content ul li {
+    grid-area: auto !important;
   }
 
   .content ul p {
@@ -1446,12 +1419,7 @@ tr:last-child td:first-child {
 #frivillig_signup input[type=text],
 #frivillig_signup input[type=email] {
   background-color: transparent;
-  border-bottom: solid #e6b8f8 1px;
-}
-
-#frivillig_signup textarea:focus,
-#frivillig_signup input:focus {
-  outline: none;
+  border-bottom: solid #e6b8f8 2px;
 }
 
 #frivillig_signup input[type=radio]:after {
@@ -1511,6 +1479,15 @@ tr:last-child td:first-child {
   margin-top: 20px;
 }
 
+#frivillig_signup legend {
+  margin-bottom: 20px;
+}
+
+#frivillig_signup label {
+  margin-top: 20px;
+  margin-left: 20px;
+}
+
 @media (max-width: 1000px) {
   .frivillig_form .gitter_list {
     grid-template-columns: 1fr 1fr;
@@ -1560,6 +1537,96 @@ tr:last-child td:first-child {
     display: none;
   }
 }
+#mc_embed_signup {
+  background-color: #f3ece9;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  height: 80%;
+  border: 2px solid #e6b8f8;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 5%;
+}
+
+#mc_embed_signup p {
+  margin-right: 5%;
+  text-align: center;
+}
+
+#mc_embed_signup input[type=email] {
+  display: block;
+  background-color: transparent;
+  border: none;
+  border-bottom: solid #e6b8f8 2px;
+  margin-top: 2vw;
+  height: 3ch;
+  width: 100%;
+  font-size: 1.8vw;
+  font-weight: 300 !important;
+  text-align: center;
+}
+
+#mc_embed_signup input[type=email]::-moz-placeholder {
+  text-align: center;
+  font-size: 1.8vw;
+  font-weight: 300;
+  font-family: sans-serif;
+}
+
+#mc_embed_signup input[type=email]:-ms-input-placeholder {
+  text-align: center;
+  font-size: 1.8vw;
+  font-weight: 300;
+  font-family: sans-serif;
+}
+
+#mc_embed_signup input[type=email]::placeholder {
+  text-align: center;
+  font-size: 1.8vw;
+  font-weight: 300;
+  font-family: sans-serif;
+}
+
+#mc_embed_signup input[type=email].mce_inline_error {
+  border-color: #e6b8f8;
+}
+
+#mc_embed_signup input[type=submit] {
+  border: 2px solid #e6b8f8;
+  background-color: #f3ece9;
+  font-weight: 300;
+  color: #252525;
+  border-radius: 0 50px 0 50px;
+  font-family: sans-serif;
+  font-size: 2.5vw;
+  padding: 1vw 2vw;
+  margin-top: 2vw;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  transition: background-color 0.5s cubic-bezier(0.77, 0, 0.24, 1);
+  cursor: pointer;
+}
+
+#mc_embed_signup input[type=submit]:hover {
+  background-color: #e6b8f8;
+}
+
+#mc_embed_signup .mce_inline_error:not(input), #mc_embed_signup #mce-success-response {
+  background-color: transparent !important;
+  color: #252525 !important;
+  font-weight: 300 !important;
+  text-align: center;
+  margin: 0.3vw 0 0 0 !important;
+  font-size: 1.8vw;
+  font-family: sans-serif;
+}
+
 .faq_container {
   margin-top: 40px !important;
 }

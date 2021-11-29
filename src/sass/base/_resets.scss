@@ -36,3 +36,8 @@ body {
 summary {
   list-style: none;
 }
+
+textarea:focus,
+input:focus {
+  outline: none;
+}

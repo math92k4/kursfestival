@@ -39,7 +39,6 @@ summary {
 legend {
   font-weight: 300;
   font-size: 1.8rem;
-  margin-bottom: 20px;
   color: $black;
   font-family: sans-serif;
 }
@@ -48,8 +47,6 @@ label {
   font-size: 1.8rem;
   font-weight: 300;
   color: $black;
-  margin-top: 20px;
-  margin-left: 20px;
   font-family: sans-serif;
 }
 
@@ -57,11 +54,6 @@ label {
   font-size: 1.2rem;
   font-weight: 300;
   font-family: sans-serif;
-}
-
-#fil_label {
-  margin-top: 20px;
-  display: block;
 }
 
 ::placeholder {
