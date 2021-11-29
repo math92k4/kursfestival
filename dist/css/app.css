@@ -1421,7 +1421,7 @@ tr:last-child td:first-child {
   display: flex;
 }
 
-form {
+#frivillig_signup {
   width: 80vw;
   background-color: #f3ece9;
   border: 2px solid #e6b8f8;
@@ -1433,28 +1433,28 @@ form {
   transform: translate(-50%, -50%);
 }
 
-form .form_ctrl {
+#frivillig_signup .form_ctrl {
   display: grid;
 }
 
-form input {
+#frivillig_signup input {
   padding: 5px;
   border: none;
   margin: 10px 20px 10px 20px;
 }
 
-form input[type=text],
-form input[type=email] {
+#frivillig_signup input[type=text],
+#frivillig_signup input[type=email] {
   background-color: transparent;
   border-bottom: solid #e6b8f8 1px;
 }
 
-form textarea:focus,
-form input:focus {
+#frivillig_signup textarea:focus,
+#frivillig_signup input:focus {
   outline: none;
 }
 
-form input[type=radio]:after {
+#frivillig_signup input[type=radio]:after {
   width: 15px;
   height: 15px;
   border-radius: 15px;
@@ -1468,7 +1468,7 @@ form input[type=radio]:after {
   border: solid 2px #e6b8f8;
 }
 
-form input[type=radio]:checked:after {
+#frivillig_signup input[type=radio]:checked:after {
   width: 15px;
   height: 15px;
   border-radius: 15px;
@@ -1482,7 +1482,7 @@ form input[type=radio]:checked:after {
   border: solid 2px #e6b8f8;
 }
 
-form input[type=submit] {
+#frivillig_signup input[type=submit] {
   background-color: #e6b8f8;
   color: #f3ece9;
   margin-top: 40px;
@@ -1493,20 +1493,20 @@ form input[type=submit] {
   position: relative;
 }
 
-form fieldset {
+#frivillig_signup fieldset {
   width: 50vw;
   border: none;
   margin-top: 20px;
   margin-top: 20px;
 }
 
-form #submit_wrapper {
+#frivillig_signup #submit_wrapper {
   display: flex;
   width: 100%;
   justify-content: center;
 }
 
-form #fil_label {
+#frivillig_signup #fil_label {
   display: block;
   margin-top: 20px;
 }
@@ -1516,28 +1516,28 @@ form #fil_label {
     grid-template-columns: 1fr 1fr;
   }
 
-  .frivillig_form form {
+  .frivillig_form #frivillig_signup {
     padding: 10px;
   }
 
-  .frivillig_form form label {
+  .frivillig_form #frivillig_signup label {
     margin-left: 0px;
   }
 
-  .frivillig_form form legend {
+  .frivillig_form #frivillig_signup legend {
     margin-bottom: 0px;
   }
 
-  .frivillig_form form #fil_label {
+  .frivillig_form #frivillig_signup #fil_label {
     display: block;
     margin-top: 20px;
   }
 
-  .frivillig_form form input {
+  .frivillig_form #frivillig_signup input {
     margin: 10px 20px 10px 0px;
   }
 
-  .frivillig_form form fieldset {
+  .frivillig_form #frivillig_signup fieldset {
     width: 80vw;
     padding: 10px;
   }
