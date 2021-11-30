@@ -7,6 +7,7 @@
   left: 0;
   z-index: 31;
   background-color: $bg_color;
+  border: solid $green 8px;
   display: none;
   &.show {
     display: flex;
@@ -21,6 +22,7 @@
   & p {
     max-width: 50ch;
     text-align: left;
+    padding: 0 20px;
   }
   & button {
     position: relative;
@@ -52,6 +54,19 @@
     &:nth-child(2) {
       margin-left: 10px;
       border-radius: 50px 0 50px 0;
+    }
+  }
+}
+
+@media (max-width: 770px) {
+  .mode_pop_up {
+    & button {
+      display: block;
+    }
+
+    & .welcome {
+      font-size: 4.5rem;
+      text-align: center;
     }
   }
 }

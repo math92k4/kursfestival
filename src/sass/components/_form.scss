@@ -7,7 +7,7 @@
   display: flex;
 }
 
-form {
+#frivillig_signup {
   width: 80vw;
   background-color: $bg_color;
   border: 2px solid $purple;
@@ -31,12 +31,7 @@ form {
   & input[type="text"],
   input[type="email"] {
     background-color: transparent;
-    border-bottom: solid $purple 1px;
-  }
-
-  & textarea:focus,
-  input:focus {
-    outline: none;
+    border-bottom: solid $purple 2px;
   }
 
   & input[type="radio"]:after {
@@ -95,6 +90,15 @@ form {
     display: block;
     margin-top: 20px;
   }
+
+  & legend {
+    margin-bottom: 20px;
+  }
+
+  & label {
+    margin-top: 20px;
+    margin-left: 20px;
+  }
 }
 
 @media (max-width: 1000px) {
@@ -103,7 +107,7 @@ form {
       grid-template-columns: 1fr 1fr;
     }
 
-    & form {
+    & #frivillig_signup {
       padding: 10px;
 
       & label {
@@ -150,6 +154,133 @@ form {
       & li:nth-child(4) {
         display: none;
       }
+    }
+  }
+}
+
+// Mail chimp
+
+#mc_embed_signup {
+  background-color: $bg_color;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  height: 80%;
+  border: 2px solid $purple;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 5%;
+  & p {
+    margin-right: 5%;
+    text-align: center;
+  }
+
+  & input[type="email"] {
+    display: block;
+    background-color: transparent;
+    border: none;
+    border-bottom: solid $purple 2px;
+    margin-top: 4vw;
+    height: 4ch;
+    width: 100%;
+    font-size: 3vw;
+    font-weight: 300 !important;
+    text-align: center;
+
+    &::placeholder {
+      text-align: center;
+      font-size: 1.3rem;
+      font-weight: 300;
+      font-family: sans-serif;
+    }
+
+    &.mce_inline_error {
+      border-color: $purple;
+    }
+  }
+
+  & input[type="submit"] {
+    border: 2px solid $purple;
+    background-color: $bg_color;
+    font-weight: 300;
+    color: $black;
+    border-radius: 0 50px 0 50px;
+    font-family: sans-serif;
+    font-size: 1.3rem;
+    padding: 10px 20px;
+    margin-top: 4vw;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    transition: background-color 0.5s $easeio;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $purple;
+    }
+  }
+
+  & .mce_inline_error:not(input),
+  & #mce-success-response {
+    background-color: transparent !important;
+    color: $black !important;
+    font-weight: 300 !important;
+    text-align: center;
+    margin: 2vw 0 0 0 !important;
+    font-size: 1.8rem;
+    font-family: sans-serif;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  #mc_embed_signup {
+    & input[type="email"] {
+      margin-top: 3vw;
+      font-size: 2.7vw;
+
+      &::placeholder {
+        font-size: 2.7vw;
+      }
+    }
+
+    & input[type="submit"] {
+      font-size: 2.5vw;
+      padding: 1vw 2vw;
+      margin-top: 2vw;
+    }
+
+    & .mce_inline_error:not(input),
+    & #mce-success-response {
+      margin: 0.3vw 0 0 0 !important;
+      font-size: 1.8vw;
+    }
+  }
+}
+@media only screen and (min-width: 900px) {
+  #mc_embed_signup {
+    & input[type="email"] {
+      margin-top: 2vw;
+      font-size: 1.8vw;
+
+      &::placeholder {
+        font-size: 1.8vw;
+      }
+    }
+
+    & input[type="submit"] {
+      font-size: 2.5vw;
+      padding: 1vw 2vw;
+      margin-top: 2vw;
+    }
+
+    & .mce_inline_error:not(input),
+    & #mce-success-response {
+      margin: 0.3vw 0 0 0 !important;
+      font-size: 1.8vw;
     }
   }
 }

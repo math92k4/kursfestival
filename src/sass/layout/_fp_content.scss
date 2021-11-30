@@ -32,7 +32,7 @@
   }
 
   & p {
-    font-size: 2.5rem;
+    font-size: 1.8rem;
     font-weight: 300;
   }
 }
@@ -189,39 +189,39 @@
   }
 }
 
-.purple {
-  &::after,
-  &::before,
-  & .graphic_fill::before,
-  & .graphic_fill::after {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    border: 2px solid $purple;
-    border-radius: 100%;
-    transform: translate(-50%, -50%);
-    width: 80%;
-    height: 80%;
-    transition: transform 0.5s cubic-bezier(0.77, 0, 0.24, 1);
-    pointer-events: none;
-  }
+// .purple {
+//   &::after,
+//   &::before,
+//   & .graphic_fill::before,
+//   & .graphic_fill::after {
+//     content: "";
+//     position: absolute;
+//     top: 50%;
+//     left: 50%;
+//     border: 2px solid $purple;
+//     border-radius: 100%;
+//     transform: translate(-50%, -50%);
+//     width: 80%;
+//     height: 80%;
+//     transition: transform 0.5s cubic-bezier(0.77, 0, 0.24, 1);
+//     pointer-events: none;
+//   }
 
-  &::before,
-  &::after {
-    fill: $bg_color;
-  }
+//   &::before,
+//   &::after {
+//     fill: $bg_color;
+//   }
 
-  & a {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+//   & a {
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//   }
 
-  &:hover::after {
-    transform: translate(-55%, -55%);
-  }
-}
+//   &:hover::after {
+//     transform: translate(-55%, -55%);
+//   }
+// }
 
 @media only screen and (min-width: 600px) {
   .content ul {
@@ -244,6 +244,10 @@
 @media only screen and (min-width: 900px) {
   .content ul {
     grid-template-columns: 1fr 1fr 1fr;
+
+    & li {
+      grid-area: auto !important;
+    }
 
     & p {
       font-size: 2.5vw;
@@ -271,6 +275,23 @@
       & img {
         border-radius: 0 0 20% 20%;
       }
+      & p {
+        border-radius: 0 0 50px 50px;
+      }
+    }
+  }
+  .eco.front_page {
+    & li:nth-child(1) {
+      & p {
+        border-radius: 0 50px 0 50px;
+      }
+    }
+    & li:nth-child(3) {
+      & p {
+        border-radius: 50px 0 50px 0;
+      }
+    }
+    & li:nth-child(5) {
       & p {
         border-radius: 0 0 50px 50px;
       }

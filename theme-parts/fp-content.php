@@ -56,9 +56,18 @@
                     </div>
                 </div>
                 <div class="graphic_fill"></div>
+                <?php 
+                if ($pods->field('farve') == "purple") {
+                    get_template_part("/theme-parts/mailchimp");
+
+                } else { 
+                ?>
+                
                 <a href=" <?php echo $pods->field('link') ?> ">
                     <p><?php echo $pods->field('tekst') ?></p>
                 </a>
+
+                <?php } ?>
             </li>
 
             <?php } else { 
