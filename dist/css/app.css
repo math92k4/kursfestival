@@ -74,6 +74,15 @@ summary {
   color: #252525;
 }
 
+h1 {
+  font-size: 3rem;
+  word-break: break-all;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
 p {
   font-size: 1.5rem;
 }
@@ -137,6 +146,15 @@ footer .footer_wrapper li {
   font-size: 1.1rem;
 }
 
+@media only screen and (min-width: 615px) {
+  h1 {
+    font-size: 4rem;
+  }
+
+  h2 {
+    font-size: 2.5rem;
+  }
+}
 #splash {
   width: 100vw;
   height: 100vh;
@@ -150,7 +168,7 @@ footer .footer_wrapper li {
   position: absolute;
   z-index: 20;
   width: 100%;
-  font-size: 1rem;
+  font-size: 0.8rem;
   text-align: center;
   transition: opacity 0.7s;
   transform: translateY(var(--y));
@@ -162,7 +180,7 @@ footer .footer_wrapper li {
 
 #splash .date span {
   display: block;
-  font-size: 1.28rem;
+  font-size: 1.05rem;
 }
 
 #splash #ticket_cont {
@@ -402,6 +420,15 @@ footer .footer_wrapper li {
   100% {
     transform: rotateX(90deg);
     /* opacity: 0; */
+  }
+}
+@media (max-width: 6150px) {
+  #splash #ticket_cont button {
+    font-size: 1.5rem;
+  }
+
+  #word_anim span {
+    font-size: 1.5rem;
   }
 }
 @media only screen and (min-width: 615px) {
@@ -955,11 +982,6 @@ header li {
   margin: 0 auto;
 }
 
-.page h1,
-.single h1 {
-  font-size: 4rem;
-}
-
 .page p:not(.caption),
 .single p:not(.caption) {
   margin-top: 1rem;
@@ -1061,8 +1083,7 @@ header li {
 }
 
 .om-kurs h1 {
-  font-size: 5rem;
-  margin-left: 20px;
+  margin: 0 20px;
 }
 
 .om-kurs section {
@@ -1094,15 +1115,8 @@ header li {
   text-align: right;
 }
 
-.om-kurs h2 {
-  font-size: 3rem;
-  margin-bottom: 15px;
-}
-
 .om-kurs p {
-  font-size: 1.4rem;
   max-width: 45ch;
-  text-align: justify;
   line-height: 1.2;
 }
 
@@ -1142,10 +1156,6 @@ header li {
     text-align: right;
   }
 }
-.skaber_container {
-  margin-top: 40px !important;
-}
-
 .skaber_container article {
   margin-top: 40px;
   position: relative;
@@ -1154,7 +1164,6 @@ header li {
 .skaber_container h2 {
   padding: 15px 10px;
   text-transform: uppercase;
-  font-size: 2.5rem;
   background-color: #f3ece9;
   border-radius: 0 100px 0 0;
 }
@@ -1521,6 +1530,10 @@ tr:last-child td:first-child {
     grid-template-columns: 1fr 1fr;
   }
 
+  .frivillig_form .gitter_list li:nth-child(1), .frivillig_form .gitter_list li:nth-child(2) {
+    display: none;
+  }
+
   .frivillig_form #frivillig_signup {
     padding: 10px;
   }
@@ -1556,6 +1569,11 @@ tr:last-child td:first-child {
     flex-direction: column;
   }
 }
+@media (max-width: 850px) {
+  .frivillig_form .gitter_list li:nth-child(1), .frivillig_form .gitter_list li:nth-child(2) {
+    display: list-item;
+  }
+}
 @media (max-width: 640px) {
   .frivillig_form .gitter_list {
     grid-template-columns: 1fr;
@@ -1563,6 +1581,11 @@ tr:last-child td:first-child {
 
   .frivillig_form .gitter_list li:nth-child(1), .frivillig_form .gitter_list li:nth-child(2), .frivillig_form .gitter_list li:nth-child(3), .frivillig_form .gitter_list li:nth-child(4) {
     display: none;
+  }
+}
+@media (max-width: 430px) {
+  .frivillig_form .gitter_list li:nth-child(4) {
+    display: list-item;
   }
 }
 #mc_embed_signup {

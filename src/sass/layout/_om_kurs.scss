@@ -6,8 +6,7 @@
     margin: 0 auto;
   }
   & h1 {
-    font-size: 5rem;
-    margin-left: 20px;
+    margin: 0 20px;
   }
 
   & section {
@@ -35,15 +34,8 @@
     }
   }
 
-  & h2 {
-    font-size: 3rem;
-    margin-bottom: 15px;
-  }
-
   & p {
-    font-size: 1.4rem;
     max-width: 45ch;
-    text-align: justify;
     line-height: 1.2;
   }
 
