@@ -69,7 +69,7 @@
     border-radius: 0px 40px 0px 40px;
     font-size: 2rem;
     cursor: pointer;
-    padding: 20px 150px;
+    padding: 10px 40px;
     position: relative;
   }
 
@@ -101,10 +101,23 @@
   }
 }
 
+@media (min-width: 600px) {
+  #frivillig_signup {
+    & input[type="submit"] {
+      padding: 20px 150px;
+    }
+  }
+}
+
 @media (max-width: 1000px) {
   .frivillig_form {
     & .gitter_list {
       grid-template-columns: 1fr 1fr;
+
+      & li:nth-child(1),
+      & li:nth-child(2) {
+        display: none;
+      }
     }
 
     & #frivillig_signup {
@@ -144,6 +157,17 @@
   }
 }
 
+@media (max-width: 850px) {
+  .frivillig_form {
+    & .gitter_list {
+      & li:nth-child(1),
+      & li:nth-child(2) {
+        display: list-item;
+      }
+    }
+  }
+}
+
 @media (max-width: 640px) {
   .frivillig_form {
     & .gitter_list {
@@ -153,6 +177,16 @@
       & li:nth-child(3),
       & li:nth-child(4) {
         display: none;
+      }
+    }
+  }
+}
+
+@media (max-width: 430px) {
+  .frivillig_form {
+    & .gitter_list {
+      & li:nth-child(4) {
+        display: list-item;
       }
     }
   }

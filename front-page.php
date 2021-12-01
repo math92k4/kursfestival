@@ -47,18 +47,21 @@ $metaKeywords = get_post_meta( $pageID, 'meta_keywords', true );
                 </li>
             </ul>
 
-            <div id="ticket_cont">
-                <button>KØB BILLET</button>
-                <div class="circles">
-                    <span data-delay="70" ></span>
-                    <span data-delay="60" ></span>
-                    <span data-delay="50" ></span>
-                    <span data-delay="40" ></span>
-                    <span data-delay="30" ></span>
-                    <span data-delay="20" ></span>
-                    <span data-delay="10" ></span>
-                </div>
-            </div>
+            <!-- <div id="ticket_cont"> -->
+                <button>
+                    <span class="txt">KØB BILLET</span>
+                    <div class="circles">
+                        <span data-delay="70" ></span>
+                        <span data-delay="60" ></span>
+                        <span data-delay="50" ></span>
+                        <span data-delay="40" ></span>
+                        <span data-delay="30" ></span>
+                        <span data-delay="20" ></span>
+                        <span data-delay="10" ></span>
+                    </div>
+                </button>
+                
+            <!-- </div> -->
         </section>
         
         <?php get_template_part("/theme-parts/fp-content") ?>

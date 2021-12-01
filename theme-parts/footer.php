@@ -1,10 +1,4 @@
 <footer>
-    <div class="footer_gitter">
-        <?php 
-        get_template_part('/theme-parts/small-gitter');
-        get_template_part('/theme-parts/small-gitter');
-        get_template_part('/theme-parts/small-gitter');
-        ?>
         
         <div class="footer_wrapper">
 
@@ -51,6 +45,5 @@
                     );
                 ?>
             </div>
-        </div>
     </div>
 </footer>

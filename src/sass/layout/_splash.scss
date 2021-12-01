@@ -1,234 +1,231 @@
 @import "../abstracts";
+
+//
+//
+// ----- SPLASH -----
+
 #splash {
-  width: 100vw;
-  height: 100vh;
   position: relative;
+  width: 100vw;
+  height: var(--vh);
   overflow: hidden;
 
-  // Date
+  //
+  //
+  // ----- DATE -----
+
   & .date {
     pointer-events: none;
-    margin-top: 20px;
-    position: absolute;
-    z-index: 20;
-    width: 100%;
-    font-size: 1rem;
-    text-align: center;
-    transition: opacity 0.7s;
+    max-width: none;
     transform: translateY(var(--y));
-    &.disappear {
-      opacity: 0;
-    }
+    font-size: calc(var(--para) * 0.76);
+    text-align: center;
+    transition: opacity 0.7s $easeio;
+    position: relative;
+    z-index: 30;
 
     & span {
       display: block;
-      font-size: 1.28rem;
+      font-size: var(--para);
+    }
+
+    &.disappear {
+      opacity: 0;
     }
   }
 
-  // Ticket Counter
-  & #ticket_cont {
-    position: absolute;
-    bottom: 20px;
-    right: 20px;
+  //
+  //
+  // ----- SPLASH LOGO -----
+
+  #splash_logo {
     display: flex;
-  }
-
-  & #ticket_cont button {
-    align-self: flex-end;
-    text-align: right;
-    max-width: 7ch;
-  }
-
-  & #ticket_cont .circles {
-    margin-left: 20px;
-    position: relative;
-    width: 75px;
-    height: 75px;
-  }
-
-  & #ticket_cont span {
-    position: absolute;
+    justify-content: center;
+    align-items: center;
     width: 100%;
     height: 100%;
-    border-radius: 100%;
-    background-size: cover;
-    transform: rotateX(var(--x-value)) rotateY(var(--y-value));
-    opacity: 0.5;
-    border-radius: 100%;
-    background-color: $orange;
-  }
-}
-
-// Splash IMG / tekst
-#splash_logo {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  & img {
-    width: 40vw;
-  }
-
-  & h1 {
-    font-size: 45vw;
-    line-height: 30vw;
-    position: relative;
-    color: $black;
     pointer-events: none;
-    font-weight: 300;
-    &::after {
-      content: "KURS";
-      position: absolute;
-      top: 0;
-      left: 0;
-      z-index: 2;
-      -webkit-text-fill-color: transparent;
-      -webkit-text-stroke-width: 2px;
-      -webkit-text-stroke-color: $black;
-    }
-  }
-  & span {
-    font-size: 25vw;
-    display: block;
-    position: relative;
 
-    &::after {
-      content: "FESTIVAL";
+    & img {
+      width: 80vw;
       position: absolute;
-      top: 0;
-      left: 0;
-      z-index: 2;
-      -webkit-text-fill-color: transparent;
-      -webkit-text-stroke-width: 2px;
-      -webkit-text-stroke-color: $black;
+
+      z-index: 1;
+    }
+
+    & h1 {
+      position: relative;
+      font-size: 45vw;
+      text-align: center;
+      line-height: 0.8;
+      color: $black;
+
+      & span {
+        display: block;
+        font-size: 25vw;
+        position: relative;
+
+        &::after {
+          content: "FESTIVAL";
+        }
+      }
+
+      &::after {
+        content: "KURS";
+      }
+
+      &::after,
+      & span::after {
+        position: absolute;
+        width: 100%;
+        top: 0;
+        left: 0;
+        -webkit-text-fill-color: transparent;
+        -webkit-text-stroke-width: 2px;
+        -webkit-text-stroke-color: $black;
+        z-index: 2;
+      }
     }
   }
 
-  & img {
+  //
+  //
+  // ----- WORD ANIM -----
+
+  & #word_anim {
     position: absolute;
-    z-index: 1;
-    transform: translateY(var(--new-y)) translateX(var(--new-x));
-    pointer-events: none;
-    width: 90vw;
-    max-width: 500px;
+    left: var(--main_margin);
+    bottom: var(--main_margin);
+
+    & li {
+      position: relative;
+      height: 2ch;
+    }
+
+    & span {
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform-origin: bottom center;
+      animation-duration: 5s;
+      animation-iteration-count: infinite;
+    }
+
+    & span:nth-child(1) {
+      animation-name: kf_txt_rot;
+    }
+    & span:nth-child(2) {
+      animation-name: kf_txt_rot2;
+    }
+
+    & li:nth-child(2) span {
+      animation-delay: 0.1s;
+    }
+    & li:nth-child(3) span {
+      animation-delay: 0.2s;
+    }
+    & li:nth-child(4) span {
+      animation-delay: 0.35s;
+    }
   }
-}
 
-// Word animation
-#word_anim {
-  position: absolute;
-  bottom: 20px;
-  left: 20px;
+  //
+  //
+  // ----- TICKET BTN -----
 
-  & li {
-    list-style: none;
-    font-size: 1.8rem;
-    font-family: sans-serif;
-    font-weight: 300;
-    color: #252525;
+  & button {
+    position: absolute;
+    right: var(--main_margin);
+    bottom: var(--main_margin);
+    display: flex;
+    align-items: flex-end;
+  }
+
+  & .txt {
+    max-width: 7ch;
+    text-align: right;
+    margin-right: var(--main_margin);
+  }
+
+  & .circles {
     position: relative;
-    height: 2ch;
-  }
-  & span {
-    position: absolute;
-    top: 0;
-    left: 0;
-  }
-  & span:nth-child(1) {
-    transform-origin: bottom center;
-    animation-name: kf_txt_rot;
-    animation-duration: 5s;
-    animation-iteration-count: infinite;
-  }
-  & span:nth-child(2) {
-    transform-origin: bottom center;
-    animation-name: kf_txt_rot2;
-    animation-duration: 5s;
-    animation-iteration-count: infinite;
-  }
-  & li:nth-child(2) span {
-    animation-delay: 0.1s;
-  }
-  & li:nth-child(3) span {
-    animation-delay: 0.2s;
-  }
-  & li:nth-child(4) span {
-    animation-delay: 0.35s;
+    width: calc(3 * var(--para));
+    height: calc(3 * var(--para));
+    border-radius: 100%;
+
+    & span {
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-color: $orange;
+      opacity: 0.3;
+      width: 100%;
+      height: 100%;
+      border-radius: inherit;
+      transform: rotateX(var(--x-value)) rotateY(var(--y-value));
+    }
   }
 }
+
+//
+//
+// ----- KEYFRAMES FOR WORD_ANIM -----
 
 @keyframes kf_txt_rot {
   0% {
     transform: rotateX(0);
-    /* opacity: 1; */
   }
   40% {
     transform: rotateX(0);
-    /* opacity: 1; */
   }
-
   50% {
     transform: rotateX(90deg);
-    /* opacity: 0; */
   }
   90% {
     transform: rotateX(90deg);
-    /* opacity: 0; */
   }
   100% {
     transform: rotateX(0);
-    /* opacity: 1; */
   }
 }
 
 @keyframes kf_txt_rot2 {
   0% {
     transform: rotateX(90deg);
-    /* opacity: 0; */
   }
   40% {
     transform: rotateX(90deg);
-    /* opacity: 0; */
   }
-
   50% {
     transform: rotateX(0);
-    /* opacity: 1; */
   }
   90% {
     transform: rotateX(0);
-    /* opacity: 1; */
   }
   100% {
     transform: rotateX(90deg);
-    /* opacity: 0; */
   }
 }
 
-@media only screen and (min-width: 615px) {
-  #splash_logo {
-    & h1 {
-      font-size: 17rem;
-      line-height: 10rem;
-
-      & span {
-        font-size: 9.5rem;
-      }
-    }
-  }
-
+@media only screen and (min-width: $tablet) {
   #splash {
-    & .date {
-      font-size: 1.36rem;
-      & span {
-        font-size: 1.8rem;
+    & #splash_logo {
+      & h1 {
+        font-size: 17rem;
+        line-height: 10rem;
+
+        & span {
+          font-size: 9.5rem;
+        }
+      }
+
+      & img {
+        width: 60vw;
+        max-width: 700px;
+        transform: translateY(var(--new-y)) translateX(var(--new-x));
       }
     }
   }
+}
+@media only screen and (min-width: $desktop) {
 }

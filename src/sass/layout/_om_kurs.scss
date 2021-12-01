@@ -6,8 +6,7 @@
     margin: 0 auto;
   }
   & h1 {
-    font-size: 5rem;
-    margin-left: 20px;
+    margin: 0 20px;
   }
 
   & section {
@@ -35,18 +34,6 @@
     }
   }
 
-  & h2 {
-    font-size: 3rem;
-    margin-bottom: 15px;
-  }
-
-  & p {
-    font-size: 1.4rem;
-    max-width: 45ch;
-    text-align: justify;
-    line-height: 1.2;
-  }
-
   & .side_menu {
     & ul {
       display: flex;
@@ -54,9 +41,9 @@
       justify-content: space-between;
     }
     & li {
-      font-size: 1.8rem;
+      font-size: var(--para);
       font-weight: 300;
-      margin-top: 20px;
+      margin-top: var(--main_margin);
     }
   }
 
@@ -65,7 +52,7 @@
   }
 }
 
-@media only screen and (min-width: 1100px) {
+@media only screen and (min-width: $desktop) {
   .om-kurs {
     & .wrapper {
       display: flex;

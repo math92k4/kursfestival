@@ -13,58 +13,18 @@
 
             if ($pods->field('grafik')) { ?>
 
-            <li class="graphic <?php echo $pods->field('farve') ?>">
-                <div class="gitter">
-                    <div class="row top">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    </div>
+            <li class="graphic <?php echo $pods->field('figur') ?>">
+                <?php
+                get_template_part("/theme-parts/gitter");
 
-                    <div class="row">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    </div>
-
-                    <div class="row">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    </div>
-
-                    <div class="row">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    </div>
-
-                    <div class="row bottom">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    </div>
-                </div>
-                <div class="graphic_fill"></div>
-                <?php 
-                if ($pods->field('farve') == "purple") {
+                if ($pods->field('figur') == "mailchimp") {
                     get_template_part("/theme-parts/mailchimp");
 
-                } else { 
+                } else {
                 ?>
-                
                 <a href=" <?php echo $pods->field('link') ?> ">
-                    <p><?php echo $pods->field('tekst') ?></p>
+                    <span class="shape"></span>
+                    <p><span><?php echo $pods->field('tekst') ?></span></p>
                 </a>
 
                 <?php } ?>
@@ -84,55 +44,15 @@
                 ?>
                 
                 <li class="image">
-                <div class="gitter">
-                    <div class="row top">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    </div>
-
-                    <div class="row">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    </div>
-
-                    <div class="row">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    </div>
-
-                    <div class="row">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    </div>
-
-                    <div class="row bottom">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    </div>
-                </div>
+                <?php get_template_part("/theme-parts/gitter"); ?>
                     <a href=" <?php echo $pods->field('link') ?> ">
 
                         <picture data-image="<?php echo $imgUrl?>"  data-fallback="<?php echo $fallbackUrl ?>">
                             <source srcset="//:0" type="image/webp">
                             <img src="//:0" alt="" loading="lazy">
                         </picture>
-
-                        <p><?php echo $pods->field('tekst') ?></p>
+                        <span class="shape"></span>
+                        <p><span><?php echo $pods->field('tekst') ?></span></p>
                     </a>
                 </li>
 

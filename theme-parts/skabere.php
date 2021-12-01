@@ -12,7 +12,7 @@ $force = false;
 <section class="skaber_container">
     <article class="kunst">
         <h2>Kunst</h2>
-        <ul class="skaber_list">
+        <ul class="skaber_list gitter_list">
             <?php
             $pods = pods('program', $params);
             while ($pods->fetch()) {
@@ -25,7 +25,7 @@ $force = false;
                 ?>
 
                 <li>
-                    <?php get_template_part('/theme-parts/small-gitter'); ?>
+                    <?php get_template_part('/theme-parts/gitter'); ?>
                     <a href="<?php echo $pods->field('permalink') ?>">
                         <picture data-image="<?php echo $imgUrl?>"  data-fallback="<?php echo $fallbackUrl ?>">
                             <source srcset="//:0" type="image/webp">
@@ -44,7 +44,7 @@ $force = false;
 
     <article class="musik">
         <h2>Musik</h2>
-        <ul class="skaber_list">
+        <ul class="skaber_list gitter_list">
             <?php
             $pods = pods('program', $params);
             while ($pods->fetch()) {
@@ -57,7 +57,7 @@ $force = false;
                 ?>
 
                 <li>
-                <?php get_template_part('/theme-parts/small-gitter'); ?>
+                <?php get_template_part('/theme-parts/gitter'); ?>
                     <a href="<?php echo $pods->field('permalink') ?>">
                         <picture data-image="<?php echo $imgUrl?>"  data-fallback="<?php echo $fallbackUrl ?>">
                             <source srcset="//:0" type="image/webp">
@@ -76,7 +76,7 @@ $force = false;
 
     <article class="talks">
         <h2>talks</h2>
-        <ul class="skaber_list">
+        <ul class="skaber_list gitter_list">
             <?php
             $pods = pods('program', $params);
             while ($pods->fetch()) {
@@ -89,7 +89,7 @@ $force = false;
                 ?>
 
                 <li>
-                <?php get_template_part('/theme-parts/small-gitter'); ?>
+                <?php get_template_part('/theme-parts/gitter'); ?>
                     <a href="<?php echo $pods->field('permalink') ?>">
                         <picture data-image="<?php echo $imgUrl?>"  data-fallback="<?php echo $fallbackUrl ?>">
                             <source srcset="//:0" type="image/webp">

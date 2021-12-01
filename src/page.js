@@ -3,12 +3,15 @@ import { toggleMenu } from "./js_modules/burgermenu.js";
 import { cursor } from "./js_modules/cursor.js";
 import { gitterAspectRatio } from "./js_modules/gitter_aspect";
 import { loadImgs } from "./js_modules/loadImgs.js";
+import { setHundredVh } from "./js_modules/hundredvh.js";
 import { getUrlParam, showModePopUp, addParamsToHrefClick } from "./js_modules/modeSelection.js";
 
 window.addEventListener("DOMContentLoaded", init);
 
 function init() {
   const eco = getUrlParam("eco");
+  setHundredVh();
+  window.addEventListener("resize", setHundredVh);
 
   if (eco == null) {
     showModePopUp();
@@ -28,3 +31,5 @@ function init() {
     }
   }
 }
+
+setInterval(() => {}, interval);
