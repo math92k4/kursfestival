@@ -58,3 +58,9 @@ input {
   border: none;
   background-color: transparent;
 }
+
+.eco {
+  & img:not(header img, #splash img) {
+    display: none;
+  }
+}

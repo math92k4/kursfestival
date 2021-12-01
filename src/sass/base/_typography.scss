@@ -30,6 +30,13 @@ h1 {
   font-weight: 300;
 }
 
+h2 {
+  font-family: "gallery_modernregular";
+  color: $black;
+  font-size: var(--h2);
+  font-weight: 300;
+}
+
 button {
   font-family: sans-serif;
   color: $black;
@@ -58,4 +65,21 @@ input {
   font-family: sans-serif;
   font-weight: 300;
   color: $black;
+}
+
+.caption {
+  font-size: var(--h2);
+  font-weight: 300;
+  font-family: "gallery_modernregular", sans-serif;
+}
+
+td {
+  font-size: var(--para);
+  font-weight: 300;
+  font-family: sans-serif;
+}
+
+th {
+  font-family: "gallery_modernregular", sans-serif;
+  font-size: var(--h2);
 }

@@ -24,7 +24,7 @@
                 ?>
                 <a href=" <?php echo $pods->field('link') ?> ">
                     <span class="shape"></span>
-                    <p><?php echo $pods->field('tekst') ?></p>
+                    <p><span><?php echo $pods->field('tekst') ?></span></p>
                 </a>
 
                 <?php } ?>
@@ -51,8 +51,8 @@
                             <source srcset="//:0" type="image/webp">
                             <img src="//:0" alt="" loading="lazy">
                         </picture>
-
-                        <p><?php echo $pods->field('tekst') ?></p>
+                        <span class="shape"></span>
+                        <p><span><?php echo $pods->field('tekst') ?></span></p>
                     </a>
                 </li>
 

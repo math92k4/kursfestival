@@ -15,12 +15,14 @@
   // ----- DATE -----
 
   & .date {
+    pointer-events: none;
     max-width: none;
-    top: var(--main_margin);
     transform: translateY(var(--y));
     font-size: calc(var(--para) * 0.76);
     text-align: center;
     transition: opacity 0.7s $easeio;
+    position: relative;
+    z-index: 30;
 
     & span {
       display: block;

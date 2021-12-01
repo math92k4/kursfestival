@@ -1,1 +1,32 @@
+@import "../abstracts";
 
+.page,
+.single {
+  & section {
+    max-width: 1500px;
+    margin: 0 auto;
+  }
+}
+
+.content_wrapper {
+  & img {
+    max-width: 500px;
+    margin: var(--main_margin) 0 var(--main_margin) auto;
+    border-radius: 20% 0 20% 0;
+  }
+}
+
+@media only screen and (min-width: $desktop) {
+  .content_wrapper {
+    display: flex;
+
+    & img {
+      margin-top: 0;
+      padding-left: var(--main_margin);
+    }
+  }
+
+  .program section {
+    padding-left: 60px;
+  }
+}

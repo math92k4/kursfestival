@@ -119,6 +119,33 @@
   }
 }
 
+//
+//
+// ----- ECO -----
+
+.eco.front_page .gitter_list {
+  & .image p,
+  & .image .shape {
+    bottom: 50%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    width: 85%;
+    height: 85%;
+    background-color: $bg_color;
+    border: $main_bdr $purple;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100px 0 100px 0;
+  }
+
+  & li:hover {
+    & .shape {
+      transform: translate(-55%, 45%);
+    }
+  }
+}
+
 // ----- MEDIAS -----
 
 @media only screen and (min-width: $tablet) {

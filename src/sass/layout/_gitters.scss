@@ -18,6 +18,13 @@
   & p:not(#mc_embed_signup p),
   & .shape {
     position: absolute;
+  }
+
+  & p span {
+    display: block;
+  }
+
+  & .shape {
     transition: transform 0.3s $easeio;
   }
 

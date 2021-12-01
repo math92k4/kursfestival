@@ -1,1 +1,75 @@
 @import "../abstracts";
+
+.om-kurs {
+  & main {
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+  & h1 {
+    margin: 0 20px;
+  }
+
+  & section {
+    padding: 20px;
+  }
+  & .om_container {
+    width: 100%;
+  }
+  & img {
+    border-radius: 0 100px 0 100px;
+  }
+
+  & article {
+    display: flex;
+    flex-direction: column;
+  }
+  & article div {
+    margin-top: 40px;
+  }
+  & article div:nth-child(2n) {
+    align-self: flex-end;
+
+    & h2 {
+      text-align: right;
+    }
+  }
+
+  & .side_menu {
+    & ul {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+    & li {
+      font-size: var(--para);
+      font-weight: 300;
+      margin-top: var(--main_margin);
+    }
+  }
+
+  & .current {
+    color: $purple;
+  }
+}
+
+@media only screen and (min-width: $desktop) {
+  .om-kurs {
+    & .wrapper {
+      display: flex;
+      flex-direction: row-reverse;
+    }
+
+    & .side_menu {
+      position: sticky;
+      top: 100px;
+
+      & ul {
+        display: block;
+      }
+
+      & li {
+        text-align: right;
+      }
+    }
+  }
+}

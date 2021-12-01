@@ -1,17 +1,36 @@
 @import "../abstracts";
-@import "../base";
 
 footer {
   background-color: $bg_color;
   padding: 0 20px;
-  margin: var(--main_margin);
-  border: $purple $main_bdr;
-  border-radius: var(--btn_radius_rev);
+  margin: var(--main_margin) auto;
 
   & .footer_wrapper {
+    border: $purple $main_bdr;
+    border-radius: $btn_radius_rev;
     padding: var(--main_margin);
     display: grid;
     grid-template-columns: 1fr;
     grid-gap: 40px;
+  }
+}
+
+footer:not(.front_page footer) {
+  max-width: 1500px;
+}
+
+@media only screen and (min-width: $tablet) {
+  footer {
+    & .footer_wrapper {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+}
+
+@media only screen and (min-width: $desktop) {
+  footer {
+    & .footer_wrapper {
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
   }
 }
