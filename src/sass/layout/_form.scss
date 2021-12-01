@@ -1,1 +1,91 @@
 @import "../abstracts";
+
+// generalle form regler
+
+input[type="text"],
+input[type="email"] {
+  background-color: transparent;
+  border-bottom: $main_bdr $purple;
+}
+
+// frivillig form
+
+#form_wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+#frivillig_signup {
+  background-color: $bg_color;
+  border: $main_bdr $purple;
+  border-radius: $btn_radius;
+  & .form_ctrl {
+    display: grid;
+  }
+
+  & fieldset {
+    width: 80vw;
+    padding: var(--main_margin);
+    margin-top: 20px;
+  }
+  & input {
+    padding: 0 var(--main_margin) var(--main_margin) var(--main_margin);
+    margin: var(--main_margin) 20px;
+
+    &[type="text"],
+    &[type="email"] {
+      width: 100%;
+    }
+  }
+  & input[type="radio"]:after {
+    width: 15px;
+    height: 15px;
+    border-radius: 15px;
+    top: -2px;
+    left: -1px;
+    position: relative;
+    background-color: $bg_color;
+    content: "";
+    display: inline-block;
+    visibility: visible;
+    border: $main_bdr $purple;
+  }
+  & input[type="radio"]:checked:after {
+    width: 15px;
+    height: 15px;
+    border-radius: 15px;
+    top: -2px;
+    left: -1px;
+    position: relative;
+    background-color: $purple;
+    content: "";
+    display: inline-block;
+    visibility: visible;
+    border: solid 2px $purple;
+  }
+  #submit_wrapper {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    & input[type="submit"] {
+      background-color: $purple;
+      color: $bg_color;
+      margin-top: 40px;
+      border-radius: $btn_radius_rev;
+      font-size: 2rem;
+      cursor: pointer;
+      padding: 10px 40px;
+      position: relative;
+    }
+  }
+
+  & label {
+    margin-left: 20px;
+  }
+
+  & #fil_label {
+    margin-top: 50px;
+  }
+}
+
+// mailchimp form
