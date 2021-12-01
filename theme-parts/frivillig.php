@@ -1,5 +1,4 @@
 <section class="frivillig_form">
-    <?php get_template_part("/theme-parts/gitter") ?>
                 
 
 <form action="frivillig_signup" id="frivillig_signup">

@@ -14,7 +14,7 @@
             </ul>
             <div class="header_clr"></div>
             <div class="menu_list">
-                <?php get_template_part("/theme-parts/small-gitter") ?>
+                <?php get_template_part("/theme-parts/gitter") ?>
                 <?php 
                 wp_nav_menu(
                 array(
