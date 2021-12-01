@@ -1,5 +1,9 @@
 @import "../abstracts";
 
+header {
+  display: none;
+}
+
 @keyframes kf_stroke_top {
   0% {
     transform: translate(-50%, -8px);

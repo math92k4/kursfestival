@@ -1,5 +1,4 @@
 <footer>
-    <div class="footer_gitter">
         
         <div class="footer_wrapper">
 
@@ -46,6 +45,5 @@
                     );
                 ?>
             </div>
-        </div>
     </div>
 </footer>

@@ -1,1 +1,46 @@
 @import "../abstracts";
+
+.front_page .gitter_list {
+  & img {
+    border-radius: 20% 0 20% 0;
+  }
+
+  & p {
+    font-size: 1.5rem;
+    background-color: $bg_color;
+  }
+
+  & .image {
+    & p {
+      left: 5%;
+      bottom: 5%;
+      padding: 10px 40px;
+      border: 2px solid $purple;
+      border-radius: $btn_radius;
+    }
+  }
+
+  & .graphic:not(.mailchimp) {
+    p {
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 90%;
+      height: 90%;
+      display: inline-flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      & span {
+        display: block;
+      }
+    }
+
+    &.cirkel {
+      & p {
+        border-radius: 100%;
+      }
+    }
+  }
+}

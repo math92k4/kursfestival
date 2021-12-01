@@ -5,6 +5,7 @@ $orange: #f9a94d;
 $green: #bdcf9a;
 
 $easeio: cubic-bezier(0.77, 0, 0.24, 1);
+$trans_width: width 0.3s $easeio;
 
 $tablet: 600px;
 $desktop: 900px;
@@ -12,3 +13,6 @@ $max_width: 1400px;
 
 $main_bdr: 2px solid;
 $half_bdr: 1px solid;
+
+$btn_radius: 0 50px 0 50px;
+$btn_radius_rev: 50px 0 50px 0;

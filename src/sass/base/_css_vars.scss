@@ -3,8 +3,12 @@
 body {
   --para: 1rem;
   --h1: 2.5rem;
-  --h2: 2rem;
+  --h2: 1.8rem;
+
   --main_margin: 10px;
+
+  --btn_radius: 0 50px 0 50px;
+  --btn_radius_rev: 50px 0 50px 0;
 }
 
 @media only screen and (min-width: $tablet) {

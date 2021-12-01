@@ -30,12 +30,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _js_modules_cursor_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./js_modules/cursor.js */ "./src/js_modules/cursor.js");
 /* harmony import */ var _js_modules_gitter_aspect_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./js_modules/gitter_aspect.js */ "./src/js_modules/gitter_aspect.js");
 /* harmony import */ var _js_modules_loadImgs_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./js_modules/loadImgs.js */ "./src/js_modules/loadImgs.js");
-/* harmony import */ var _js_modules_modeSelection_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./js_modules/modeSelection.js */ "./src/js_modules/modeSelection.js");
+/* harmony import */ var _js_modules_hundredvh_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./js_modules/hundredvh.js */ "./src/js_modules/hundredvh.js");
+/* harmony import */ var _js_modules_modeSelection_js__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./js_modules/modeSelection.js */ "./src/js_modules/modeSelection.js");
 
 
 function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
 
 function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
+
 
 
 
@@ -59,14 +61,16 @@ function _init() {
       while (1) {
         switch (_context.prev = _context.next) {
           case 0:
-            eco = (0,_js_modules_modeSelection_js__WEBPACK_IMPORTED_MODULE_9__.getUrlParam)("eco");
+            eco = (0,_js_modules_modeSelection_js__WEBPACK_IMPORTED_MODULE_10__.getUrlParam)("eco");
+            (0,_js_modules_hundredvh_js__WEBPACK_IMPORTED_MODULE_9__.setHundredVh)();
+            window.addEventListener("resize", _js_modules_hundredvh_js__WEBPACK_IMPORTED_MODULE_9__.setHundredVh);
 
             if (eco == null) {
               // prevent scroll on body when the box is shown
               document.querySelector("body").style.overflow = "hidden";
-              (0,_js_modules_modeSelection_js__WEBPACK_IMPORTED_MODULE_9__.showModePopUp)();
+              (0,_js_modules_modeSelection_js__WEBPACK_IMPORTED_MODULE_10__.showModePopUp)();
             } else {
-              (0,_js_modules_modeSelection_js__WEBPACK_IMPORTED_MODULE_9__.addParamsToHrefClick)();
+              (0,_js_modules_modeSelection_js__WEBPACK_IMPORTED_MODULE_10__.addParamsToHrefClick)();
               (0,_js_modules_gitter_aspect_js__WEBPACK_IMPORTED_MODULE_7__.gitterAspectRatio)();
               (0,_js_modules_burgermenu_js__WEBPACK_IMPORTED_MODULE_5__.toggleMenu)();
               (0,_js_modules_datedisappear_js__WEBPACK_IMPORTED_MODULE_4__.dateDisappear)();
@@ -89,7 +93,7 @@ function _init() {
               }
             }
 
-          case 2:
+          case 4:
           case "end":
             return _context.stop();
         }
@@ -247,6 +251,24 @@ function setAspectRatio() {
     var width = elm.offsetWidth;
     elm.style.height = width + "px";
   });
+}
+
+/***/ }),
+
+/***/ "./src/js_modules/hundredvh.js":
+/*!*************************************!*\
+  !*** ./src/js_modules/hundredvh.js ***!
+  \*************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "setHundredVh": () => (/* binding */ setHundredVh)
+/* harmony export */ });
+function setHundredVh() {
+  var vh = window.innerHeight;
+  document.querySelector("body").style.setProperty("--vh", vh + "px");
 }
 
 /***/ }),

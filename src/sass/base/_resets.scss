@@ -30,6 +30,10 @@ body {
   background-color: $bg_color;
 }
 
+section {
+  padding: var(--main_margin);
+}
+
 ::marker {
   display: none;
 }
@@ -40,4 +44,11 @@ summary {
 textarea:focus,
 input:focus {
   outline: none;
+}
+
+button {
+  appearance: none;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
 }
