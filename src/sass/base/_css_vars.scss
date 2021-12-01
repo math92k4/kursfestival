@@ -1,0 +1,14 @@
+@import "../abstracts/";
+
+body {
+  --para: 1rem;
+  --h1: 2.5rem;
+  --h2: 2rem;
+  --main_margin: 10px;
+}
+
+@media only screen and (min-width: $tablet) {
+}
+
+@media only screen and (min-width: $desktop) {
+}

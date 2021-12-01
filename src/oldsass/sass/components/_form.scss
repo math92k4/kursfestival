@@ -1,0 +1,320 @@
+@import "../abstracts";
+
+.frivillig_form {
+  position: relative;
+}
+#form_wrapper {
+  display: flex;
+}
+
+#frivillig_signup {
+  width: 80vw;
+  background-color: $bg_color;
+  border: 2px solid $purple;
+  border-radius: 100px 0px 100px 0px;
+  padding: 50px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  & .form_ctrl {
+    display: grid;
+  }
+
+  & input {
+    padding: 5px;
+    border: none;
+    margin: 10px 20px 10px 20px;
+  }
+
+  & input[type="text"],
+  input[type="email"] {
+    background-color: transparent;
+    border-bottom: solid $purple 2px;
+  }
+
+  & input[type="radio"]:after {
+    width: 15px;
+    height: 15px;
+    border-radius: 15px;
+    top: -2px;
+    left: -1px;
+    position: relative;
+    background-color: $bg_color;
+    content: "";
+    display: inline-block;
+    visibility: visible;
+    border: solid 2px $purple;
+  }
+
+  & input[type="radio"]:checked:after {
+    width: 15px;
+    height: 15px;
+    border-radius: 15px;
+    top: -2px;
+    left: -1px;
+    position: relative;
+    background-color: $purple;
+    content: "";
+    display: inline-block;
+    visibility: visible;
+    border: solid 2px $purple;
+  }
+
+  & input[type="submit"] {
+    background-color: $purple;
+    color: $bg_color;
+    margin-top: 40px;
+    border-radius: 0px 40px 0px 40px;
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 10px 40px;
+    position: relative;
+  }
+
+  & fieldset {
+    width: 50vw;
+    border: none;
+    margin-top: 20px;
+    margin-top: 20px;
+  }
+
+  #submit_wrapper {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+  }
+
+  & #fil_label {
+    display: block;
+    margin-top: 20px;
+  }
+
+  & legend {
+    margin-bottom: 20px;
+  }
+
+  & label {
+    margin-top: 20px;
+    margin-left: 20px;
+  }
+}
+
+@media (min-width: 600px) {
+  #frivillig_signup {
+    & input[type="submit"] {
+      padding: 20px 150px;
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  .frivillig_form {
+    & .gitter_list {
+      grid-template-columns: 1fr 1fr;
+
+      & li:nth-child(1),
+      & li:nth-child(2) {
+        display: none;
+      }
+    }
+
+    & #frivillig_signup {
+      padding: 10px;
+
+      & label {
+        margin-left: 0px;
+      }
+
+      & legend {
+        margin-bottom: 0px;
+      }
+
+      & #fil_label {
+        display: block;
+        margin-top: 20px;
+      }
+
+      & input {
+        margin: 10px 20px 10px 0px;
+      }
+
+      & fieldset {
+        width: 80vw;
+        padding: 10px;
+      }
+    }
+
+    & input[type="submit"] {
+      padding: 20px 100px;
+    }
+
+    & #form_wrapper {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}
+
+@media (max-width: 850px) {
+  .frivillig_form {
+    & .gitter_list {
+      & li:nth-child(1),
+      & li:nth-child(2) {
+        display: list-item;
+      }
+    }
+  }
+}
+
+@media (max-width: 640px) {
+  .frivillig_form {
+    & .gitter_list {
+      grid-template-columns: 1fr;
+      & li:nth-child(1),
+      & li:nth-child(2),
+      & li:nth-child(3),
+      & li:nth-child(4) {
+        display: none;
+      }
+    }
+  }
+}
+
+@media (max-width: 430px) {
+  .frivillig_form {
+    & .gitter_list {
+      & li:nth-child(4) {
+        display: list-item;
+      }
+    }
+  }
+}
+
+// Mail chimp
+
+#mc_embed_signup {
+  background-color: $bg_color;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  height: 80%;
+  border: 2px solid $purple;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 5%;
+  & p {
+    margin-right: 5%;
+    text-align: center;
+  }
+
+  & input[type="email"] {
+    display: block;
+    background-color: transparent;
+    border: none;
+    border-bottom: solid $purple 2px;
+    margin-top: 4vw;
+    height: 4ch;
+    width: 100%;
+    font-size: 3vw;
+    font-weight: 300 !important;
+    text-align: center;
+
+    &::placeholder {
+      text-align: center;
+      font-size: 1.3rem;
+      font-weight: 300;
+      font-family: sans-serif;
+    }
+
+    &.mce_inline_error {
+      border-color: $purple;
+    }
+  }
+
+  & input[type="submit"] {
+    border: 2px solid $purple;
+    background-color: $bg_color;
+    font-weight: 300;
+    color: $black;
+    border-radius: 0 50px 0 50px;
+    font-family: sans-serif;
+    font-size: 1.3rem;
+    padding: 10px 20px;
+    margin-top: 4vw;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    transition: background-color 0.5s $easeio;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $purple;
+    }
+  }
+
+  & .mce_inline_error:not(input),
+  & #mce-success-response {
+    background-color: transparent !important;
+    color: $black !important;
+    font-weight: 300 !important;
+    text-align: center;
+    margin: 2vw 0 0 0 !important;
+    font-size: 1.8rem;
+    font-family: sans-serif;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  #mc_embed_signup {
+    & input[type="email"] {
+      margin-top: 3vw;
+      font-size: 2.7vw;
+
+      &::placeholder {
+        font-size: 2.7vw;
+      }
+    }
+
+    & input[type="submit"] {
+      font-size: 2.5vw;
+      padding: 1vw 2vw;
+      margin-top: 2vw;
+    }
+
+    & .mce_inline_error:not(input),
+    & #mce-success-response {
+      margin: 0.3vw 0 0 0 !important;
+      font-size: 1.8vw;
+    }
+  }
+}
+@media only screen and (min-width: 900px) {
+  #mc_embed_signup {
+    & input[type="email"] {
+      margin-top: 2vw;
+      font-size: 1.8vw;
+
+      &::placeholder {
+        font-size: 1.8vw;
+      }
+    }
+
+    & input[type="submit"] {
+      font-size: 2.5vw;
+      padding: 1vw 2vw;
+      margin-top: 2vw;
+    }
+
+    & .mce_inline_error:not(input),
+    & #mce-success-response {
+      margin: 0.3vw 0 0 0 !important;
+      font-size: 1.8vw;
+    }
+  }
+}

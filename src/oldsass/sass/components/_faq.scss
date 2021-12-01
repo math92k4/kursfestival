@@ -1,10 +1,23 @@
 @import "../abstracts";
+.faq_container {
+  margin-top: 40px !important;
+}
 
 details {
+  //   &:nth-child(3n-2) {
+  //     background-color: $purple;
+  //   }
+  //   &:nth-child(3n-1) {
+  //     background-color: $orange;
+  //   }
+  //   &:nth-child(3n) {
+  //     background-color: $green;
+  //   }
+
   margin-top: 20px;
 
   & summary {
-    padding: var(--main_margin);
+    padding: 20px;
     border: 2px solid $orange;
     position: relative;
 
@@ -22,7 +35,9 @@ details {
 
   & p {
     background-color: $orange;
-    padding: var(--main_margin);
+    padding: 20px;
+    margin-top: 0 !important;
+    max-width: none !important;
   }
 }
 

@@ -1,0 +1,72 @@
+@import "../abstracts";
+.mode_pop_up {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 31;
+  background-color: $bg_color;
+  border: solid $green 8px;
+  display: none;
+  &.show {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  & .welcome {
+    font-size: 5rem;
+    font-family: "gallery_modernregular", sans-serif;
+  }
+  & p {
+    max-width: 50ch;
+    text-align: left;
+    padding: 0 20px;
+  }
+  & button {
+    position: relative;
+    width: 350px;
+    padding: 20px 40px;
+    border: solid 2px $green;
+    margin-top: 20px;
+    overflow: hidden;
+    font-family: "gallery_modernregular", sans-serif;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 0%;
+      background-color: $green;
+      z-index: -1;
+      transition: width 0.3s $easeio;
+    }
+    &:hover::before {
+      width: 100%;
+    }
+    &:nth-child(1) {
+      margin-right: 10px;
+
+      border-radius: 0 50px 0 50px;
+    }
+    &:nth-child(2) {
+      margin-left: 10px;
+      border-radius: 50px 0 50px 0;
+    }
+  }
+}
+
+@media (max-width: 770px) {
+  .mode_pop_up {
+    & button {
+      display: block;
+    }
+
+    & .welcome {
+      font-size: 4.5rem;
+      text-align: center;
+    }
+  }
+}
