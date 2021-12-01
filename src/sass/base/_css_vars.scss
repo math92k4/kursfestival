@@ -6,12 +6,15 @@ body {
   --h2: 1.8rem;
 
   --main_margin: 10px;
-
-  --btn_radius: 0 50px 0 50px;
-  --btn_radius_rev: 50px 0 50px 0;
 }
 
 @media only screen and (min-width: $tablet) {
+  body {
+    --para: 1.3rem;
+    --h1: 3rem;
+    --h2: 2rem;
+    --main_margin: 20px;
+  }
 }
 
 @media only screen and (min-width: $desktop) {

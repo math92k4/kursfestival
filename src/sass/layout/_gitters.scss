@@ -15,9 +15,30 @@
     height: 100%;
   }
 
-  & p,
+  & p:not(#mc_embed_signup p),
   & .shape {
     position: absolute;
+    transition: transform 0.3s $easeio;
+  }
+
+  & p::after {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+    border: inherit;
+    z-index: 100;
+    transition: $trans_transform;
+    pointer-events: none;
+  }
+
+  & li:hover {
+    & p::after {
+      transform: translate(-5%, -5%);
+    }
   }
 }
 

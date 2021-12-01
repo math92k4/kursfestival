@@ -18,7 +18,7 @@
     max-width: none;
     top: var(--main_margin);
     transform: translateY(var(--y));
-    font-size: 0.76rem;
+    font-size: calc(var(--para) * 0.76);
     text-align: center;
     transition: opacity 0.7s $easeio;
 
@@ -47,9 +47,7 @@
     & img {
       width: 80vw;
       position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
+
       z-index: 1;
     }
 
@@ -83,7 +81,7 @@
         -webkit-text-fill-color: transparent;
         -webkit-text-stroke-width: 2px;
         -webkit-text-stroke-color: $black;
-        z-index: 20;
+        z-index: 2;
       }
     }
   }
@@ -205,4 +203,27 @@
   100% {
     transform: rotateX(90deg);
   }
+}
+
+@media only screen and (min-width: $tablet) {
+  #splash {
+    & #splash_logo {
+      & h1 {
+        font-size: 17rem;
+        line-height: 10rem;
+
+        & span {
+          font-size: 9.5rem;
+        }
+      }
+
+      & img {
+        width: 60vw;
+        max-width: 700px;
+        transform: translateY(var(--new-y)) translateX(var(--new-x));
+      }
+    }
+  }
+}
+@media only screen and (min-width: $desktop) {
 }
