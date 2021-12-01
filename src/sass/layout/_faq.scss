@@ -1,13 +1,14 @@
 @import "../abstracts";
 
 details {
-  margin-top: 20px;
+  &:not(:first-of-type) {
+    margin-top: var(--main_margin);
+  }
 
   & summary {
-    padding: var(--main_margin);
-    border: 2px solid $orange;
+    padding: 20px var(--main_margin);
+    border: $main_bdr $orange;
     position: relative;
-
     &::after {
       content: "";
       width: 50px;
@@ -19,7 +20,6 @@ details {
       transform: translateY(-50%);
     }
   }
-
   & p {
     background-color: $orange;
     padding: var(--main_margin);
