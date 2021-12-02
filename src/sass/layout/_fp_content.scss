@@ -209,20 +209,4 @@
       }
     }
   }
-
-  .eco.front_page .gitter_list {
-    & li:nth-child(1) {
-      & p,
-      & .shape {
-        border-radius: 0 100px 0 100px;
-      }
-    }
-
-    & li:nth-child(5) {
-      & p,
-      & .shape {
-        border-radius: 0 0 100px 100px;
-      }
-    }
-  }
 }
