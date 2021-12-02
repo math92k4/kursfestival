@@ -3,7 +3,7 @@
 header {
   position: fixed;
   width: 100%;
-  padding: var(--main_margin) var(--main_margin) 0px var(--main_margin);
+  padding: 10px var(--main_margin);
   z-index: 10;
   background-color: $bg_color;
 
@@ -19,12 +19,22 @@ header {
     margin: 0 auto;
   }
 
+  & > nav > ul {
+    align-items: center;
+  }
+
   & li {
     font-size: 1.5rem;
   }
 
   & .gitter {
-    display: none;
+    position: absolute;
+    left: 10vw;
+    width: 80%;
+    top: 50%;
+    transform: translateY(-50%);
+    border: $half_bdr $purple;
+    max-width: 500px;
   }
 }
 
@@ -55,6 +65,7 @@ header {
     height: 100%;
     flex-direction: column;
     padding-right: 10vw;
+    max-width: none;
   }
 
   & .menu-top-menu-container li {
@@ -174,6 +185,7 @@ header {
 //
 // ----- MENU BTN -----
 #menu_btn {
+  display: inline-block;
   & .strokes {
     display: inline-block;
     width: 25px;

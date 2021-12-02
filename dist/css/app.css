@@ -414,7 +414,7 @@ body {
 header {
   position: fixed;
   width: 100%;
-  padding: var(--main_margin) var(--main_margin) 0px var(--main_margin);
+  padding: 10px var(--main_margin);
   z-index: 10;
   background-color: #f3ece9;
 }
@@ -431,12 +431,22 @@ header ul {
   margin: 0 auto;
 }
 
+header > nav > ul {
+  align-items: center;
+}
+
 header li {
   font-size: 1.5rem;
 }
 
 header .gitter {
-  display: none;
+  position: absolute;
+  left: 10vw;
+  width: 80%;
+  top: 50%;
+  transform: translateY(-50%);
+  border: 1px solid #e6b8f8;
+  max-width: 500px;
 }
 
 .header_margin {
@@ -467,6 +477,7 @@ header .gitter {
   height: 100%;
   flex-direction: column;
   padding-right: 10vw;
+  max-width: none;
 }
 
 .menu_list .menu-top-menu-container li {
@@ -577,6 +588,10 @@ header .gitter {
   height: 40px;
   background-image: url("../../imgs/temp_splash_logo.png");
   background-size: cover;
+}
+
+#menu_btn {
+  display: inline-block;
 }
 
 #menu_btn .strokes {
