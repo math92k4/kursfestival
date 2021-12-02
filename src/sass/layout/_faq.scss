@@ -1,6 +1,7 @@
 @import "../abstracts";
 
 details {
+  cursor: pointer;
   &:not(:first-of-type) {
     margin-top: var(--main_margin);
   }

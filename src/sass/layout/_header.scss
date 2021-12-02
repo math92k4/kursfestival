@@ -6,6 +6,7 @@ header {
   padding: 10px var(--main_margin);
   z-index: 10;
   background-color: $bg_color;
+  border-bottom: $main_bdr $purple;
 
   & #logo {
     width: 70px;
@@ -106,7 +107,8 @@ header {
     transition: transform 1s 0.8s $easeio;
 
     & li {
-      transition: transform 0.3s var(--delay) $easeio, opacity 0.3s var(--delay) $easeio;
+      transition: transform 0.3s var(--delay) $easeio,
+        opacity 0.3s var(--delay) $easeio;
       transform: translateX(0);
       opacity: 1;
     }
@@ -271,5 +273,11 @@ header {
   }
   100% {
     transform: translate(-50%, 0px) rotate(-45deg);
+  }
+}
+
+@media (min-width: $tablet) {
+  header {
+    border-bottom: none;
   }
 }
