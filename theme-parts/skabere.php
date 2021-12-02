@@ -31,10 +31,10 @@ $force = false;
                             <source srcset="//:0" type="image/webp">
                             <img src="//:0" alt="" loading="lazy">
                         </picture>
+                        <span class="shape"></span>
                         <p><?php echo $pods->field('program_navn')?></p>
                     </a>
                 </li>
-
                 <?php
                 }
             }
@@ -63,6 +63,7 @@ $force = false;
                             <source srcset="//:0" type="image/webp">
                             <img src="//:0" alt="" loading="lazy">
                         </picture>
+                        <span class="shape"></span>
                         <p><?php echo $pods->field('program_navn')?></p>
                     </a>
                 </li>
@@ -95,6 +96,7 @@ $force = false;
                             <source srcset="//:0" type="image/webp">
                             <img src="//:0" alt="" loading="lazy">
                         </picture>
+                        <span class="shape"></span>
                         <p><?php echo $pods->field('program_navn')?></p>
                     </a>
                 </li>
