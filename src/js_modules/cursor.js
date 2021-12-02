@@ -30,7 +30,7 @@ export function cursor() {
 
   animateCursor();
 
-  const allATags = document.querySelectorAll("a, #menu_btn");
+  const allATags = document.querySelectorAll("a, #menu_btn, input");
 
   allATags.forEach((a) => {
     a.addEventListener("mouseover", expandMouse);

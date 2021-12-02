@@ -41,6 +41,14 @@ summary {
   list-style: none;
 }
 
+details summary::-webkit-details-marker {
+  display: none;
+}
+
+summary:focus {
+  outline: none;
+}
+
 textarea:focus,
 input:focus {
   outline: none;

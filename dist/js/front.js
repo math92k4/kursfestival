@@ -183,7 +183,7 @@ function cursor() {
   }
 
   animateCursor();
-  var allATags = document.querySelectorAll("a, #menu_btn");
+  var allATags = document.querySelectorAll("a, #menu_btn, input");
   allATags.forEach(function (a) {
     a.addEventListener("mouseover", expandMouse);
 
