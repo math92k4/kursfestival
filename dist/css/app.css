@@ -116,8 +116,8 @@ footer p {
   font-family: "gallery_modernregular";
 }
 
-footer a {
-  font-size: var(--para);
+footer li, footer a {
+  font-size: 1rem;
 }
 
 summary,
@@ -1118,17 +1118,22 @@ header .gitter {
 }
 footer {
   background-color: #f3ece9;
-  padding: 0 20px;
-  margin: var(--main_margin) auto;
+  padding: 0 var(--main_margin);
+  margin-left: var(--main_margin) auto;
+  margin-right: var(--main_margin) auto;
+  margin-bottom: var(--main_margin);
 }
 
 footer .footer_wrapper {
   border: #e6b8f8 2px solid;
-  border-radius: 50px 0 50px 0;
-  padding: var(--main_margin);
+  padding: 50px 25px;
   display: grid;
   grid-template-columns: 1fr;
   grid-gap: 40px;
+}
+
+footer .footer_wrapper li {
+  line-height: 1.5;
 }
 
 footer:not(.front_page footer) {
