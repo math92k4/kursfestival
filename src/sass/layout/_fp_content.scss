@@ -19,8 +19,8 @@
 
   & .image {
     & p {
-      left: 5%;
-      bottom: 5%;
+      left: 7.5%;
+      bottom: 7.5%;
       padding: 10px 40px;
       border-radius: $btn_radius;
       border: $main_bdr $purple;
@@ -223,6 +223,14 @@
       & .shape {
         border-radius: 0 0 100px 100px;
       }
+    }
+  }
+}
+
+@media only screen and (min-width: 1500px) {
+  .front_page .gitter_list {
+    & p {
+      font-size: 30px;
     }
   }
 }

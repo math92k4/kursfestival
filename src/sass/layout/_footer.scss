@@ -20,8 +20,9 @@ footer {
   }
 }
 
-footer:not(.front_page footer) {
+footer {
   max-width: 1500px;
+  margin: var(--main_margin) auto;
 }
 
 @media only screen and (min-width: $tablet) {
