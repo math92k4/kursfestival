@@ -872,6 +872,14 @@ header .gitter {
   .front_page .gitter_list li:nth-child(5) p {
     border-radius: 0 0 50px 50px;
   }
+
+  .eco.front_page .gitter_list li:nth-child(1) p, .eco.front_page .gitter_list li:nth-child(1) .shape {
+    border-radius: 0 100px 0 100px;
+  }
+
+  .eco.front_page .gitter_list li:nth-child(5) p, .eco.front_page .gitter_list li:nth-child(5) .shape {
+    border-radius: 0 0 100px 100px;
+  }
 }
 .page section,
 .single section {
