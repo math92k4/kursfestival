@@ -817,7 +817,7 @@ header .gitter {
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  border-radius: 100px 0 100px 0;
+  border-radius: 100px 0;
 }
 
 .eco.front_page .gitter_list li:hover .shape {
@@ -848,6 +848,38 @@ header .gitter {
 
   .front_page .gitter_list p {
     font-size: 2vw;
+  }
+
+  .front_page .gitter_list li:nth-child(3) {
+    grid-area: auto;
+  }
+
+  .front_page .gitter_list li:nth-child(4) {
+    grid-area: auto;
+  }
+
+  .front_page .gitter_list li:nth-child(1) img {
+    border-radius: 0 20% 0 20%;
+  }
+
+  .front_page .gitter_list li:nth-child(1) p {
+    border-radius: 0 50px 0 50px;
+  }
+
+  .front_page .gitter_list li:nth-child(3) img {
+    border-radius: 20% 0 20% 0;
+  }
+
+  .front_page .gitter_list li:nth-child(3) p {
+    border-radius: 50px 0 50px 0;
+  }
+
+  .front_page .gitter_list li:nth-child(5) img {
+    border-radius: 0 0 20% 20%;
+  }
+
+  .front_page .gitter_list li:nth-child(5) p {
+    border-radius: 0 0 50px 50px;
   }
 }
 .page section,
