@@ -23,6 +23,7 @@
     transition: opacity 0.7s $easeio;
     position: relative;
     z-index: 30;
+    line-height: 0.8;
 
     & span {
       display: block;
@@ -221,7 +222,7 @@
 
       & img {
         width: 60vw;
-        max-width: 700px;
+        max-width: 550px;
         transform: translateY(var(--new-y)) translateX(var(--new-x));
       }
     }

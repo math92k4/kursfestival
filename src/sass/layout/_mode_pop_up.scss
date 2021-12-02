@@ -47,3 +47,15 @@
     display: flex;
   }
 }
+
+@media (min-width: $tablet) {
+  .mode_pop_up div {
+    display: flex;
+    & .normal_btn {
+      margin-right: var(--main_margin);
+    }
+    & .eco_btn {
+      margin-left: var(--main_margin);
+    }
+  }
+}

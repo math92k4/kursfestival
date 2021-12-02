@@ -1,6 +1,6 @@
 @import "../abstracts";
 
-// generalle form regler
+// generelle form regler
 
 input[type="text"],
 input[type="email"] {
@@ -13,7 +13,7 @@ input[type="email"] {
 #form_wrapper {
   display: flex;
   flex-direction: column;
-  width: 100%;
+  width: 80%;
 }
 #frivillig_signup {
   background-color: $bg_color;
@@ -24,17 +24,20 @@ input[type="email"] {
   }
 
   & fieldset {
-    width: 80vw;
     padding: var(--main_margin);
     margin-top: 20px;
   }
   & input {
-    padding: 0 var(--main_margin) var(--main_margin) var(--main_margin);
+    padding: 0 var(--main_margin);
     margin: var(--main_margin) 20px;
+    font-size: var(--para);
 
     &[type="text"],
     &[type="email"] {
       width: 100%;
+    }
+    &#frivillig_fil {
+      margin: 0;
     }
   }
   & input[type="radio"]:after {
@@ -63,6 +66,7 @@ input[type="email"] {
     visibility: visible;
     border: solid 2px $purple;
   }
+
   #submit_wrapper {
     display: flex;
     width: 100%;
@@ -85,6 +89,24 @@ input[type="email"] {
 
   & #fil_label {
     margin-top: 50px;
+  }
+}
+
+@media (min-width: $desktop) {
+  .frivillig_form {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #form_wrapper {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  fieldset {
+    width: 50%;
   }
 }
 

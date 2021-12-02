@@ -13,6 +13,7 @@
                 <li id="menu_btn" >M<span class="strokes"><span class="top"></span><span class="center"></span><span class="bottom"></span></span>NU</li>
             </ul>
             <div class="header_clr"></div>
+            <div class="loading open"></div>
             <div class="menu_list">
                 <?php get_template_part("/theme-parts/gitter") ?>
                 <?php 

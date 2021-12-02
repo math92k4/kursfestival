@@ -19,8 +19,8 @@
 
   & .image {
     & p {
-      left: 5%;
-      bottom: 5%;
+      left: 7.5%;
+      bottom: 7.5%;
       padding: 10px 40px;
       border-radius: $btn_radius;
       border: $main_bdr $purple;
@@ -136,7 +136,7 @@
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    border-radius: 100px 0 100px 0;
+    border-radius: 100px 0;
   }
 
   & li:hover {
@@ -146,6 +146,8 @@
   }
 }
 
+//
+//
 // ----- MEDIAS -----
 
 @media only screen and (min-width: $tablet) {
@@ -171,6 +173,64 @@
 
     & p {
       font-size: 2vw;
+    }
+
+    & li:nth-child(3) {
+      grid-area: auto;
+    }
+    & li:nth-child(4) {
+      grid-area: auto;
+    }
+
+    & li:nth-child(1) {
+      & img {
+        border-radius: 0 20% 0 20%;
+      }
+
+      & p {
+        border-radius: 0 50px 0 50px;
+      }
+    }
+
+    & li:nth-child(3) {
+      & img {
+        border-radius: 20% 0 20% 0;
+      }
+      & p {
+        border-radius: 50px 0 50px 0;
+      }
+    }
+    & li:nth-child(5) {
+      & img {
+        border-radius: 0 0 20% 20%;
+      }
+      & p {
+        border-radius: 0 0 50px 50px;
+      }
+    }
+  }
+
+  .eco.front_page .gitter_list {
+    & li:nth-child(1) {
+      & p,
+      & .shape {
+        border-radius: 0 100px 0 100px;
+      }
+    }
+
+    & li:nth-child(5) {
+      & p,
+      & .shape {
+        border-radius: 0 0 100px 100px;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 1500px) {
+  .front_page .gitter_list {
+    & p {
+      font-size: 30px;
     }
   }
 }

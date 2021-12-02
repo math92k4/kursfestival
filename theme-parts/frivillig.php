@@ -22,7 +22,6 @@
 
 
 <fieldset id="frivillig_omraade">
-<legend>Område</legend>
 <input type="radio" id="omraade_kommunikation" name="omraade" value="kommunikation" required>
   <label for="omraade_kommunikation" class="radio_label">Kommunikation</label><br>
 <input type="radio" id="omraade_booking" name="omraade" value="booking" required>

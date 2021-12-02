@@ -19,6 +19,7 @@ function init() {
     addParamsToHrefClick();
     gitterAspectRatio();
     toggleMenu();
+    document.querySelector(".loading").classList.remove("open");
 
     if (eco == 0) {
       if (window.innerWidth > 600) {
@@ -31,5 +32,3 @@ function init() {
     }
   }
 }
-
-setInterval(() => {}, interval);
