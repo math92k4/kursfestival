@@ -48,13 +48,14 @@
   }
 }
 
-@media (min-width: 900px) {
+@media (min-width: $tablet) {
   .mode_pop_up div {
-    &:nth-child(1) {
-      margin-left: var(--main_margin);
-    }
-    &:nth-child(2) {
+    display: flex;
+    & .normal_btn {
       margin-right: var(--main_margin);
+    }
+    & .eco_btn {
+      margin-left: var(--main_margin);
     }
   }
 }

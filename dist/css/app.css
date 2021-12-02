@@ -1238,13 +1238,17 @@ footer {
   display: flex;
 }
 
-@media (min-width: 900px) {
-  .mode_pop_up div:nth-child(1) {
-    margin-left: var(--main_margin);
+@media (min-width: 600px) {
+  .mode_pop_up div {
+    display: flex;
   }
 
-  .mode_pop_up div:nth-child(2) {
+  .mode_pop_up div .normal_btn {
     margin-right: var(--main_margin);
+  }
+
+  .mode_pop_up div .eco_btn {
+    margin-left: var(--main_margin);
   }
 }
 .table_cont {
