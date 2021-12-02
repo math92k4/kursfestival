@@ -425,7 +425,7 @@ header ul {
 }
 
 header li {
-  font-size: var(--para);
+  font-size: 1.5rem;
 }
 
 header .gitter {
@@ -561,8 +561,8 @@ header .gitter {
 
 #menu_btn .strokes {
   display: inline-block;
-  width: calc(var(--para) * 1.1);
-  height: calc(var(--para) * 0.8);
+  width: 25px;
+  height: 20px;
   margin: 0 2px;
   position: relative;
 }
@@ -570,7 +570,7 @@ header .gitter {
 #menu_btn .strokes span {
   position: absolute;
   width: 100%;
-  height: 1px;
+  height: 2px;
   top: 50%;
   left: 50%;
   background-color: #252525;
@@ -581,7 +581,7 @@ header .gitter {
 }
 
 #menu_btn .strokes .top {
-  transform: translate(-50%, calc(-0.3 * var(--para)));
+  transform: translate(-50%, -7px);
 }
 
 #menu_btn .strokes .center {
@@ -589,7 +589,7 @@ header .gitter {
 }
 
 #menu_btn .strokes .bottom {
-  transform: translate(-50%, calc(0.3 * var(--para)));
+  transform: translate(-50%, 7px);
 }
 
 #menu_btn.open .top, #menu_btn.closed .top {
@@ -613,7 +613,7 @@ header .gitter {
 
 @-webkit-keyframes kf_stroke_top {
   0% {
-    transform: translate(-50%, calc(-0.3 * var(--para)));
+    transform: translate(-50%, -7px);
     -webkit-animation-iteration-count: cubic-bezier(0.77, -0.47, 0.24, 1.02);
             animation-iteration-count: cubic-bezier(0.77, -0.47, 0.24, 1.02);
   }
@@ -629,7 +629,7 @@ header .gitter {
 
 @keyframes kf_stroke_top {
   0% {
-    transform: translate(-50%, calc(-0.3 * var(--para)));
+    transform: translate(-50%, -7px);
     -webkit-animation-iteration-count: cubic-bezier(0.77, -0.47, 0.24, 1.02);
             animation-iteration-count: cubic-bezier(0.77, -0.47, 0.24, 1.02);
   }
@@ -670,7 +670,7 @@ header .gitter {
 }
 @-webkit-keyframes kf_sroke_bottom {
   0% {
-    transform: translate(-50%, calc(0.3 * var(--para)));
+    transform: translate(-50%, 7px);
     -webkit-animation-iteration-count: cubic-bezier(0.77, -0.47, 0.24, 1.02);
             animation-iteration-count: cubic-bezier(0.77, -0.47, 0.24, 1.02);
   }
@@ -685,7 +685,7 @@ header .gitter {
 }
 @keyframes kf_sroke_bottom {
   0% {
-    transform: translate(-50%, calc(0.3 * var(--para)));
+    transform: translate(-50%, 7px);
     -webkit-animation-iteration-count: cubic-bezier(0.77, -0.47, 0.24, 1.02);
             animation-iteration-count: cubic-bezier(0.77, -0.47, 0.24, 1.02);
   }
@@ -696,15 +696,6 @@ header .gitter {
   }
   100% {
     transform: translate(-50%, 0px) rotate(-45deg);
-  }
-}
-@media only screen and (min-width: 600px) {
-  #menu_btn .strokes {
-    height: calc(var(--para) * 0.85);
-  }
-
-  #menu_btn .strokes span {
-    height: 2px;
   }
 }
 .front_page .gitter_list {
