@@ -1451,12 +1451,17 @@ input[type=email] {
 }
 
 #frivillig_signup input {
-  padding: 0 var(--main_margin) var(--main_margin) var(--main_margin);
+  padding: 0 var(--main_margin);
   margin: var(--main_margin) 20px;
+  font-size: var(--para);
 }
 
 #frivillig_signup input[type=text], #frivillig_signup input[type=email] {
   width: 100%;
+}
+
+#frivillig_signup input#frivillig_fil {
+  margin: 0;
 }
 
 #frivillig_signup input[type=radio]:after {
@@ -1496,7 +1501,7 @@ input[type=email] {
 #frivillig_signup #submit_wrapper input[type=submit] {
   background-color: #e6b8f8;
   color: #f3ece9;
-  margin-top: 20px;
+  margin-top: 40px;
   border-radius: 50px 0 50px 0;
   font-size: 2rem;
   cursor: pointer;
@@ -1521,9 +1526,10 @@ input[type=email] {
   }
 
   #form_wrapper {
-    width: 100%;
     flex-direction: row;
     justify-content: center;
+    align-items: center;
+    width: 100%;
   }
 
   fieldset {
