@@ -197,9 +197,11 @@ function addParamsToHrefClick() {
   allH.forEach(function (elm) {
     elm.addEventListener("click", function (e) {
       e.preventDefault();
+      document.querySelector(".loading").classList.add("open");
       var hrefUrl = this.getAttribute("href");
-      setUrlParam(hrefUrl, param);
-      window.location.href = hrefUrl + "?eco=" + param;
+      setTimeout(function () {
+        setUrlParam(hrefUrl, param);
+      }, 1500);
     });
   });
 }
@@ -326,6 +328,7 @@ function init() {
     (0,_js_modules_modeSelection_js__WEBPACK_IMPORTED_MODULE_6__.addParamsToHrefClick)();
     (0,_js_modules_gitter_aspect__WEBPACK_IMPORTED_MODULE_3__.gitterAspectRatio)();
     (0,_js_modules_burgermenu_js__WEBPACK_IMPORTED_MODULE_1__.toggleMenu)();
+    document.querySelector(".loading").classList.remove("open");
 
     if (eco == 0) {
       if (window.innerWidth > 600) {
@@ -339,8 +342,6 @@ function init() {
     }
   }
 }
-
-setInterval(function () {}, interval);
 })();
 
 /******/ })()

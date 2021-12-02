@@ -74,6 +74,7 @@ function _init() {
               (0,_js_modules_gitter_aspect_js__WEBPACK_IMPORTED_MODULE_7__.gitterAspectRatio)();
               (0,_js_modules_burgermenu_js__WEBPACK_IMPORTED_MODULE_5__.toggleMenu)();
               (0,_js_modules_datedisappear_js__WEBPACK_IMPORTED_MODULE_4__.dateDisappear)();
+              document.querySelector(".loading").classList.remove("open");
 
               if (eco == 0) {
                 (0,_js_modules_loadImgs_js__WEBPACK_IMPORTED_MODULE_8__.loadImgs)();
@@ -334,9 +335,11 @@ function addParamsToHrefClick() {
   allH.forEach(function (elm) {
     elm.addEventListener("click", function (e) {
       e.preventDefault();
+      document.querySelector(".loading").classList.add("open");
       var hrefUrl = this.getAttribute("href");
-      setUrlParam(hrefUrl, param);
-      window.location.href = hrefUrl + "?eco=" + param;
+      setTimeout(function () {
+        setUrlParam(hrefUrl, param);
+      }, 1500);
     });
   });
 }

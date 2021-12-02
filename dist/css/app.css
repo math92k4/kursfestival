@@ -506,7 +506,8 @@ header .gitter {
   opacity: 1;
 }
 
-.header_clr {
+.header_clr,
+.loading {
   position: absolute;
   top: 0%;
   left: 0;
@@ -518,7 +519,9 @@ header .gitter {
   z-index: -1;
 }
 
-.header_clr::before, .header_clr::after {
+.header_clr::before, .header_clr::after,
+.loading::before,
+.loading::after {
   content: "";
   position: absolute;
   top: 0;
@@ -527,28 +530,38 @@ header .gitter {
   height: 100%;
 }
 
-.header_clr::before {
+.header_clr::before,
+.loading::before {
   background-color: #f9a94d;
   transition: transform 1.2s 0.6s cubic-bezier(0.77, 0, 0.24, 1);
   transform: translateX(50%);
 }
 
-.header_clr::after {
+.header_clr::after,
+.loading::after {
   background-color: #bdcf9a;
   transition: transform 0.9s 0.6s cubic-bezier(0.77, 0, 0.24, 1);
   transform: translateX(100%);
 }
 
-.header_clr.open {
+.header_clr.open,
+.loading.open {
   transform: translateX(0);
 }
 
-.header_clr.open::before, .header_clr.open::after {
+.header_clr.open::before, .header_clr.open::after,
+.loading.open::before,
+.loading.open::after {
   transform: translateX(0);
 }
 
-.header_clr.open::before {
+.header_clr.open::before,
+.loading.open::before {
   transition-delay: 0.3s;
+}
+
+.loading {
+  z-index: 100;
 }
 
 .menu-logo-container a {

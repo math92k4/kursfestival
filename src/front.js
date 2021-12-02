@@ -25,6 +25,7 @@ async function init() {
     gitterAspectRatio();
     toggleMenu();
     dateDisappear();
+    document.querySelector(".loading").classList.remove("open");
 
     if (eco == 0) {
       loadImgs();
