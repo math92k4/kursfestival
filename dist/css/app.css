@@ -45,6 +45,14 @@ summary {
   list-style: none;
 }
 
+details summary::-webkit-details-marker {
+  display: none;
+}
+
+summary:focus {
+  outline: none;
+}
+
 textarea:focus,
 input:focus {
   outline: none;
@@ -1020,11 +1028,7 @@ section {
 }
 
 .om-kurs h1 {
-  margin: 0 20px;
-}
-
-.om-kurs section {
-  padding: 20px;
+  margin: 0 var(--main_margin);
 }
 
 .om-kurs .om_container {
@@ -1041,26 +1045,14 @@ section {
 }
 
 .om-kurs article div {
-  margin-top: 40px;
+  margin-top: calc(var(--main_margin) * 2);
 }
 
 .om-kurs article div:nth-child(2n) {
   align-self: flex-end;
 }
 
-.om-kurs article div:nth-child(2n) h2 {
-  text-align: right;
-}
-
-.om-kurs .side_menu ul {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-
 .om-kurs .side_menu li {
-  font-size: var(--para);
-  font-weight: 300;
   margin-top: var(--main_margin);
 }
 
@@ -1068,6 +1060,13 @@ section {
   color: #e6b8f8;
 }
 
+@media only screen and (min-width: 805px) {
+  .om-kurs .side_menu ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
 @media only screen and (min-width: 900px) {
   .om-kurs .wrapper {
     display: flex;
