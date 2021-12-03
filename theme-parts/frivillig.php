@@ -81,9 +81,6 @@ function getValues() {
     document.querySelector("#frivillig_telefon").value;
   const fil = document.querySelector("#frivillig_fil").value;
   const omraade = document.querySelector("input[name=omraade]:checked").value;
-
-
-
   const data = {
       frivillignavn: navn, 
       frivilligemail: email, 
@@ -91,18 +88,12 @@ function getValues() {
       frivilligfil: fil, 
       frivilligomraade: omraade,
   }
-
   post(data, url);
   emptyInputs(); 
-  
-
-
 }
 
 // data sendes til databasen
  function post(data, url) {
-     console.log(data); 
-
     const headers = {
   "Content-Type": "application/json",
   "x-apikey": "619634edfc71545b0f5e090f",
