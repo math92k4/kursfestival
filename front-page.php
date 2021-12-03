@@ -30,7 +30,7 @@ $metaKeywords = get_post_meta( $pageID, 'meta_keywords', true );
             
             <ul id="word_anim">
                 <li>
-                    <span>PERFOMATIVITET</span>
+                    <span>PERFORMATIVITET</span>
                     <span>DEMOKRATI</span>
                 </li>
                 <li>

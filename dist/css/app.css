@@ -128,8 +128,14 @@ footer p {
   font-family: "gallery_modernregular";
 }
 
-footer li, footer a {
+footer a {
   font-size: 1rem;
+  text-decoration: underline;
+}
+
+footer #kontakt a {
+  text-decoration: none;
+  text-transform: uppercase;
 }
 
 summary,
@@ -161,6 +167,10 @@ td {
 th {
   font-family: "gallery_modernregular", sans-serif;
   font-size: var(--h2);
+}
+
+.txt {
+  text-decoration: underline;
 }
 
 body {

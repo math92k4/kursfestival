@@ -5,15 +5,15 @@
             <div>
                 <p>SOME</p>
                 <ul>
-                    <li><a href=""></a>FACEBOOK</li>
-                    <li><a href=""></a>INSTAGRAM</li>
-                    <li><a href=""></a>LINKED-IN</li>
+                    <li><a href="https://www.facebook.com/kursfestivall">FACEBOOK</a></li>
+                    <li><a href="https://www.instagram.com/kursfestival/">INSTAGRAM</a></li>
+                    <li><a href="https://www.linkedin.com/company/kurs-festival/">LINKED-IN</a></li>
                 </ul>
             </div>
 
 
 
-            <div>
+            <div id="kontakt">
                 <p>KONTAKT</p>
                 <?php   
                 wp_nav_menu(
