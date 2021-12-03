@@ -22,7 +22,7 @@ $metaKeywords = get_post_meta( $pageID, 'meta_keywords', true );
 <?php get_template_part("/theme-parts/header") ?>
     <main>
         <section id="splash">
-            <p class="date">20-23 AUGUST 2022 <span>UNGDOMSØEN</span></p>
+            <p class="date">10-12 JUNI 2022 <span>UNGDOMSØEN</span></p>
             <div id="splash_logo">
                 <img src="./wp-content/themes/kursfestival/imgs/logostroke.svg" alt="">
                 <h1>KURS <span>FESTIVAL</span></h1>
@@ -30,7 +30,7 @@ $metaKeywords = get_post_meta( $pageID, 'meta_keywords', true );
             
             <ul id="word_anim">
                 <li>
-                    <span>PERFOMATIVITET</span>
+                    <span>PERFORMATIVITET</span>
                     <span>DEMOKRATI</span>
                 </li>
                 <li>

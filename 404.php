@@ -14,7 +14,7 @@
     
 
 <section class="fourofour_site">
-<h1>Woopsie! <br> Du er ude af KURS ☹</h1>
+<h1>Woopsie! <br> Du er ude af KURS ☺</h1>
 <a href="https://mathaeusss.dk/"><button>TILBAGE</button></a>
 </section>
 
