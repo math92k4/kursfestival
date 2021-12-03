@@ -1114,6 +1114,14 @@ footer .footer_wrapper li {
   line-height: 1.5;
 }
 
+footer .partnere_wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-top: var(--main_margin);
+}
+
 footer {
   max-width: 1500px;
   margin: var(--main_margin) auto;

@@ -18,6 +18,14 @@ footer {
       line-height: 1.5;
     }
   }
+
+  & .partnere_wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: var(--main_margin);
+  }
 }
 
 footer {
