@@ -193,8 +193,9 @@ function setUrlParam(url, param) {
 
 function addParamsToHrefClick() {
   var param = getUrlParam("eco");
-  var allH = document.querySelectorAll("a");
+  var allH = document.querySelectorAll('a:not(a[target="_blank"])');
   allH.forEach(function (elm) {
+    console.log(elm);
     elm.addEventListener("click", function (e) {
       e.preventDefault();
       document.querySelector(".loading").classList.add("open");

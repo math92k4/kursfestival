@@ -434,7 +434,7 @@ header {
   padding: 10px var(--main_margin);
   z-index: 10;
   background-color: #f3ece9;
-  border-bottom: 0.5px solid #e6b8f8;
+  border-bottom: 2px solid #e6b8f8;
 }
 
 header #logo {
@@ -775,7 +775,7 @@ header .gitter {
   bottom: 7.5%;
   padding: 10px 40px;
   border-radius: 0 50px 0 50px;
-  border: 0.5px solid #e6b8f8;
+  border: 2px solid #e6b8f8;
 }
 
 .front_page .gitter_list .image p::after {
@@ -789,7 +789,7 @@ header .gitter {
   transform: translate(-50%, -50%);
   width: 85%;
   height: 85%;
-  border: 0.5px solid #e6b8f8;
+  border: 2px solid #e6b8f8;
   background-color: #f3ece9;
 }
 
@@ -812,7 +812,7 @@ header .gitter {
 
 #mc_embed_signup {
   background-color: #f3ece9;
-  border: 0.5px solid #e6b8f8;
+  border: 2px solid #e6b8f8;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -837,7 +837,7 @@ header .gitter {
 }
 
 #mc_embed_signup input[type=submit] {
-  border: 0.5px solid #e6b8f8;
+  border: 2px solid #e6b8f8;
   padding: 5% 20%;
   border-radius: 0 50px 0 50px;
 }
@@ -862,7 +862,7 @@ header .gitter {
   width: 85%;
   height: 85%;
   background-color: #f3ece9;
-  border: 0.5px solid #e6b8f8;
+  border: 2px solid #e6b8f8;
   display: inline-flex;
   justify-content: center;
   align-items: center;
@@ -1053,7 +1053,7 @@ header .gitter {
   background-color: #f3ece9;
   padding: 20px 40px;
   border-radius: 0 50px 0 50px;
-  border: 0.5px solid var(--color);
+  border: 2px solid var(--color);
 }
 
 .skaber_list p::after {
@@ -1070,7 +1070,7 @@ header .gitter {
   justify-content: center;
   align-items: center;
   background-color: #f3ece9;
-  border: 0.5px solid var(--color);
+  border: 2px solid var(--color);
   border-radius: 100px 0 100px 0;
 }
 
@@ -1103,7 +1103,7 @@ footer {
 }
 
 footer .footer_wrapper {
-  border: #e6b8f8 0.5px solid;
+  border: #e6b8f8 2px solid;
   padding: 50px 25px;
   display: grid;
   grid-template-columns: 1fr;
@@ -1154,7 +1154,7 @@ footer {
 .mode_pop_up button {
   font-family: gallery_modernregular, sans-serif;
   font-size: var(--h2);
-  border: 0.5px solid #bdcf9a;
+  border: 2px solid #bdcf9a;
   display: block;
   width: 300px;
   padding: var(--main_margin) 0;
@@ -1233,7 +1233,7 @@ td,
 th {
   flex: 1;
   padding: 25px 10px;
-  border: 0.5px solid var(--bd-clr);
+  border: 2px solid var(--bd-clr);
   border-bottom: 0;
 }
 
@@ -1317,7 +1317,7 @@ details:not(:first-of-type) {
 
 details summary {
   padding: 20px var(--main_margin);
-  border: 0.5px solid #f9a94d;
+  border: 2px solid #f9a94d;
   position: relative;
 }
 
@@ -1345,7 +1345,7 @@ details[open] summary::after {
 input[type=text],
 input[type=email] {
   background-color: transparent;
-  border-bottom: 0.5px solid #e6b8f8;
+  border-bottom: 2px solid #e6b8f8;
 }
 
 #form_wrapper {
@@ -1356,7 +1356,7 @@ input[type=email] {
 
 #frivillig_signup {
   background-color: #f3ece9;
-  border: 0.5px solid #e6b8f8;
+  border: 2px solid #e6b8f8;
   border-radius: 0 50px 0 50px;
 }
 
@@ -1394,7 +1394,7 @@ input[type=email] {
   content: "";
   display: inline-block;
   visibility: visible;
-  border: 0.5px solid #e6b8f8;
+  border: 2px solid #e6b8f8;
 }
 
 #frivillig_signup input[type=radio]:checked:after {
@@ -1514,7 +1514,7 @@ button:hover::before {
 
 .fourofour_site button {
   border-radius: 0 50px 0 50px;
-  border: 0.5px solid #e6b8f8;
+  border: 2px solid #e6b8f8;
   padding: 20px;
   width: 300px;
 }
