@@ -6,9 +6,8 @@ if ($pods_name == "kursfestival") {
 
 // Get SEO meta fields from page
 $pageID = get_the_ID();
-$metaDesc = get_post_meta( $pageID, 'meta_tekst', true );
-$metaKeywords = get_post_meta( $pageID, 'meta_keywords', true );
-
+$metaDesc = get_post_meta( get_the_ID(), 'meta_tekst', true );
+$metaKeywords = get_post_meta( get_the_ID(), 'meta_keywords', true );
 ?>
 
 <!DOCTYPE html>
@@ -38,6 +37,6 @@ if ($pods_name == 'program') {
 ?>
 
 <?php get_template_part('/theme-parts/footer'); ?>
-<script type="module" src="/wp-content/themes/kursfestival/dist/js/page.js"></script>
+<script type="module" src="../../wp-content/themes/kursfestival/dist/js/page.js"></script>
 </body>
 </html>
