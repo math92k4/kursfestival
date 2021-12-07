@@ -50,7 +50,7 @@ $metaKeywords = get_post_meta( $pageID, 'meta_keywords', true );
             <!-- <div id="ticket_cont"> -->
                 <button>
                     <span class="txt">KØB BILLET</span>
-                    <div class="circles">
+                    <span class="circles">
                         <span data-delay="70" ></span>
                         <span data-delay="60" ></span>
                         <span data-delay="50" ></span>
@@ -58,7 +58,7 @@ $metaKeywords = get_post_meta( $pageID, 'meta_keywords', true );
                         <span data-delay="30" ></span>
                         <span data-delay="20" ></span>
                         <span data-delay="10" ></span>
-                    </div>
+                    </span>
                 </button>
                 
             <!-- </div> -->
