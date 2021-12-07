@@ -76,8 +76,8 @@ if (get_post_meta( $pageID, 'billede', true )) {
             } else if ($imagetSet) { ?>
 
                 <picture data-image="<?php echo $imgUrl?>"  data-fallback="<?php echo $fallbackUrl ?>">
-                    <source srcset="//:0" type="image/webp">
-                    <img src="//:0" alt="" loading="lazy">
+                    <source srcset="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" type="image/webp">
+                    <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="" loading="lazy">
                 </picture>
 
             <?php } ?>
