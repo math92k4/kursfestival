@@ -28,8 +28,8 @@ $force = false;
                     <?php get_template_part('/theme-parts/gitter'); ?>
                     <a href="<?php echo $pods->field('permalink') ?>">
                         <picture data-image="<?php echo $imgUrl?>"  data-fallback="<?php echo $fallbackUrl ?>">
-                            <source srcset="//:0" type="image/webp">
-                            <img src="//:0" alt="" loading="lazy">
+                            <source srcset="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" type="image/webp">
+                            <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="" loading="lazy">
                         </picture>
                         <span class="shape"></span>
                         <p><?php echo $pods->field('program_navn')?></p>
@@ -60,8 +60,8 @@ $force = false;
                 <?php get_template_part('/theme-parts/gitter'); ?>
                     <a href="<?php echo $pods->field('permalink') ?>">
                         <picture data-image="<?php echo $imgUrl?>"  data-fallback="<?php echo $fallbackUrl ?>">
-                            <source srcset="//:0" type="image/webp">
-                            <img src="//:0" alt="" loading="lazy">
+                            <source srcset="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" type="image/webp">
+                            <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="" loading="lazy">
                         </picture>
                         <span class="shape"></span>
                         <p><?php echo $pods->field('program_navn')?></p>
@@ -93,8 +93,8 @@ $force = false;
                 <?php get_template_part('/theme-parts/gitter'); ?>
                     <a href="<?php echo $pods->field('permalink') ?>">
                         <picture data-image="<?php echo $imgUrl?>"  data-fallback="<?php echo $fallbackUrl ?>">
-                            <source srcset="//:0" type="image/webp">
-                            <img src="//:0" alt="" loading="lazy">
+                            <source srcset="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" type="image/webp">
+                            <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="" loading="lazy">
                         </picture>
                         <span class="shape"></span>
                         <p><?php echo $pods->field('program_navn')?></p>
