@@ -24,7 +24,7 @@ $metaKeywords = get_post_meta( $pageID, 'meta_keywords', true );
         <section id="splash">
             <p class="date">10-12 JUNI 2022 <span>UNGDOMSØEN</span></p>
             <div id="splash_logo">
-                <img src="./wp-content/themes/kursfestival/imgs/logostroke.svg" alt="">
+                <img src="./wp-content/themes/kursfestival/imgs/splash.jpg" alt="">
                 <h1>KURS <span>FESTIVAL</span></h1>
             </div>
             
