@@ -108,6 +108,7 @@ h1 {
   font-size: var(--h1);
   line-height: 1.3;
   font-weight: 300;
+  font-display: swap;
 }
 
 h2 {
@@ -115,6 +116,7 @@ h2 {
   color: #252525;
   font-size: var(--h2);
   font-weight: 300;
+  font-display: swap;
 }
 
 button {
@@ -126,6 +128,7 @@ button {
 footer p {
   font-size: var(--h2);
   font-family: "gallery_modernregular";
+  font-display: swap;
 }
 
 footer a {
@@ -155,6 +158,7 @@ input {
   font-size: var(--h2);
   font-weight: 300;
   font-family: "gallery_modernregular", sans-serif;
+  font-display: swap;
 }
 
 td {
@@ -165,6 +169,7 @@ td {
 
 th {
   font-family: "gallery_modernregular", sans-serif;
+  font-display: swap;
   font-size: var(--h2);
 }
 
@@ -227,6 +232,7 @@ body {
 #splash #splash_logo img {
   width: 80vw;
   position: absolute;
+  border-radius: 100%;
   z-index: 1;
 }
 
@@ -424,7 +430,7 @@ body {
 
   #splash #splash_logo img {
     width: 60vw;
-    max-width: 550px;
+    max-width: 450px;
     transform: translateY(var(--new-y)) translateX(var(--new-x));
   }
 }
@@ -508,6 +514,7 @@ header .gitter {
   opacity: 0;
   transform: translateX(100%);
   font-family: "gallery_modernregular", sans-serif;
+  font-display: swap;
 }
 
 .menu_list .menu-top-menu-container li:not(:nth-child(1)) {
@@ -604,7 +611,7 @@ header .gitter {
   display: block;
   width: 40px;
   height: 40px;
-  background-image: url("../../imgs/temp_splash_logo.png");
+  background-image: url("../../imgs/kurs_logo.svg");
   background-size: cover;
 }
 
@@ -1161,6 +1168,7 @@ footer {
 
 .mode_pop_up button {
   font-family: gallery_modernregular, sans-serif;
+  font-display: swap;
   font-size: var(--h2);
   border: 2px solid #bdcf9a;
   display: block;
@@ -1495,12 +1503,27 @@ button:hover::before {
   transition: width 0.5s cubic-bezier(0.7, -0.47, 0.24, 1.89), height 0.5s cubic-bezier(0.7, -0.47, 0.24, 1.89);
   transform: translate(var(--new-x), var(--new-y));
   z-index: 30;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cursor svg {
+  width: 0;
+  height: 0;
+  transition: width 0.5s cubic-bezier(0.77, 0, 0.24, 1), height 0.5s cubic-bezier(0.77, 0, 0.24, 1);
+  fill: #f3ece9;
 }
 
 .expand {
   transition: width 0.5s cubic-bezier(0.7, -0.47, 0.26, 1.3), height 0.5s cubic-bezier(0.7, -0.47, 0.26, 1.3);
   width: 70px;
   height: 70px;
+}
+
+.expand svg {
+  width: 50%;
+  height: 50%;
 }
 
 .fourofour_site {
@@ -1517,6 +1540,7 @@ button:hover::before {
 
 .fourofour_site h1 {
   font-family: "gallery_modernregular";
+  font-display: swap;
   font-size: 5rem;
 }
 
@@ -1605,6 +1629,15 @@ section {
   max-width: 500px;
   margin: var(--main_margin) 0 var(--main_margin) auto;
   border-radius: 20% 0 20% 0;
+}
+
+.content_wrapper div {
+  width: 100%;
+}
+
+.content_wrapper div:nth-child(1) {
+  margin-right: var(--main_margin);
+  margin-bottom: var(--main_margin);
 }
 
 @media only screen and (min-width: 900px) {

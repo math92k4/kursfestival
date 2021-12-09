@@ -12,7 +12,7 @@ $metaDesc = get_post_meta( $pageID, 'meta_tekst', true );
 $metaKeywords = get_post_meta( $pageID, 'meta_keywords', true );
 
 // Is media fields set?
-$imagetSet = "false";
+$imagetSet = false;
 $videoSet = false;
 
 // urls default to null
@@ -70,7 +70,11 @@ if (get_post_meta( $pageID, 'billede', true )) {
 
             <?php if ($videoSet) {
             ?>
-                <video data-image="<?php echo $fallbackUrl ?>" data-vsrc="<?php echo $videUrl ?>" src=""></video>
+            <div>
+                <video controls="1" preload="none" width="100%">
+                    <source src="<?php echo $videUrl ?>" type="video/mp4">
+                </video>
+            </div>
 
             <?php
             } else if ($imagetSet) { ?>
