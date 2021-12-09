@@ -66,16 +66,13 @@
             ?>
 
         <li>
-            <a target="_blank" href="<?php echo $pods->field('link') ?>">
-
+            <a target="_blank" rel="noreferrer" href="<?php echo $pods->field('link') ?>">
                 <picture data-image="<?php echo $imgUrl?>"  data-fallback="<?php echo $fallbackUrl ?>">
                     <source srcset="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" type="image/webp">
                     <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="" loading="lazy">
                 </picture>
-
             </a>
         </li>
-
         <?php
         }
         ?>
