@@ -79,6 +79,7 @@ header {
     opacity: 0;
     transform: translateX(100%);
     font-family: "gallery_modernregular", sans-serif;
+    font-display: swap;
 
     &:not(:nth-child(1)) {
       margin-top: var(--main_margin);
@@ -107,8 +108,7 @@ header {
     transition: transform 1s 0.8s $easeio;
 
     & li {
-      transition: transform 0.3s var(--delay) $easeio,
-        opacity 0.3s var(--delay) $easeio;
+      transition: transform 0.3s var(--delay) $easeio, opacity 0.3s var(--delay) $easeio;
       transform: translateX(0);
       opacity: 1;
     }
