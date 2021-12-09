@@ -43,9 +43,9 @@
     bottom: 10%;
     left: 10%;
     background-color: $bg_color;
-    padding: 20px 40px;
+    padding: 10px 20px;
     border-radius: $btn_radius;
-    border: $main_bdr var(--color);
+    // border: $main_bdr var(--color);
     &::after {
       display: none;
     }

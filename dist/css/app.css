@@ -782,7 +782,6 @@ header .gitter {
   bottom: 7.5%;
   padding: 10px 40px;
   border-radius: 0 50px 0 50px;
-  border: 2px solid #e6b8f8;
 }
 
 .front_page .gitter_list .image p::after {
@@ -1058,9 +1057,8 @@ header .gitter {
   bottom: 10%;
   left: 10%;
   background-color: #f3ece9;
-  padding: 20px 40px;
+  padding: 10px 20px;
   border-radius: 0 50px 0 50px;
-  border: 2px solid var(--color);
 }
 
 .skaber_list p::after {
