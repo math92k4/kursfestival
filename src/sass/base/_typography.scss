@@ -5,6 +5,7 @@
   src: url("../../fonts/gallerymodern-webfont.woff2") format("woff2"), url("../..//fonts/gallerymodern-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
+  font-display: swap;
 }
 
 p,
@@ -32,7 +33,6 @@ h1 {
   font-size: var(--h1);
   line-height: 1.3;
   font-weight: 300;
-  font-display: swap;
 }
 
 h2 {
@@ -40,7 +40,6 @@ h2 {
   color: $black;
   font-size: var(--h2);
   font-weight: 300;
-  font-display: swap;
 }
 
 button {
@@ -53,7 +52,6 @@ footer {
   & p {
     font-size: var(--h2);
     font-family: "gallery_modernregular";
-    font-display: swap;
   }
   & a {
     font-size: 1rem;
@@ -82,7 +80,6 @@ input {
   font-size: var(--h2);
   font-weight: 300;
   font-family: "gallery_modernregular", sans-serif;
-  font-display: swap;
 }
 
 td {
@@ -93,7 +90,6 @@ td {
 
 th {
   font-family: "gallery_modernregular", sans-serif;
-  font-display: swap;
   font-size: var(--h2);
 }
 
