@@ -6,6 +6,7 @@ body {
   --h2: 1.8rem;
 
   --main_margin: 10px;
+  --hlf_margin: 5px;
 }
 
 @media only screen and (min-width: $tablet) {
@@ -14,6 +15,7 @@ body {
     --h1: 3rem;
     --h2: 2rem;
     --main_margin: 20px;
+    --hlf_margin: 10px;
   }
 }
 

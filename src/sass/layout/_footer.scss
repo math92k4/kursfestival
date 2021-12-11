@@ -24,7 +24,10 @@ footer {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    margin-top: var(--main_margin);
+    margin-top: calc(var(--main_margin) * 2);
+    & li {
+      margin: var(--hlf_margin);
+    }
   }
 }
 
