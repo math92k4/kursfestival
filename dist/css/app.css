@@ -178,6 +178,7 @@ body {
   --h1: 2.5rem;
   --h2: 1.8rem;
   --main_margin: 10px;
+  --hlf_margin: 5px;
 }
 
 @media only screen and (min-width: 600px) {
@@ -186,6 +187,7 @@ body {
     --h1: 3rem;
     --h2: 2rem;
     --main_margin: 20px;
+    --hlf_margin: 10px;
   }
 }
 #splash {
@@ -1119,7 +1121,11 @@ footer .partnere_wrapper {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  margin-top: var(--main_margin);
+  margin-top: calc(var(--main_margin) * 2);
+}
+
+footer .partnere_wrapper li {
+  margin: var(--hlf_margin);
 }
 
 footer {
