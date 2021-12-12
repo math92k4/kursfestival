@@ -1,16 +1,12 @@
 @import "../abstracts";
 
-// .page,
-// .single {
-//   & section {
-//     max-width: 1500px;
-//     margin: 0 auto;
-//   }
-// }
-
 section {
   max-width: 1500px;
   margin: 0 auto;
+}
+
+iframe {
+  margin-top: var(--main_margin);
 }
 
 .content_wrapper {
@@ -20,15 +16,6 @@ section {
     margin: var(--main_margin) 0 var(--main_margin) auto;
     border-radius: 20% 0 20% 0;
   }
-
-  // & div {
-  //   width: 100%;
-
-  //   &:nth-child(1) {
-  //     margin-right: var(--main_margin);
-  //     margin-bottom: var(--main_margin);
-  //   }
-  // }
 }
 
 @media only screen and (min-width: $desktop) {

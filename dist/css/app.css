@@ -1626,6 +1626,10 @@ section {
   margin: 0 auto;
 }
 
+iframe {
+  margin-top: var(--main_margin);
+}
+
 .content_wrapper img {
   max-width: 500px;
   width: 100%;
