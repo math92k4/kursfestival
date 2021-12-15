@@ -207,6 +207,7 @@ body {
   position: relative;
   z-index: 30;
   line-height: 0.8;
+  margin-top: var(--main_margin);
 }
 
 #splash .date span {
@@ -430,6 +431,10 @@ body {
     width: 60vw;
     max-width: 450px;
     transform: translateY(var(--new-y)) translateX(var(--new-x));
+  }
+
+  #splash .date {
+    margin-top: 0;
   }
 }
 header {
