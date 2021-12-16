@@ -35,6 +35,11 @@
   & .current {
     color: $purple;
   }
+
+  & h2 {
+    margin-bottom: var(--hlf_margin);
+    text-transform: uppercase;
+  }
 }
 
 @media only screen and (min-width: 805px) {

@@ -8,8 +8,8 @@ export function moveElm() {
   let mouseX = 0;
 
   window.addEventListener("mousemove", (e) => {
-    mouseX = (e.clientX - originalX) / 25;
-    mouseY = (e.clientY - originalY) / 25;
+    mouseX = (e.clientX - originalX) / 15;
+    mouseY = (e.clientY - originalY) / 15;
   });
   const delay = 100;
   let revisedX = 0;

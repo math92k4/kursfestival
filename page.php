@@ -73,7 +73,7 @@ if (get_post_meta( $pageID, 'billede', true )) {
             <?php if ($videoSet) {
             ?>
             <div>
-                <video controls="1" preload="none" width="100%">
+                <video poster="<?php echo $fallbackUrl ?>" controls="1" preload="none" width="100%">
                     <source src="<?php echo $videUrl ?>" type="video/mp4">
                 </video>
             </div>

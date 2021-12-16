@@ -16,6 +16,10 @@ iframe {
     margin: var(--main_margin) 0 var(--main_margin) auto;
     border-radius: 20% 0 20% 0;
   }
+
+  & p {
+    margin-top: var(--main_margin);
+  }
 }
 
 @media only screen and (min-width: $desktop) {
@@ -30,5 +34,11 @@ iframe {
 
   .program section {
     padding-left: 60px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  video {
+    margin-top: var(--main_margin);
   }
 }
