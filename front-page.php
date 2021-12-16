@@ -22,7 +22,7 @@ $metaKeywords = get_post_meta( $pageID, 'meta_keywords', true );
 <?php get_template_part("/theme-parts/header") ?>
     <main>
         <section id="splash">
-            <p class="date">10-12 JUNI 2022 <span>UNGDOMSØEN</span></p>
+            <p class="date">19-21 AUGUST 2022 <span>UNGDOMSØEN</span></p>
             <div id="splash_logo">
 
                     <img src="./wp-content/themes/kursfestival/imgs/splash.jpg" alt="Kurs Festival splash planet">

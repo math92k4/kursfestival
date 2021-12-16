@@ -24,6 +24,7 @@
     position: relative;
     z-index: 30;
     line-height: 0.8;
+    margin-top: var(--main_margin);
 
     & span {
       display: block;
@@ -226,6 +227,10 @@
         max-width: 450px;
         transform: translateY(var(--new-y)) translateX(var(--new-x));
       }
+    }
+
+    & .date {
+      margin-top: 0;
     }
   }
 }

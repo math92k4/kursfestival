@@ -1,7 +1,9 @@
 <?php $pods_name = pods_v( 0, 'url');
 // "/kursfestival/" sub-directory fallback
-if ($pods_name == "kursfestival") {
-   $pods_name = pods_v( 1, 'url');
+if ($page_name == 'kursfestival') {
+   $page_name = pods_v(1, 'url');
+} else if ($page_name == 'kursfestival1') {
+   $page_name = pods_v(1, 'url');
 }
 
 // Get SEO meta fields from page
