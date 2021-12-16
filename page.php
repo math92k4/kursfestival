@@ -4,6 +4,8 @@ $page_name = pods_v(0, 'url');
 
 if ($page_name == 'kursfestival') {
     $page_name = pods_v(1, 'url');
+} else if ($page_name == 'kursfestival1') {
+    $page_name = pods_v(1, 'url');
 }
 
 // Get SEO meta fields from page
