@@ -11,7 +11,7 @@
   & .om_container {
     width: 100%;
   }
-  & img {
+  & img:not(footer img) {
     border-radius: 0 100px 0 100px;
   }
 
