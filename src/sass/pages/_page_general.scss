@@ -20,6 +20,10 @@ iframe {
   & p {
     margin-top: var(--main_margin);
   }
+
+  & video {
+    margin-left: var(--main_margin);
+  }
 }
 
 @media only screen and (min-width: $desktop) {
@@ -38,7 +42,8 @@ iframe {
 }
 
 @media screen and (max-width: 900px) {
-  video {
+  .content_wrapper video {
     margin-top: var(--main_margin);
+    margin-left: 0;
   }
 }
