@@ -53,7 +53,7 @@ if (get_post_meta( $pageID, 'billede', true )) {
     <meta name="description" content="<?php echo $metaDesc ?>">
     <meta name="keywords" content="<?php echo $metaKeywords ?>">
     <link rel="stylesheet" href="../wp-content/themes/kursfestival/dist/css/app.css">
-    <link rel="icon" href="../wp-content/themes/kursfestival/imgs/ellipse_55.png" type="image/x-icon"/>
+    <link rel="icon" href="../wp-content/themes/kursfestival/imgs/fav.png" type="image/x-icon"/>
     <title><?php echo get_the_title(); ?></title>
 </head>
 <body class="page <?php echo $page_name; ?>">

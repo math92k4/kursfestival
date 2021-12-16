@@ -7,7 +7,7 @@
     <meta name="description" content="<?php echo $metaDesc ?>">
     <meta name="keywords" content="<?php echo $metaKeywords ?>">
     <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri() ?>/dist/css/app.css"">
-    <link rel="icon" href="<?php echo get_stylesheet_directory_uri() ?>/imgs/ellipse_55.png" type="image/x-icon"/>
+    <link rel="icon" href="<?php echo get_stylesheet_directory_uri() ?>/imgs/fav.png" type="image/x-icon"/>
     <title>Kurs Festival - siden kunne ikke fundes</title>
 </head>
 <body>

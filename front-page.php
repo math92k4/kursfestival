@@ -14,7 +14,7 @@ $metaKeywords = get_post_meta( $pageID, 'meta_keywords', true );
     <meta name="description" content="<?php echo $metaDesc ?>">
     <meta name="keywords" content="<?php echo $metaKeywords ?>">
     <link rel="stylesheet" href="./wp-content/themes/kursfestival/dist/css/app.css">
-    <link rel="icon" href="./wp-content/themes/kursfestival/imgs/ellipse_55.png" type="image/x-icon"/>
+    <link rel="icon" href="./wp-content/themes/kursfestival/imgs/fav.png" type="image/x-icon"/>
     <title>Kurs Festival</title>
 </head>
 <body class="front_page">
